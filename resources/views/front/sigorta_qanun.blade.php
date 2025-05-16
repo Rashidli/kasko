@@ -1,16 +1,15 @@
 @extends('front.layouts.master')
 
-@section('title', 'Sigorta qanunu')
-@section('description', 'Sigorta qanunu')
-@section('keywords', 'Sigorta qanunu')
-
+@section('title', $sigorta_fealiyeti_haqqinda_qanun->title)
+@section('description', $sigorta_fealiyeti_haqqinda_qanun->seo_description)
+@section('keywords', $sigorta_fealiyeti_haqqinda_qanun->seo_keywords)
+@section('image', 'https://kasko.az/storage/869aeca8-d5c6-42ff-b754-5987d24d8e28.webp')
 @section('content')
 
 <div class="sigortaQanun-container p-lr">
         <img class="gerb-img" src="{{asset('/')}}front/image/gerb.png" alt="">
         <h2>Sığorta fəaliyyəti haqqında</h2>
         <h1>AZƏRBAYCAN RESPUBLİKASININ <span>QANUNU</span></h1>
-        <div class="sehife_section" id="sigorta1">Səhifə 1</div>
         <div class="mundericat">
             <div class="fesil">
                 <a href="#sigorta5" class="fesil-main-link">
@@ -142,7 +141,7 @@
                         <p>Maddə 24. Səhmdarın səs hüququnun etibarsızlığı</p>
                         <span>22</span>
                     </a>
-                    
+
                 </div>
             </div>
             <div class="fesil">
@@ -150,7 +149,14 @@
                     <p>IV Fəsil</p>
                     <span>22</span>
                 </a>
-                <div class="sehife_section" id="sigorta2">Səhifə 2</div>
+                <div class="sehife_section" id="sigorta1">
+                    <p>Səhifə 1</p>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
                 <div class="fesil-links">
                     <a href="#sigorta22" class="fesil-link">
                         <p>Sığortaçılarda korporativ idarəetmə</p>
@@ -387,7 +393,13 @@
                     <p>VIII Fəsil</p>
                     <span>45</span>
                 </a>
-                <div class="sehife_section" id="sigorta3">Səhifə 3</div>
+                <div class="sehife_section" id="sigorta2"><p>Səhifə 2</p></div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
                 <div class="fesil-links">
                     <a href="#sigorta45" class="fesil-link">
                         <p>Sığortaçının fəaliyyətində əsaslı dəyişikliklər</p>
@@ -401,7 +413,7 @@
                         <p>Maddə 73. Sığortaçıların birləşmə yolu ilə yenidən təşkili</p>
                         <span>46</span>
                     </a>
-                    
+
                 </div>
             </div>
             <div class="fesil">
@@ -434,7 +446,7 @@
                         <p>Maddə 78. Sığortaçının illik maliyyə hesabatları, digər hesabatları və məlumatları</p>
                         <span>49</span>
                     </a>
-                    
+
                 </div>
             </div>
             <div class="fesil">
@@ -599,7 +611,13 @@
                         <p>Maddə 110. Lisenziyanın qüvvəsi məhdudlaşdırıldıqda, dayandırıldıqda və ya lisenziya ləğv edildikdə sığortaçının vəzifələri</p>
                         <span>68</span>
                     </a>
-                    <div class="sehife_section" id="sigorta4">Səhifə 4</div>
+                    <div class="sehife_section" id="sigorta3"><p>Səhifə 3</p></div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
                     <br>
                     <a href="#sigorta68" class="fesil-link">
                         <p>Maddə 111. Sığorta növü üzrə fəaliyyətin və ya lisenziyanın qüvvəsinin bərpa edilməsi</p>
@@ -736,10 +754,10 @@
                 </div>
             </div>
         </div>
-        <div class="sehife_section" id="sigorta5">Səhifə 5</div>
+        <div class="sehife_section" id="sigorta4"><p>Səhifə 4</p></div>
         <br>
         <br>
-        <div class="sehife-inner">
+        <div class="sehife-inner pt120" id="sigorta5">
             <p>Bu Qanun Azərbaycan Respublikasında sığorta sisteminin inkişafının, sığorta bazarının peşəkar iştirakçılarının, o cümlədən sığortaçıların, təkrarsığortaçıların, sığorta vasitəçilərinin fəaliyyətinin əsas istiqamətlərini və prinsiplərini, habelə sığorta sahəsində dövlət tənzimlənməsinin və nəzarətinin hüquqi və iqtisadi əsaslarını müəyyən edir.
                 Bu Qanun sosial sığorta münasibətlərinə şamil edilmir.
             </p>
@@ -771,9 +789,9 @@
                  <br>
                 <strong>1.1.9. sığorta nəzarəti orqanı </strong>– sığorta sektorunda dövlət tənzimləməsi və nəzarəti funksiyalarını həyata keçirən müvafiq icra hakimiyyəti orqanı;
             </p>
-            <div class="sehife_section" id="sigorta6">Səhifə 6</div>
+            <div class="sehife_section" ><p>Səhifə 5</p></div>
             <br>
-            <p>
+            <p class="pt120" id="sigorta6">
                <strong> 1.1.10. sığorta müqaviləsi </strong>- sığortalının müvafiq sığorta haqqı ödəməsi müqabilində sığorta obyektinin məruz qala biləcəyi risklərlə bağlı itkilərin, dəyən zərərin əvəzinin və ya razılaşdırılan pul məbləğinin müəyyən bir hadisənin baş verməsi əsasında ödənilməsinin sığortaçı tərəfindən öhdəlik kimi götürülməsi şərtlərinin təsbit edildiyi razılaşma;
                <br><strong>1.1.11. sığorta şəhadətnaməsi </strong>- sığorta müqaviləsinin bağlanması faktını təsdiq edən, sığortaçı tərəfindən sığortalıya və (və ya) sığorta olunana verilən sənəd;
                <br><strong> 1.1.12. sığorta qaydaları </strong>- sığorta qanunvericiliyinə uyğun olaraq, sığortaçının həyata keçirdiyi könüllü sığorta növünün əsaslandığı, sığortaçının özü tərəfindən və ya sığorta qanunvericiliyində nəzərdə tutulmuş digər qaydada hazırlanan, həmin sığorta növü üzrə qayda və şərtləri müəyyən edən sənəd;
@@ -789,10 +807,9 @@
                <br><strong>1.1.22. şəxsi tutum </strong>– sığorta və ya təkrarsığorta müqaviləsinə əsasən sığorta riskinin sığortaçının (təkrarsığortalının) öhdəliyində qalan hissəsi;
                <br><strong>1.1.23. şərikli sığorta </strong>– sığorta müqaviləsi ilə müəyyən edilmiş sığorta risklərinin birgə sığortalanması və sığorta ödənişi üzrə öhdəliklərin bölüşdürülməsi
             </p>
+            <div class="sehife_section"><p>Səhifə 6</p></div>
             <br>
-            <div class="sehife_section" id="sigorta7">Səhifə 7</div>
-            <br>
-            <p>
+            <p class="pt120" id="sigorta7">
                 barədə bir neçə sığortaçının öz aralarında bağladıqları müqavilədən yaranan hüquqi və iqtisadi münasibətlər mexanizmi;
                 <br><strong>1.1.24. həyatın yığım sığortası </strong>– sığortalının müntəzəm şəkildə ödədiyi sığorta haqlarının sığortaçıda müddətli yığım vəsaitləri kimi toplanılmasını nəzərdə tutan həyat sığortasının aparılmasının forması;
                 <br><strong>1.1.25. aktuari </strong>– qanunvericiliyə uyğun olaraq iqtisadi-riyazi hesablamalar aparmaqla sığorta haqlarının hesablanmasının əsaslarını müəyyən edən, həmçinin sığorta ehtiyatlarını hesablayan mütəxəssis;
@@ -812,10 +829,9 @@
                 <br><strong>1.1.39. əhəmiyyətli nəzarət </strong>– bu Qanunun məqsədləri üçün səhmdarın hüquqi şəxsin yerləşdirilmiş adi səhmlərinin 50 faizinə və ya daha çox hissəsinə malik olması, yaxud əhəmiyyətli müqavilə əsasında hər hansı şəxs tərəfindən hüquqi şəxsin qərarlarının qəbul edilməsinə mühüm təsir göstərmək imkanı;
                 <br><strong>1.1.40. mühüm iştirak payı </strong> – nizamnamə kapitalında yerləşdirilmiş səhmlərin 20 və ya daha çox faizinə birbaşa və ya dolayı yolla malik olma; şəxs hüquqi şəxsdə o zaman dolayı yolla mühüm iştirak payının sahibi hesab edilir ki,
             </p>
+            <div class="sehife_section" ><p>Səhifə 7</p></div>
             <br>
-            <div class="sehife_section" id="sigorta8">Səhifə 8</div>
-            <br>
-            <p>
+            <p class="pt120" id="sigorta8">
                 o, bu hüquqi şəxsdə mühüm iştirak payına malik olan digər hüquqi şəxsə əhəmiyyətli nəzarəti həyata keçirsin;
                 <br><strong>1.1.41. </strong>vətəndaş qüsursuzluğu </strong>– bu Qanunda nəzərdə tutulan şəxslər üçün:
                 <br><strong>1.1.41.1.</strong> qəsdən törədilmiş cinayətə görə məhkumluğun olmaması;
@@ -842,10 +858,9 @@
                <strong>3.1.</strong>İcbari və ya könüllü sığorta müqaviləsini yalnız müvafiq sığorta növünü aparmağa sığorta nəzarəti orqanından icazəsi olan sığortaçı bağlaya bilər.
                <br><strong>3.2.</strong>İcbari sığortanın növləri, aparılması qaydaları və şərtləri sığorta qanunvericiliyi ilə müəyyən edilir.
             </p>
+            <div class="sehife_section" ><p>Səhifə 8</p></div>
             <br>
-            <div class="sehife_section" id="sigorta9">Səhifə 9</div>
-            <br>
-            <p><strong>3.3.</strong> Bu Qanuna uyğun olaraq başqa hal tətbiq edilmirsə könüllü sığortanın növləri və müvafiq sığorta qaydaları sığortaçı tərəfindən müəyyən edilir.
+            <p class="pt120" id="sigorta9"><strong>3.3.</strong> Bu Qanuna uyğun olaraq başqa hal tətbiq edilmirsə könüllü sığortanın növləri və müvafiq sığorta qaydaları sığortaçı tərəfindən müəyyən edilir.
             <br><strong> 3.4.</strong> Qanunvericiliklə müəyyən edilmiş hallar istisna edilməklə icbari sığorta növünü aparmağa icazəsi olan sığortaçı müvafiq icbari sığorta müqaviləsini bağlamaqdan imtina edə bilməz.</p>
             <br><h3 class="madde-item">Maddə 4. Sığorta fəaliyyəti ilə bağlı müəyyən sözlərdən digər şəxslərin adlarında istifadəyə qadağalar</h3>
             <br><p>
@@ -865,9 +880,8 @@
                 <br><strong>6.1.1.</strong> sığortalının, sığorta olunanın və ya faydalanan şəxsin adı, ünvanı və digər şəxsi məlumatları;
                 <br><strong>6.1.2. </strong>hər hansı sığorta müqaviləsinin sığorta məbləği və ya qaytarılan məbləğ;
             </p>
-            <br>
-            <div class="sehife_section" id="sigorta10">Səhifə 10</div>
-            <br><p>
+            <div class="sehife_section" ><p>Səhifə 9</p></div>
+            <br><p class="pt120" id="sigorta10">
                 <strong> 6.1.3. </strong>hər hansı sığorta müqaviləsi üzrə ödənilmiş, yaxud ödənilməmiş sığorta haqqı;
                 <br><strong> 6.1.4. </strong>hüquqi şəxs olan sığortalının, sığorta olunanın və ya faydalanan şəxsin kommersiya və ya biznes sirri;
                 <br><strong>6.1.5. </strong>sığortalının, sığorta olunanın və ya faydalanan şəxsin şəxsi və ailə həyatı ilə bağlı, o cümlədən səhhətinə və əmlakına aid məlumatlar.
@@ -887,10 +901,8 @@
                 <br><strong>6.2.9.</strong> “Cinayət yolu ilə əldə edilmiş pul vəsaitlərinin və ya digər əmlakın leqallaşdırılmasına və terrorçuluğun maliyyələşdirilməsinə qarşı mübarizə haqqında” Azərbaycan Respublikasının Qanununda nəzərdə tutulmuş hallarda maliyyə monitorinqi orqanına.1
                 <br><strong>6.3. </strong>Sığorta sirrini qanuni yolla əldə edən bütün şəxslər onu yaymağa və digər şəxslərə açıqlamağa görə müvafiq qanunvericiliklə müəyyən edilmiş qaydada məsuliyyət daşıyırlar.
             </p>
-            <br>
-            <div class="sehife_section" id="sigorta11">Səhifə 11</div>
-            <br>
-            <h2>II Fəsil
+            <div class="sehife_section" ><p>Səhifə 10</p></div>
+            <h2 class="pt120" id="sigorta11">II Fəsil
                 <br>
                 Sığortaçının fəaliyyətinin əsasları
             </h2>
@@ -923,9 +935,8 @@
                 <br><strong>9.5.</strong> Müstəsna olaraq həyat sığortası sahəsində fəaliyyət göstərən sığortaçının tam adında «həyat» sözünün olması məcburidir.
                 <br><strong>9.6.</strong> Təkrarsığortaçının tam adında «təkrarsığorta» sözünün olması məcburidir.
             </p>
-            <br>
-            <div class="sehife_section" id="sigorta12">Səhifə 12</div>
-            <br><p>
+            <div class="sehife_section" ><p>Səhifə 11</p></div>
+            <br><p class="pt120" id="sigorta12">
                 <strong>9.7. </strong>Sığortaçının adında «Azərbaycan», «dövlət», «milli», «mərkəzi», «büdcə», «respublika» sözlərindən qanunvericiliklə müəyyən edilmiş qaydada istifadə olunur.
                 <br><strong>9.8.</strong> Sığortaçının öz adında əvvəllər təsis edilmiş və fəaliyyət göstərən sığortaçıların, habelə xarici sığortaçıların adları ilə eyni olan, yaxud bir-biri ilə dəyişik salınacaq dərəcədə oxşar olan söz və ya söz birləşmələrindən istifadə etməsi qadağandır.
                 <br><strong>9.9.</strong> Öz adında səhmlərinin əlli faiz və ya daha çox hissəsinə malik olan xarici səhmdarının adından istifadə edən sığortaçıya bu Qanunun 9.1-ci və 9.8-ci maddələrinin tələbləri şamil olunmur.
@@ -943,10 +954,9 @@
                 <br><strong>10.6.</strong> Sığortaçılar Azərbaycan Respublikasının ərazisində yerləşən və ya mövcud olan sığorta predmeti ilə bağlı əmlak mənafeləri üzrə riskləri yerli sığortaçılarda və ya bu Qanunun tələblərinə cavab verən, həmçinin bu Qanunun 95.3-cü maddəsində nəzərdə tutulmuş reyestrə daxil edilmiş xarici sığortaçılarda təkrarsığortalaya bilərlər. Belə təkrarsığorta birbaşa, yerli sığorta brokerləri və ya bu Qanunun tələblərinə cavab verən, həmçinin bu Qanunun 95.3-cü maddəsində nəzərdə tutulmuş reyestrə daxil edilmiş xarici sığorta brokerləri vasitəsilə həyata keçirilə bilər.
                 <br><strong>10.7.</strong> Sığortaçıların Azərbaycan Respublikasından xaricdə filial və nümayəndəlikləri yalnız sığorta nəzarəti orqanının razılığı ilə açıla bilər.
             </p>
+            <div class="sehife_section" ><p>Səhifə 12</p></div>
             <br>
-            <div class="sehife_section" id="sigorta13">Səhifə 13</div>
-            <br>
-            <p>
+            <p class="pt120" id="sigorta13">
                 <strong>10.8.</strong> Qanunvericilikdə nəzərdə tutulmuş hallar istisna olmaqla, dövlət hakimiyyəti və yerli özünüidarəetmə orqanları sığortaçının fəaliyyətinə qarışa, onun əmlakına, o cümlədən bank hesablarındakı vəsaitlərinə sərəncam verə bilməzlər.
                 <br><strong>10.9.</strong> Sığorta risklərinin və zərərlərin qiymətləndirilməsi, sığorta hadisələrinin araşdırılması, həmçinin zərərlərin tənzimlənməsi ilə bağlı xidmətlər sığorta sahəsində yardımçı fəaliyyət göstərən hüquqi şəxslər tərəfindən həyata keçirildikdə də, bu fəaliyyət sığorta xidmətlərinin tərkib hissəsi hesab edilir.
                 <br><strong>10.10.</strong>Azərbaycan Respublikasının sığorta sahəsində yardımçı fəaliyyət göstərən hüquqi şəxsləri və müstəqil ekspertləri yalnız bu Qanunun 95.3-cü maddəsində nəzərdə tutulmuş reyestrə daxil edilmiş olduqları halda sığortaçılar və ya sığorta brokerləri tərəfindən xidmət göstərmək üçün cəlb oluna bilərlər.
@@ -968,9 +978,9 @@
                 <br><strong>11.5.</strong> Sığorta müqaviləsi üzrə sığortaçı sığorta etdiyi riskləri təkrarsığorta etdirdikdə təkrarsığorta müqaviləsi üzrə təkrarsığortalı hesab olunur.
                 <br><strong>11.6.</strong> Təkrarsığortanın təşkili üçün sığortaçılar birgə fəaliyyət müqaviləsi əsasında təkrarsığorta daxılları təsis edə bilərlər.
             </p>
-            <div class="sehife_section" id="sigorta14">Səhifə 14</div>
+            <div class="sehife_section" ><p>Səhifə 13</p></div>
             <br>
-            <h3 class="madde-item">Maddə 12. İnhisarın qadağan olunması</h3>
+            <h3 class="madde-item pt120" id="sigorta14">Maddə 12. İnhisarın qadağan olunması</h3>
             <br>
             <p>
                 <strong>12.1.</strong> Sığortaçıların və sığorta brokerlərinin sığorta xidmətlərinin inhisara alınmasına və sığorta bazarında rəqabətin məhdudlaşdırılmasına yönələn sazişlər bağlaması, həmçinin bunlara səbəb ola bilən əməliyyatlar aparması qadağandır.
@@ -992,10 +1002,9 @@
                 <strong>14.1.</strong> Sığortaçılar həyat sığortası və ya qeyri-həyat sığortası (ümumi sığorta) sahələrindən yalnız biri üzrə fəaliyyət göstərə bilərlər.
                 <br><strong>14.2.</strong> Həyat sığortası sığorta obyektinə görə şəxsi sığortaya aid olan aşağıdakı sığorta siniflərini özündə birləşdirir:
             </p>
+            <div class="sehife_section"><p>Səhifə 14</p></div>
             <br>
-            <div class="sehife_section" id="sigorta15">Səhifə 15</div>
-            <br>
-            <p>
+            <p class="pt120" id="sigorta15">
                 <strong>14.2.1.</strong> sığortalı və ya sığorta olunan öldükdə sığorta ödənişinin həyata keçirilməsini nəzərdə tutan <strong>həyatın ölüm halından</strong> sığortası;
                 <br><strong>14.2.2.</strong> sığorta müqaviləsinin qüvvədə olduğu müddətdə sığorta olunanın öldüyü, yaxud sığorta müqaviləsində müəyyən edilmiş yaşa, müddətə qədər yaşadığı halda sığorta ödənişinin həyata keçirilməsini nəzərdə tutan <strong>həyatın yaşam</strong> sığortası;
                 <br><strong>14.2.3.</strong> sığorta olunanın müəyyən yaşa çatması, yaşı, əlilliyi, 18 yaşınadək sağlamlıq imkanlarının məhdudluğu3 və ya xəstəliyi ilə əlaqədar əmək qabiliyyətini itirməsi, ailə başçısını itirməsi, işsiz qalması və şəxsi gəlirlərinin azalmasına, yaxud itirilməsinə səbəb olan digər hallarda pensiya, yaxud renta şəklində dövri sığorta ödənişinin həyata keçirilməsini nəzərdə tutan <strong>annuitet</strong>  sığortası;
@@ -1009,10 +1018,9 @@
                 <br><strong>14.3.2.</strong> Sığorta obyektinə görə əmlak sığortasına aid olan əmlakın sığortası üzrə aşağıdakı siniflər:
                 <br><strong>14.3.2.1.</strong> Bu Qanunun 14.3.2.2 – 14.3.2.5-ci maddələrində sadalanmış əmlak istisna olmaqla, digər əmlakın, onun ərazisində və (və ya) içərisində yerləşən başqa əmlakla birlikdə, yaxud ayrılıqda yanğın və ya digər hadisələr nəticəsində zədələnməsi, məhv olması, yaxud hər hansı formada itkisi ilə bağlı
             </p>
+            <div class="sehife_section"><p>Səhifə 15</p></div>
             <br>
-            <div class="sehife_section" id="sigorta16">Səhifə 16</div>
-            <br>
-            <p>
+            <p class="pt120" id="sigorta16">
                 sığortalının əmlak mənafelərinə dəyən zərərin əvəzinin tam və ya qismən ödənilməsi miqdarında sığorta ödənişinin həyata keçirilməsini nəzərdə tutan <strong>əmlakın yanğından və digər risklərdən</strong>  sığortası;
                 <br><strong>14.3.2.2.</strong> avtomobil nəqliyyatı vasitəsinin zədələnməsi, məhv olması, həmçinin qaçırılması və ya oğurlanması nəticəsində sığortalının əmlak mənafelərinə dəyən zərərin əvəzinin tam və ya qismən ödənilməsi miqdarında sığorta ödənişinin həyata keçirilməsini nəzərdə tutan <strong>avtonəqliyyat vasitələrinin</strong> sığortası;
                 <br><strong>14.3.2.3.</strong> dəmiryol nəqliyyatı vasitəsinin zədələnməsi, məhv olması, həmçinin qaçırılması və ya oğurlanması nəticəsində sığortalının əmlak mənafelərinə dəyən zərərin əvəzinin tam və ya qismən ödənilməsi miqdarında sığorta ödənişinin həyata keçirilməsini nəzərdə tutan <strong>dəmiryol nəqliyyatı vasitələrinin</strong>  sığortası;
@@ -1025,10 +1033,9 @@
                 <br><strong>14.3.3.2.</strong> sığortalıya məxsus dəmiryol nəqliyyatı vasitəsindən istifadə olunarkən üçüncü şəxslərə vurulan zərərin əvəzini ödəmək öhdəliyi ilə əlaqədar onun əmlak mənafeləri ilə bağlı zərərin əvəzinin tam və ya qismən ödənilməsi miqdarında sığorta ödənişinin həyata keçirilməsini nəzərdə tutan <strong> dəmiryol nəqliyyatı vasitələri sahiblərinin mülki məsuliyyətinin</strong> sığortası;
                 <br><strong>14.3.3.3.</strong> sığortalıya məxsus hava nəqliyyatı vasitəsindən istifadə olunarkən üçüncü şəxslərə vurulan zərərin əvəzini ödəmək öhdəliyi ilə əlaqədar onun əmlak mənafeləri ilə bağlı zərərin əvəzinin tam və ya qismən ödənilməsi
             </p>
+            <div class="sehife_section" ><p>Səhifə 16</p></div>
             <br>
-            <div class="sehife_section" id="sigorta17">Səhifə 17</div>
-            <br>
-            <p>
+            <p class="pt120" id="sigorta17">
                 miqdarında sığorta ödənişinin həyata keçirilməsini nəzərdə tutan <strong>hava nəqliyyatı vasitələri sahiblərinin mülki məsuliyyətinin </strong> sığortası;
                 <br><strong>14.3.3.4.</strong> sığortalıya məxsus su nəqliyyatı vasitəsindən istifadə olunarkən üçüncü şəxslərə vurulan zərərin əvəzini ödəmək öhdəliyi ilə əlaqədar onun əmlak mənafeləri ilə bağlı zərərin əvəzinin tam və ya qismən ödənilməsi miqdarında sığorta ödənişinin həyata keçirilməsini nəzərdə tutan <strong>su nəqliyyatı vasitələri sahiblərinin mülki məsuliyyətinin</strong> sığortası;
                 <br><strong>14.3.3.5.</strong> sığortalının yükdaşıyan qismində nəqliyyat vasitəsindən istifadə edərkən üçüncü şəxslərə vurduğu zərərin əvəzini ödəmək öhdəliyi ilə əlaqədar onun əmlak mənafelərinə dəyən zərərin əvəzinin tam və ya qismən ödənilməsi miqdarında sığorta ödənişinin həyata keçirilməsini nəzərdə tutan <strong> yük daşıyanın mülki məsuliyyətinin</strong> sığortası;
@@ -1041,10 +1048,9 @@
                 <br><strong>14.3.4.2.</strong> ipoteka qoyulan əmlakın bazar qiymətinin düşməsi ilə əlaqədar ipoteka müqaviləsi üzrə borclunun həmin müqavilə ilə müəyyən edilmiş öhdəliklərini yerinə yetirə bilməməsi nəticəsində kreditorun əmlak mənafelərinə dəyən zərərin əvəzinin tam və ya qismən ödənilməsi üçün sığorta ödənişinin həyata keçirilməsini nəzərdə tutan <strong>ipoteka</strong>  sığortası;
                 <br><strong>14.3.4.3.</strong> bu Qanunun 14.3.4.1-14.3.4.2-ci maddələrində göstərilməyən, sığorta obyektinə görə əmlak sığortasına aid olan kreditlərin sığortası üzrə digər siniflər.
             </p>
+            <div class="sehife_section" ><p>Səhifə 17</p></div>
             <br>
-            <div class="sehife_section" id="sigorta18">Səhifə 18</div>
-            <br>
-            <p>
+            <p class="pt120" id="sigorta18">
                 <strong>14.3.5.</strong> Sığorta obyektinə görə əmlak sığortasına aid olan qarışıq maliyyə risklərinin sığortası üzrə aşağıdakı siniflər:
                 <br><strong>14.3.5.1.</strong> əmlakın bazar qiymətinin düşməsi halında ondan istifadə ilə əlaqədar sığortalının əmlak mənafelərinə dəyən zərərin əvəzinin tam və ya qismən ödənilməsi üçün sığorta ödənişinin həyata keçirilməsini nəzərdə tutan <strong>bazar dəyərinin düşməsi riskindən</strong> sığorta;
                 <br><strong>14.3.5.2.</strong> sığortalının kommersiya fəaliyyətində sığorta hadisəsi nəticəsində baş verən fasilə ilə əlaqədar, onun əmlak mənafelərinə əldən çıxan fayda və əlavə xərclərlə bağlı dəyən zərərin əvəzinin tam və ya qismən ödənilməsi üçün sığorta ödənişinin həyata keçirilməsini nəzərdə tutan <strong>işin dayanması ilə bağlı risklərdən</strong> sığorta.
@@ -1066,10 +1072,9 @@
                <br><strong>16.3.</strong> Bu Qanunun 16.5-ci maddəsində nəzərdə tutulmuş müəyyən qaydalar mövcud olmadıqda sığortaçı könüllü sığorta növünün aparılmasına icazə almaq üçün hazırladığı müvafiq sığorta qaydalarını sığorta nəzarəti orqanı ilə razılaşdırmalıdır.
                <br><strong>16.4.</strong> İcbari sığortanın hər bir növünün aparılması üzrə əlavə tələblər sığorta qanunvericiliyi ilə müəyyən edilir.
             </p>
+            <div class="sehife_section" ><p>Səhifə 18</p></div>
             <br>
-            <div class="sehife_section" id="sigorta19">Səhifə 19</div>
-            <br>
-            <p>
+            <p class="pt120" id="sigorta19">
                 <strong>16.5.</strong> Sığorta nəzarəti orqanı fiziki şəxslərə təqdim edilən müəyyən könüllü sığorta növü üzrə bütün sığortaçılar üçün məcburi olan sığorta qaydalarını qəbul edə bilər.
             </p>
             <br>
@@ -1104,10 +1109,9 @@
             <p>
                 <strong>19.1.</strong>Azərbaycan Respublikasının vətəndaşı sığortaçının təsisçisi və ya səhmdarı olmaq üçün aşağıdakı tələblərə cavab verməlidir:
             </p>
+            <div class="sehife_section" ><p>Səhifə 19</p></div>
             <br>
-            <div class="sehife_section" id="sigorta20">Səhifə 20</div>
-            <br>
-            <p>
+            <p class="pt120" id="sigorta20">
                 <strong>19.1.1.</strong> müvafiq səhmləri almaq üçün kifayət qədər maliyyə vəsaitinin olması;
                 <br><strong>19.1.2.</strong> mühüm iştirak payını və ya əhəmiyyətli nəzarəti əldə etmək niyyətində olduqda - vətəndaş qüsursuzluğu.
                 <br><strong>19.2.</strong> Yerli hüquqi şəxs sığortaçının təsisçisi və ya səhmdarı olmaq üçün aşağıdakı tələblərə cavab verməlidir:
@@ -1133,12 +1137,11 @@
                 <strong>21.1.</strong> Heç bir şəxs, o cümlədən sığortaçının təsisçisi və səhmdarı sığorta nəzarəti orqanının razılığı olmadan sığortaçının adi səhmlərini almaqla, onun nizamnamə kapitalında mühüm iştirak payına malik olması, həmçinin sığortaçının üzərində əhəmiyyətli nəzarəti həyata keçirməsi ilə nəticələnən müqavilə bağlaya bilməz.
                 <br><strong>21.2.</strong> Şəxs sığortaçıda mühüm iştirak payını tam və ya qismən bu Qanunun tələblərini pozmaqla əldə edərsə, sığorta nəzarəti orqanı həmin payın və ya onun müvafiq hissəsinin müəyyənləşdirdiyi müddət ərzində ləğv edilməsi barədə şəxsə yazılı göstəriş verir.
             </p>
+            <div class="sehife_section" ><p>Səhifə 20</p></div>
             <br>
-            <div class="sehife_section" id="sigorta21">Səhifə 21</div>
+            <h3 class="madde-item pt120" id="sigorta21">Maddə 22. Mühüm iştirak payının əldə edilməsinə və ya əhəmiyyətli nəzarətə razılıq üçün müraciət</h3>
             <br>
-            <h3 class="madde-item">Maddə 22. Mühüm iştirak payının əldə edilməsinə və ya əhəmiyyətli nəzarətə razılıq üçün müraciət</h3>
-            <br>
-            <p>
+            <p >
                 <strong>22.1.</strong> Sığortaçıda mühüm iştirak payına və ya əhəmiyyətli nəzarətə malik olmaq istəyən şəxs bu Qanunun tələblərinə uyğunluğunu təsdiq edən sənədləri əlavə etməklə niyyətini sığorta nəzarəti orqanı ilə razılaşdırmaq üçün yazılı müraciət etməlidir.
                 <br><strong>22.2.</strong> Sığorta nəzarəti orqanı bu Qanunun 22.1-ci maddəsində nəzərdə tutulmuş müraciətə baxarkən təqdim olunmuş sənədlərdə və ya məlumatlarda çatışmazlıq və ya bu Qanuna uyğunsuzluq aşkar edərsə, müraciəti aldığı tarixdən etibarən 20 təqvim günü müddətində müraciət edəndən əlavə məlumatı, sənədi və ya izahatı yazılı şəkildə tələb edə bilər.
                 <br><strong>22.3.</strong> Sığorta nəzarəti orqanı bu Qanunun 22.1-ci maddəsində nəzərdə tutulmuş müraciətə baxarkən sorğu əsasında müvafiq dövlət orqanlarından və digər şəxslərdən müraciətdə və ona əlavə edilmiş sənədlərdə qeyd olunan informasiyanın düzgünlüyü barədə məlumat ala bilər.
@@ -1155,10 +1158,9 @@
                 <br><strong>23.1.1.</strong> yerli hüquqi şəxsə və ya xarici sığortaçıya əhəmiyyətli nəzarətə malik olan şəxsin dəyişməsi;
                 <br><strong>23.1.2.</strong> yerli hüquqi şəxsə və ya xarici sığortaçıya əhəmiyyətli nəzarətə malik olan fiziki və ya hüquqi şəxsin müvafiq olaraq vətəndaş qüsursuzluğuna, yaxud işgüzar nüfuzuna təsir göstərən halın yaranması;
             </p>
+            <div class="sehife_section" ><p>Səhifə 21</p></div>
             <br>
-            <div class="sehife_section" id="sigorta22">Səhifə 22</div>
-            <br>
-            <p>
+            <p class="pt120" id="sigorta22">
                 <strong>23.1.3.</strong> yerli hüquqi şəxsin və ya xarici sığortaçının rəhbər işçisinin vətəndaş qüsursuzluğuna təsir göstərən halın yaranması;
                 <br><strong>23.1.4.</strong> yerli hüquqi şəxsə və ya xarici sığortaçıya əhəmiyyətli nəzarətə malik olan şəxsin sığortaçının nizamnamə kapitalındakı səhmlərinin əhəmiyyətli nəzarətin itirilməsi ilə nəticələnən sayda azalması;
                 <br><strong>23.2.</strong> Sığorta nəzarəti orqanı bu Qanuna riayət edilməsinə nəzarəti həyata keçirmək məqsədi ilə sığortaçının nizamnamə kapitalında mühüm iştirak payına malik olan və ya ona əhəmiyyətli nəzarəti həyata keçirən səhmdarlardan, yaxud digər şəxslərdən ildə bir dəfə fiziki şəxs olan həmin səhmdarların vətəndaş qüsursuzluğuna, hüquqi şəxs olan həmin səhmdarların isə rəhbər işçilərinin vətəndaş qüsursuzluğuna aid məlumatlar tələb edə bilər.
@@ -1192,10 +1194,9 @@
             <p>
                 <strong>26.1.</strong> Səhmdarların Ümumi Yığıncağının Azərbaycan Respublikasının Mülki Məcəlləsində nəzərdə tutulmuş müstəsna səlahiyyətlərindən başqa
             </p>
+            <div class="sehife_section" ><p>Səhifə 22</p></div>
             <br>
-            <div class="sehife_section" id="sigorta23">Səhifə 23</div>
-            <br>
-            <p>
+            <p class="pt120" id="sigorta23">
                 sığortaçıların Səhmdarlarının Ümumi Yığıncağının aşağıdakı əlavə səlahiyyətləri var:
                 <br><strong>26.1.1.</strong> digər hüquqi şəxslərin nizamnamə kapitalına investisiya qoyulması, o cümlədən başqa sığortaçının səhmlərinin alınması, sığortaçının törəmə cəmiyyətlərinin təsis edilməsi və fəaliyyətlərinə xitam verilməsi barədə qərarlar qəbul etmək;
                 <br><strong>26.1.2.</strong> sığortaçının qiymətli kağızlarının, o cümlədən səhmlərinin buraxılması müddətlərini və şərtlərini müəyyənləşdirmək, sığortaçının kapitalının artırılması və ya azaldılması, xalis mənfəət hesabına ehtiyatların formalaşdırılması barədə qərarlar qəbul etmək;
@@ -1217,10 +1218,9 @@
             <p>
                 <strong>27.1.</strong> Sığortaçının Səhmdarlarının Ümumi Yığıncağının iclaslarında Azərbaycan Respublikasının Mülki Məcəlləsində nəzərdə tutulanlardan başqa, Direktorlar Şurası və İdarə Heyəti üzvlərinin vəzifəyə seçilməsi və vəzifədən azad edilməsi, başqa sığortaçının səhmlərinin alınması, törəmə cəmiyyətlərin təsis edilməsi məsələləri üzrə qərarlar iclasda təmsil edilən səhmdarların üçdə iki səs çoxluğu ilə qəbul edilir.
             </p>
+            <div class="sehife_section"><p>Səhifə 23</p></div>
             <br>
-            <div class="sehife_section" id="sigorta24">Səhifə 24</div>
-            <br>
-            <p>
+            <p class="pt120" id="sigorta24">
                 <strong>27.2.</strong> Səhmdarların Ümumi Yığıncağının növbəti iclasları Azərbaycan Respublikasının Mülki Məcəlləsində nəzərdə tutulmuş qaydada, lakin maliyyə ili bitdikdən sonra 2 aydan gec olmayan müddətdə çağırılmalıdır.
                 <br><strong>27.3.</strong> Səhmdarların Ümumi Yığıncağının növbədənkənar iclasları Azərbaycan Respublikasının Mülki Məcəlləsində nəzərdə tutulmuş qaydada, həmçinin müvafiq hallarda Təftiş Komissiyasının tələbi ilə Direktorlar Şurası tərəfindən çağırılır.
                 <br><strong>27.4.</strong> Səsvermə hüququna malik olan səhmdarların yekdil razılığı ilə Səhmdarlarının Ümumi Yığıncağının iclası gündəliyə daxil edilməmiş məsələləri də müzakirə edə və onlara dair qərarlar qəbul edə bilər.
@@ -1244,10 +1244,9 @@
             <h3 class="madde-item">Maddə 29. Sığortaçının Direktorlar Şurasının səlahiyyətləri</h3>
             <br>
             <p><strong>29.1.</strong> Sığortaçının Direktorlar Şurasının səlahiyyətlərinə aşağıdakılar aiddir:</p>
+            <div class="sehife_section" ><p>Səhifə 24</p></div>
             <br>
-            <div class="sehife_section" id="sigorta25">Səhifə 25</div>
-            <br>
-            <p>
+            <p class="pt120" id="sigorta25">
                 <strong>29.1.1.</strong> sığortaçının idarə edilməsinə və fəaliyyətinə nəzarəti həyata keçirmək, o cümlədən sığortaçının İdarə Heyətindən hesabatlar almaq;
                 <br><strong>29.1.2.</strong> Səhmdarların Ümumi Yığıncağı və İdarə Heyəti üçün tövsiyələr vermək;
                 <br><strong>29.1.3.</strong> bildirişlər göndərmək yolu ilə Səhmdarların Ümumi Yığıncağının iclaslarını çağırmaq və səhmdarların, İdarə Heyətinin və Təftiş Komissiyasının tələbi ilə keçirilən növbədənkənar iclaslar istisna olmaqla, hər bir iclasın gündəliyini müəyyən etmək;
@@ -1266,10 +1265,9 @@
                 <br><strong>29.1.10.6.</strong> sığortaçının fəaliyyəti zamanı “Cinayət yolu ilə əldə edilmiş pul vəsaitlərinin və ya digər əmlakın leqallaşdırılmasına və terrorçuluğun maliyyələşdirilməsinə qarşı mübarizə haqqında” Azərbaycan Respublikası Qanununun tələblərinə əməl edilməsini təmin etmək;6
                 <br><strong>29.1.11.</strong> sığortaçının kapital ehtiyatlarının formalaşdırılması haqqında qərar qəbul etmək;
             </p>
+            <div class="sehife_section" ><p>Səhifə 25</p></div>
             <br>
-            <div class="sehife_section" id="sigorta26">Səhifə 26</div>
-            <br>
-            <p>
+            <p class="pt120" id="sigorta26">
                 <strong>29.1.12.</strong> sığortaçının nizamnaməsində nəzərdə tutulmuş hallarda sığortaçının adından müvafiq əqdlərin bağlanmasına icazə vermək;
                 <br><strong>29.1.13.</strong> sığortaçının fəaliyyətinin kompleks və ya ayrı-ayrı sahələrinin daxili yoxlanması barədə qərar qəbul etmək;
                 <br><strong>29.1.14.</strong> müstəqil və ya daxili auditorların, habelə sığorta nəzarəti orqanının yoxlamalarının nəticələrinə baxmaq, bu yoxlamaların yekunlarına dair tədbirlər görmək;
@@ -1289,10 +1287,9 @@
                 <br><strong>30.1.5.</strong> böyük həcmli itkilərin baş verməsi risklərinin qarşısının alınması və əvvəlcədən nəzərdə tutulan gəlir əldə edilməsi üçün bu Qanunun VI Fəslinin tələblərinə cavab verən sığortaçının investisiya siyasətini təsdiq etmək;
                 <br><strong>30.1.6.</strong> təkrarsığorta əməliyyatları üzrə siyasəti, o cümlədən təkrarsığortanın etibarlılığını, risklərin bölüşdürülməsinin ümumi səviyyəsini, hər bir risk üzrə şəxsi tutumun və hər bir sığorta hadisəsi üzrə öhdəliyin yuxarı həddini və təkrarsığortanın sığortaçı üçün məqbul hesab edilən digər meyarlarını təsdiq etmək;
             </p>
+            <div class="sehife_section" ><p>Səhifə 26</p></div>
             <br>
-            <div class="sehife_section" id="sigorta27">Səhifə 27</div>
-            <br>
-            <p><strong>30.1.7.</strong> sığortaçının bu Qanunun 30.1.1-30.1.6-cı maddələrində nəzərdə tutulmuş siyasətə, strategiyalara və təlimatlara ciddi riayət etməsinə, şəraitin dəyişməsi nəzərə alınmaqla bu sənədlərə mütəmadi qaydada yenidən baxılmasına daimi nəzarəti həyata keçirmək.</p>
+            <p class="pt120" id="sigorta27"><strong>30.1.7.</strong> sığortaçının bu Qanunun 30.1.1-30.1.6-cı maddələrində nəzərdə tutulmuş siyasətə, strategiyalara və təlimatlara ciddi riayət etməsinə, şəraitin dəyişməsi nəzərə alınmaqla bu sənədlərə mütəmadi qaydada yenidən baxılmasına daimi nəzarəti həyata keçirmək.</p>
             <br>
             <h3 class="madde-item">Maddə 31. Sığortaçının İdarə Heyəti</h3>
             <br>
@@ -1314,10 +1311,9 @@
                 <br><strong>32.3.</strong> Sığortaçının və ya onunla əlaqəli şəxsin idarəetmə orqanının üzvü olmayan, həmçinin özü və ya arvadı (əri) sığortaçının və ya onunla əlaqəli şəxsin hər hansı səhminə malik olmayan şəxs Təftiş Komissiyasının müstəqil üzvü seçilə bilər.
                 <br><strong>32.4.</strong> Təftiş Komissiyasının üzvləri sırasından Təftiş Komissiyasının sədri və onun bir, yaxud bir neçə müavini seçilir. Təftiş Komissiyasının sədrinin səlahiyyətləri Təftiş Komissiyası haqqında əsasnamə ilə müəyyən edilir.
             </p>
+            <div class="sehife_section"><p>Səhifə 27</p></div>
             <br>
-            <div class="sehife_section" id="sigorta28">Səhifə 28</div>
-            <br>
-            <p>
+            <p class="pt120" id="sigorta28">
                 <strong>32.5.</strong> Təftiş Komissiyasının iclasları üzvlərinin yarısından çoxu iştirak etdikdə səlahiyyətlidir.
                 <br><strong>32.6.</strong> Təftiş Komissiyasının qərarları iclasda iştirak edən üzvlərin sadə səs çoxluğu ilə qəbul edilir. Hər bir üzv bir səs hüququna malikdir. Üzvlərin səsvermə zamanı bitərəf qalmasına icazə verilmir. Səslər bərabər bölündükdə Təftiş Komissiyasının sədrinin səsi həlledici sayılır.
             </p>
@@ -1347,10 +1343,9 @@
                 <br><strong>34.1.6.</strong> sığortaçının maliyyə hesabatlarına, o cümlədən illik balansına baxmaq, müvafiq irad və tövsiyələrini Direktorlar Şurasına bildirmək;
                 <br><strong>34.1.7.</strong> Direktorlar Şurasının təqdimatı əsasında əlaqəli şəxslərlə bağlanmasına bu Qanunla icazə verilən əqdlərə rəsmiləşdirilməzdən əvvəl baxmaq
             </p>
+            <div class="sehife_section"><p>Səhifə 28</p></div>
             <br>
-            <div class="sehife_section" id="sigorta29">Səhifə 29</div>
-            <br>
-            <p>və əqdin bu Qanunun tələblərinə və sığortaçının maraqlarına uyğunluğu barədə rəy bildirmək.</p>
+            <p class="pt120" id="sigorta29">və əqdin bu Qanunun tələblərinə və sığortaçının maraqlarına uyğunluğu barədə rəy bildirmək.</p>
             <br>
             <h3 class="madde-item">Maddə 35. Sığortaçının daxili audit xidməti</h3>
             <br>
@@ -1380,10 +1375,9 @@
                 <br><strong>37.2.2.4.</strong> baş mühasib – maliyyə sahəsində baş mühasib kimi ən azı 3 il və ya sığorta sektorunda mühasib kimi ən azı 2 il;
                 <br><strong>37.2.3.</strong> qanunvericiliklə müəyyən edilmiş qaydada müflis elan olunaraq məcburi ləğv edilmiş hüquqi şəxsin ləğvi haqqında qərarın qəbul edildiyi tarixdən ən azı 12 ay əvvəlki dövrdə həmin hüquqi şəxsin Direktorlar Şurasının, Təftiş Komissiyasının, İdarə Heyətinin və ya daxili audit xidmətinin üzvü, yaxud baş mühasibi olmamalıdır. Bu tələb həmin hüquqi şəxsin qanunvericiliklə müəyyən
             </p>
+            <div class="sehife_section" ><p>Səhifə 29</p></div>
             <br>
-            <div class="sehife_section" id="sigorta30">Səhifə 30</div>
-            <br>    
-            <p>
+            <p class="pt120" id="sigorta30">
                 edilmiş qaydada müflis elan olunaraq məcburi ləğvi haqqında qərarın qəbul edildiyi tarixdən etibarən 5 il müddətində tətbiq edilir;
                 <br><strong>37.2.4.</strong> sığortaçının rəhbər işçisi vəzifəsindən qanunvericiliklə müəyyən olunmuş qaydada qeyri-qənaətbəxş fəaliyyətinə görə kənarlaşdırılmış olmamalıdır;
                 <br><strong>37.2.5.</strong> səhmdarların Ümumi Yığıncağı istisna edilməklə, sığortaçının digər idarəetmə orqanının üzvü olmamalıdır;
@@ -1404,10 +1398,9 @@
                 <br><strong>38.5.</strong> Aşağıdakı hallarda sığorta nəzarəti orqanı sığortaçıya rəhbər işçisinin təyin edilməsinə verdiyi razılığın geri alınması və onun əsasında vəzifəyə təyin edilmiş şəxsin vəzifəsindən kənarlaşdırılması ilə bağlı təqdimat verə bilər:
                 <br><strong>38.5.1.</strong> razılığın verilməsi üçün əsas kimi götürülmüş məlumatların yanlış olması sonradan aşkar edildikdə;
             </p>
+            <div class="sehife_section"><p>Səhifə 30</p></div>
             <br>
-            <div class="sehife_section" id="sigorta31">Səhifə 31</div>
-            <br>  
-            <p>
+            <p class="pt120" id="sigorta31">
                 <strong>38.5.2.</strong> rəhbər işçi sığortaçıdakı fəaliyyəti ilə bağlı yol verdiyi hüquq pozuntularına görə son 1 il ərzində iki dəfə və ya daha çox inzibati məsuliyyətə cəlb edildikdə.
             </p>
             <br>
@@ -1437,10 +1430,9 @@
                 <br><strong>42.1.1.3.</strong> digər hüquqi şəxsin idarəetmə orqanının üzvü olub olmaması barədə məlumat;
                 <br><strong>42.1.1.4.</strong> səlahiyyət müddətinin başa çatma tarixi;
             </p>
+            <div class="sehife_section" ><p>Səhifə 31</p></div>
             <br>
-            <div class="sehife_section" id="sigorta32">Səhifə 32</div>
-            <br>
-            <p>
+            <p class="pt120" id="sigorta32">
                 <strong>42.1.2.</strong> sığortaçının müstəqil auditorunun:
                 <br><strong>42.1.2.1.</strong> adı, soyadı, atasının adı, yaşadığı yer və poçt ünvanı;
                 <br><strong>42.1.2.2.</strong> təyin olunma tarixi;
@@ -1471,10 +1463,9 @@
                 <br><strong>44.1.2.</strong> açıq səhmdar cəmiyyətinin nizamnaməsinin notariat qaydasında təsdiq edilmiş surəti, təsisçilərin sayı birdən artıq olduqda isə, həmçinin müvafiq qaydada təsdiq edilmiş təsis müqaviləsinin surəti;
                 <br><strong>44.1.3.</strong> hüquqi şəxs olan təsisçilər haqqında məlumatlar, o cümlədən belə təsisçilərin:
             </p>
+            <div class="sehife_section" ><p>Səhifə 32</p></div>
             <br>
-            <div class="sehife_section" id="sigorta33">Səhifə 33</div>
-            <br>
-            <p>
+            <p class="pt120" id="sigorta33">
                 <strong>44.1.3.1.</strong> hüquqi şəxs kimi dövlət qeydiyyatına alınması haqqında şəhadətnamənin notariat qaydasında təsdiq edilmiş surəti;
                 <br><strong>44.1.3.2.</strong> təsis sənədlərinin notariat qaydasında təsdiqlənmiş surəti;
                 <br><strong>44.1.3.3.</strong> son üç maliyyə ili üzrə, 3 ildən az müddətdə fəaliyyət göstərdikdə isə, bütün fəaliyyət dövrü üzrə, o cümlədən sənədlərin təqdim edildiyi tarixdən əvvəlki rübün mühasibat balansları, mənfəət və zərərlər haqqında müstəqil auditor tərəfindən müvafiq rəy əlavə olunmaqla təsdiq edilmiş maliyyə hesabatları;
@@ -1496,10 +1487,9 @@
                 <br><strong>44.1.8.</strong> rəhbər işçi vəzifələrinə təyin olunması nəzərdə tutulan şəxslərin siyahısı və onların vətəndaş qüsursuzluğu barədə notariat qaydasında təsdiq edilmiş ərizəsi.
                 <br><strong>44.2.</strong> Sığorta nəzarəti orqanı lisenziya verilməsi üçün ilkin müraciətə baxarkən sığortaçı olmaq üçün təsis edilmiş açıq səhmdar cəmiyyətinin nizamnamə kapitalında mühüm iştirak payını əldə etməyi nəzərdə tutan fiziki şəxs olan təsisçi və hüquqi şəxs olan təsisçinin rəhbər işçiləri barədə maliyyə, vergi və hüquq-mühafizə orqanlarından müvafiq məlumat ala bilər. Bu tələb sonradan mühüm
             </p>
+            <div class="sehife_section" ><p>Səhifə 33</p></div>
             <br>
-            <div class="sehife_section" id="sigorta34">Səhifə 34</div>
-            <br>
-            <p>
+            <p class="pt120" id="sigorta34">
                 iştirak payını əldə etmək istəyən fiziki şəxsə, hüquqi şəxs olan istənilən səhmdarın rəhbər işçilərinə də şamil edilir. Maliyyə, vergi və hüquq-mühafizə orqanları sığorta nəzarəti orqanının tələb etdiyi məlumatları 10 gün müddətində verməyə borcludurlar.
                 <br><strong>44.3.</strong> Lisenziya verilməsi üçün ilkin müraciətlə bağlı xarici təsisçinin xarici ölkənin müvafiq dövlət orqanı tərəfindən verilmiş sənədləri qanunvericiliklə müəyyən edilmiş qaydada təsdiq olunmalıdır.
             </p>
@@ -1523,10 +1513,9 @@
                 <br><strong>46.1.4.</strong> biznes-plan gələcək fəaliyyət zamanı maliyyə sabitliyinin və ödəmə qabiliyyətinin, təsis edilən sığortaçının normal fəaliyyət göstərməsinin təmin edilməsi, habelə sığortalıların hüquqlarının müdafiəsi baxımından qənaətbəxş hesab edilmədikdə;
                 <br><strong>46.1.5.</strong> sığorta nəzarəti orqanına bu Qanunun 45.2-ci maddəsinə uyğun olaraq verilmiş tələbdən sonra da sığortaçı olmaq üçün təsis edilən hüquqi şəxs və
             </p>
+            <div class="sehife_section" ><p>Səhifə 34</p></div>
             <br>
-            <div class="sehife_section" id="sigorta35">Səhifə 35</div>
-            <br>
-            <p>
+            <p class="pt120" id="sigorta35">
                 onun təsisçiləri barədə yanlış məlumatlar təqdim edilməsi aşkar və şübhəsiz olduqda.
                 <br><strong>46.2.</strong> Sığorta nəzarəti orqanı lisenziya verilməsi üçün ilkin müraciəti rədd etdikdə bu Qanunun 45.4-cü maddəsində nəzərdə tutulmuş bildirişdə bunun səbəblərini göstərməlidir.
             </p>
@@ -1557,10 +1546,9 @@
             <p>
                 <strong>50.1.</strong> Sığortaçı kimi təsis edilmiş hüquqi şəxs dövlət qeydiyyatına alındıqdan sonra lisenziya verilməsi üçün sığorta nəzarəti orqanına aşağıdakı sənədləri təqdim etməlidir:
             </p>
+            <div class="sehife_section" ><p>Səhifə 35</p></div>
             <br>
-            <div class="sehife_section" id="sigorta36">Səhifə 36</div>
-            <br>
-            <p>
+            <p class="pt120" id="sigorta36">
                 <strong>50.1.1.</strong> adını, təşkilati-hüquqi formasını, olduğu yeri, hesablaşma hesabının nömrəsini və müvafiq bankın adını, lisenziya verilməsi üçün müraciət olunan fəaliyyət növünün adını əks etdirən yekun müraciət;
                 <br><strong>50.1.2.</strong> dövlət qeydiyyatı haqqında şəhadətnamənin notariat qaydasında təsdiq edilmiş surəti;
                 <br><strong>50.1.3.</strong> sığortaçı olmaq üçün təsis edilmiş açıq səhmdar cəmiyyətinin müvafiq vergi orqanı tərəfindən uçota alınması haqqında sənədin notariat qaydasında təsdiq edilmiş surəti;
@@ -1581,10 +1569,9 @@
                 <br><strong>51.4.</strong> Sığorta nəzarəti orqanı lisenziya verilməsi üçün yekun müraciət zamanı təqdim olunan sənədləri və məlumatları bu Qanunun tələblərinə uyğun hesab edib bu barədə müraciət edənə bildirdikdən və lisenziya verilməsi üçün dövlət rüsumunun ödənilməsini təsdiq edən bank sənədi təqdim olunduqdan sonra müvafiq lisenziya verir.
                 <br><strong>51.5.</strong> Sığorta nəzarəti orqanı lisenziyanın verilməsi və ya lisenziya verilməsindən imtina olunması barədə məlumatı bu Qanunun 51.1-ci maddəsində göstərilən müddət ərzində müraciət edənə yazılı bildiriş göndərməklə çatdırır.
             </p>
+            <div class="sehife_section" ><p>Səhifə 36</p></div>
             <br>
-            <div class="sehife_section" id="sigorta37">Səhifə 37</div>
-            <br>
-            <p>
+            <p class="pt120" id="sigorta37">
                 Lisenziya sığorta nəzarəti orqanı tərəfindən sığortaçının səlahiyyətli nümayəndəsinə şəxsən təqdim edilir.
                 <br><strong>51.6.</strong> Sığorta nəzarəti orqanı lisenziyanın bu Qanunun 54-cü maddəsində nəzərdə tutulmuş qaydada reyestrdə qeydə alındığı tarixdən etibarən 10 gün müddətində lisenziyanın verilməsi barədə müvafiq vergi orqanına bildiriş göndərir və lisenziya sahibinin vəsaiti hesabına Azərbaycan Respublikasında nəşr olunan iki dövlət qəzetində məlumat dərc etdirir.
             </p>
@@ -1613,10 +1600,9 @@
                 <br><strong>53.2.</strong> Yeni təsis edilən sığortaçıya verilən lisenziyada bu Qanunun 53.1-ci maddəsində göstərilənlərlə yanaşı lisenziyanın müddəti də göstərilməlidir.
                 <br><strong>53.3.</strong> Lisenziya sığorta nəzarəti orqanının rəhbəri və ya onun həvalə etdiyi vəzifəli şəxs tərəfindən imzalanır və möhürlə təsdiq edilir.
             </p>
+            <div class="sehife_section" ><p>Səhifə 37</p></div>
             <br>
-            <div class="sehife_section" id="sigorta38">Səhifə 38</div>
-            <br>
-            <p>
+            <p class="pt120" id="sigorta38">
                <strong>53.4.</strong> Lisenziyanın forması və doldurulması qaydaları sığorta nəzarəti orqanı tərəfindən müəyyən edilir.
             </p>
             <br>
@@ -1646,10 +1632,9 @@
                 <br><strong>55.4.</strong> Sığorta növünün aparılmasına icazə verilməsi ilə bağlı müraciət lisenziya alınması üçün yekun müraciətlə birlikdə, həmçinin lisenziyanın qüvvədə olduğu müddət ərzində sığorta nəzarəti orqanına təqdim edilə bilər.
                 <br><strong>55.5.</strong> Könüllü sığorta növü üzrə sığorta qaydalarına sığortaçının etdiyi dəyişikliklər sığorta nəzarəti orqanı ilə razılaşdırıldıqdan sonra tətbiq edilə bilər.
             </p>
+            <div class="sehife_section" ><p>Səhifə 38</p></div>
             <br>
-            <div class="sehife_section" id="sigorta39">Səhifə 39</div>
-            <br>
-            <h3 class="madde-item">Maddə 56. Sığorta növünün aparılmasına icazə verməkdən imtinanın əsasları</h3>
+            <h3 class="madde-item pt120" id="sigorta39">Maddə 56. Sığorta növünün aparılmasına icazə verməkdən imtinanın əsasları</h3>
             <br>
             <p>
                 <strong>56.1.</strong> Sığorta nəzarəti orqanı sığortaçıya sığorta növünü aparmağa icazə verməkdən aşağıdakı əsaslardan biri olduqda imtina edir:
@@ -1672,10 +1657,9 @@
                 <br><strong>57.5.</strong> Müddətsiz lisenziyanın verilməsi və ya verilməsindən imtina barədə məlumat müraciət edənə bu Qanunun 51.5-ci maddəsində nəzərdə tutulmuş qaydada çatdırılır.
                 <br><strong>57.6.</strong> Sığorta nəzarəti orqanı müddətsiz lisenziya verilməsi üçün müraciət zamanı təqdim olunan sənədləri və məlumatları bu Qanunun tələblərinə uyğun hesab etdikdə, həmçinin bu Qanunun 58.1-ci maddəsində nəzərdə tutulmuş əsaslar olmadıqda bu barədə müraciət edənə bildirdikdən və lisenziya verilməsi üçün
             </p>
+            <div class="sehife_section"><p>Səhifə 39</p></div>
             <br>
-            <div class="sehife_section" id="sigorta40">Səhifə 40</div>
-            <br>
-            <p>
+            <p class="pt120" id="sigorta40">
                 dövlət rüsumunun ödənilməsini təsdiq edən bank sənədi təqdim olunduqdan sonra müvafiq lisenziya verir.
                 <br><strong>57.7.</strong> Sığorta nəzarəti orqanı müddətsiz lisenziya verdikdə də bu Qanunun 51.6-cı maddəsində nəzərdə tutulmuş tələblərə əməl etməlidir.
                 <br><strong>57.8.</strong> Sığortaçı bu Qanunun 57.1-ci və 57.2-ci maddələrinin tələblərinə əməl etdiyi halda ilk lisenziyanın müddəti başa çatsa da onun qüvvəsi 51.5-ci maddədə nəzərdə tutulan müvafiq bildiriş sığortaçıya çatdığı tarixədək uzadılmış hesab olunur.
@@ -1702,10 +1686,9 @@
                 <br><strong>60.2.1.</strong> sığortaçının adının dəyişdirilməsi barədə onun səlahiyyətli idarəetmə orqanının qərarının surəti;
                 <br><strong>60.2.2.</strong> dəyişiklik edilmiş nizamnamənin notariat qaydasında təsdiq olunmuş surəti;
             </p>
+            <div class="sehife_section" ><p>Səhifə 40</p></div>
             <br>
-            <div class="sehife_section" id="sigorta41">Səhifə 41</div>
-            <br>
-            <p>
+            <p class="pt120" id="sigorta41">
                 <strong>60.2.3.</strong> dövlət qeydiyyatı haqqında şəhadətnamənin notariat qaydasında təsdiq edilmiş surəti.
                 <br><strong>60.3.</strong> Lisenziya itirildikdə, yararsız hala düşdükdə və ya məhv olduqda lisenziyanın yenilənməsi ilə bağlı müraciətə onun etibarsız hesab edilməsi barədə elanların dərc edildiyi qəzetlərin nüsxələri, habelə müvafiq halda yararsız hala düşmüş lisenziya əlavə olunmalıdır.
                 <br><strong>60.4.</strong> Sığorta nəzarəti orqanı lisenziyanın yenilənməsi üçün müraciətə bu Qanunun 60.2-ci və ya 60.3-cü maddələrində tələb olunan sənədlərdən sonuncusunun təqdim edildiyi tarixdən etibarən 15 gün müddətində baxmalıdır.
@@ -1738,10 +1721,9 @@
                 <br><strong>63.1.3</strong> daşınmaz əmlak;
                 <br><strong>63.1.4</strong> qeyri-dövlət qiymətli kağızları;
             </p>
+            <div class="sehife_section"><p>Səhifə 41</p></div>
             <br>
-            <div class="sehife_section" id="sigorta42">Səhifə 42</div>
-            <br>
-            <p>
+            <p class="pt120" id="sigorta42">
                 <strong>63.1.5</strong> digər hüquqi şəxslərin nizamnamə kapitalına qoyulmuş vəsaitlər;
                 <br><strong>63.1.6</strong> öz işçilərinə borc verilmiş pul vəsaitləri.
                 <br><strong>63.2.</strong> Sığortaçının aktivlərin bu Qanunun 63.1.1-63.1.6-cı maddələrində göstərilməyən qruplarına investisiyaya yönəldilmiş öz vəsaiti onun məcmu kapitalının hesablanmasında nəzərə alınmır.
@@ -1773,10 +1755,9 @@
             <h3 class="madde-item">Maddə 66. Digər hüquqi şəxsdə mühüm iştirak payının alınmasına razılıq</h3>
             <br>
             <p><strong>66.1.</strong> Bu Qanunun 66.4-cü maddəsində nəzərdə tutulmuş hal istisna olmaqla, sığortaçı özünün törəmə cəmiyyətlərindən başqa sığorta nəzarəti</p>
+            <div class="sehife_section" ><p>Səhifə 42</p></div>
             <br>
-            <div class="sehife_section" id="sigorta43">Səhifə 43</div>
-            <br>
-            <p>
+            <p class="pt120" id="sigorta43">
                 orqanının razılığı olmadan digər hüquqi şəxslərin nizamnamə kapitalında mühüm iştirak payına sahib ola bilməz.
                 <br><strong>66.2.</strong> Sığorta nəzarəti orqanı digər hüquqi şəxsin nizamnamə kapitalına investisiya qoymaq üçün razılığın verilməsi barədə sığortaçının müraciətinə baxarkən vacib və ya lazım hesab etdiyi məlumatları, yaxud izahatları ondan tələb edə bilər.
                 <br><strong>66.3.</strong> Sığorta nəzarəti orqanı digər hüquqi şəxsin nizamnamə kapitalına investisiya qoymaq üçün bu Qanunun 66.1-ci maddəsində nəzərdə tutulmuş razılığın verilməsi üçün müraciətə onun daxil olduğu tarixdən etibarən 15 iş günü ərzində baxaraq müvafiq qərarı barədə müraciət edənə yazılı bildiriş göndərir.
@@ -1807,10 +1788,9 @@
                 <br><strong>68.1.3.</strong> sığortaçının asılı cəmiyyəti və ya sığortaçının asılı cəmiyyətinin rəhbər işçisi, onun yaxın qohumları və ya bu asılı cəmiyyətin nizamnamə kapitalında mühüm iştirak payına sahib olan hüquqi şəxs və ya fiziki şəxs, yaxud onun yaxın qohumları;
                 <br><strong>68.1.4.</strong> sığortaçının idarəetmə orqanının üzvünün əhəmiyyətli nəzarətə malik olduğu hüquqi şəxs.
             </p>
+            <div class="sehife_section" ><p>Səhifə 43</p></div>
             <br>
-            <div class="sehife_section" id="sigorta44">Səhifə 44</div>
-            <br>
-            <p>
+            <p class="pt120" id="sigorta44">
                 <strong>68.2.</strong> Bu Qanunun 68.1-ci maddəsində göstərilmiş şəxslərdən başqa, sığorta nəzarəti orqanı öz mülahizəsi əsasında sığortaçının idarə edilməsinə və ya əməliyyatlarına hər hansı üsulla mühüm təsir göstərmək imkanı olan şəxsləri də sığortaçının əlaqəli şəxsləri kimi qəbul edə bilər.
                 <br><strong>68.3.</strong> Əqd sığortaçının törəmə cəmiyyəti tərəfindən bağlandıqda sığortaçı tərəfindən dolayısı ilə bağlanmış hesab edilir.
             </p>
@@ -1840,10 +1820,9 @@
                 <strong>70.1.</strong> Sığortaçı əlaqəli şəxsi ilə bu Qanunun 69.1-ci maddəsində nəzərdə tutulmuş əqdləri yalnız aşağıdakı şərtlərlə bağlaya bilər:
                 <br><strong>70.1.1.</strong> sığortaçının Direktorlar Şurası təklif olunan əqdi sığortaçının maraqlarına və bu Qanunun 69-cu və 71-ci maddələrinin tələblərinə uyğun hesab etdikdə;
             </p>
+            <div class="sehife_section" ><p>Səhifə 44</p></div>
             <br>
-            <div class="sehife_section" id="sigorta45">Səhifə 45</div>
-            <br>
-            <p>
+            <p class="pt120" id="sigorta45">
                 <strong>70.1.2.</strong> əlaqəli şəxslərlə bağlanan əqdlərin məcmu dəyəri sığortaçının öz vəsaitinin 10 faizindən çox olmadıqda.
             </p>
             <br>
@@ -1871,10 +1850,9 @@
                 <br><strong>72.2.</strong> Sığortaçının sığorta və ya təkrarsığorta müqavilələrinin digər sığortaçıya ötürmək barədə qərar qəbul etməsi üçün sığortalıların və ya təkrarsığortalıların razılığı tələb olunmur.
                 <br><strong>72.3.</strong> Sığorta və ya təkrarsığorta müqavilələrinin portfelinin digər sığortaçıya ötürülməsi barədə qərar qəbul etmiş sığortaçı müvafiq razılığın alınması üçün sığorta nəzarəti orqanına müraciət etməlidir. Sığorta nəzarəti orqanı göstərilən müraciət barədə elanı Azərbaycan Respublikasında nəşr olunan iki
             </p>
+            <div class="sehife_section" ><p>Səhifə 45</p></div>
             <br>
-            <div class="sehife_section" id="sigorta46">Səhifə 46</div>
-            <br>
-            <p>
+            <p class="pt120" id="sigorta46">
                 dövlət qəzetində aralarında 30 gün müddət olmaq və elanın dəyəri müqavilələri ötürən sığortaçı tərəfindən ödənilmək şərti ilə iki dəfə dərc etdirir.
                 <br><strong>72.4.</strong> Bu Qanunun 72.3-cü maddəsində nəzərdə tutulmuş birinci elanda sığorta və ya təkrarsığorta müqavilələrini digər sığortaçıya ötürən sığortaçının sığortalılarının və ya təkrarsığortalılarının, habelə digər maraqlı şəxslərin 30 gün müddətində özlərinə aid olan müqavilələrin ötürülməsinə etiraz etmək imkanları, həmçinin bu cür etirazın sığorta nəzarəti orqanına bildirilməsi qaydası göstərilməlidir.
                 <br><strong>72.5.</strong> Bu Qanunun 72.4-cü maddəsində göstərilən müddətdə sığortalı və ya təkrarsığortalı özünə aid olan müqavilənin başqa sığortaçıya ötürülməsinə dair etirazını bildirdikdə sığorta nəzarəti orqanı həmin müqavilənin sığortalının və ya təkrarsığortalının özünün müəyyənləşdirdiyi sığortaçıya ötürülməsi barədə müqavilələri ötürən sığortaçıya yazılı göstəriş verir.
@@ -1888,10 +1866,9 @@
             </p>
             <br>
             <h3 class="madde-item">Maddə 73. Sığortaçıların birləşmə yolu ilə yenidən təşkili</h3>
+            <div class="sehife_section" ><p>Səhifə 46</p></div>
             <br>
-            <div class="sehife_section" id="sigorta47">Səhifə 47</div>
-            <br>
-            <p>
+            <p class="pt120" id="sigorta47">
                 <strong>73.1.</strong> Sığortaçı yalnız sığortaçı olan digər hüquqi şəxslə (şəxslərlə) birləşə bilər. Belə birləşmənin həyata keçirilməsi üçün sığorta nəzarəti orqanının razılığı tələb olunur.
                 <br><strong>73.2.</strong> Sığortaçıların birləşməsi nəticəsində təsis edilən yeni hüquqi şəxs açıq səhmdar cəmiyyəti formasında olmalıdır.
                 <br><strong>73.3.</strong> Birləşmə barədə qərar qəbul etmiş sığortaçılar müvafiq razılığın alınması üçün sığorta nəzarəti orqanına müraciət etməlidirlər. Sığorta nəzarəti orqanı göstərilən müraciət barədə elanı Azərbaycan Respublikasında nəşr olunan iki dövlət qəzetinin hər birində aralarında 30 gün müddət olmaq və dəyəri birləşən sığortaçılar tərəfindən ödənilmək şərti ilə, iki dəfə dərc etdirir.
@@ -1916,10 +1893,9 @@
                 <br><strong>74.3.</strong> Sərbəst auditor və ya auditor təşkilatı aşağıdakı hallarda auditin aparılması nəzərdə tutulan sığortaçıya münasibətdə müstəqil hesab edilmir:
                 <br><strong>74.3.1.</strong> həmin sığortaçı ilə münasibətlərində sığortalı və ya sığorta olunan qismində çıxış etdiyi hallardan başqa, onunla hər hansı maliyyə əlaqəsində olduqda;
             </p>
+            <div class="sehife_section" ><p>Səhifə 47</p></div>
             <br>
-            <div class="sehife_section" id="sigorta48">Səhifə 48</div>
-            <br>
-            <p>
+            <p class="pt120" id="sigorta48">
                 <strong>74.3.2.</strong> sığortaçının, onun törəmə cəmiyyətinin və ya asılı cəmiyyətinin idarəetmə orqanlarının üzvü, işçisi və ya sığorta agenti olduqda;
                 <br><strong>74.3.3.</strong> sığortaçının, onun törəmə cəmiyyətinin və ya asılı cəmiyyətinin idarəetmə orqanlarının üzvü, işçisi və ya sığorta agenti ilə hər hansı maliyyə əlaqəsində olduqda;
                 <br><strong>74.3.4.</strong> sığortaçının, onun törəmə cəmiyyətinin və ya asılı cəmiyyətinin nizamnamə kapitalında birbaşa və ya dolayısı ilə mühüm iştirak payına malik olduqda;
@@ -1948,10 +1924,9 @@
                 <strong>77.1.</strong> Müstəqil auditor sığortaçının auditini qanunvericiliklə nəzərdə tutulmuş qaydada aparmalıdır.
                 <br><strong>77.2.</strong> Sığortaçının Direktorlar Şurasının və İdarə Heyətinin üzvləri, işçiləri və ya nümayəndələri müstəqil auditorun bütün mümkün sənədləri, aktivləri və ya qiymətli kağızları sərbəst yoxlaması üçün şərait yaratmalı, sığortaçının fəaliyyəti ilə əlaqədar lazım olan bütün mümkün məlumatlarla onu təmin etməlidirlər.
             </p>
+            <div class="sehife_section"><p>Səhifə 48</p></div>
             <br>
-            <div class="sehife_section" id="sigorta49">Səhifə 49</div>
-            <br>
-            <p>
+            <p class="pt120" id="sigorta49">
                 <strong>77.3.</strong> Müstəqil auditor apardığı yoxlama nəticəsində qanunvericiliyə zidd olan və ya sığortaçının maliyyə sabitliyinə mənfi təsir göstərə bilən əqdlər, yaxud hallar barədə sığortaçıya və sığorta nəzarəti orqanına yazılı məlumat təqdim etməlidir.
                 <br><strong>77.4.</strong> Sığortaçının müstəqil auditoru maliyyə hesabatlarında məlumatların yanlış göstərilməsi və düzgün əks etdirilməməsi hallarının aşkar olunmamasına görə məsuliyyət daşıyır.
                 <br><strong>77.5.</strong> Sığorta nəzarəti orqanı sığortaçının müstəqil auditinin aparılmasına dair beynəlxalq sığorta nəzarəti təcrübəsinə uyğun olaraq minimum tələblər müəyyənləşdirə bilər.
@@ -1970,10 +1945,9 @@
                 <br><strong>78.6.</strong> Sığortaçı nizamnaməsində edilən dəyişikliklərin hüquqi şəxslərin dövlət reyestrində qeydiyyata alınması barədə müvafiq sənədləri onları aldıqdan 5 iş günü müddətində sığorta nəzarəti orqanına təqdim etməli, habelə filial və ya nümayəndəliyinin açılması, onların fəaliyyətinin dayandırılması və ya ləğv edilməsi haqqında qərar qəbul etdiyi tarixdən 7 iş günü müddətində bu barədə həmin orqana yazılı məlumat verməlidir.
                 <br><strong>78.7.</strong> Sığortaçı sığorta sirri hesab edilən məlumatlar da daxil olmaqla öz əmlakı, o cümlədən Azərbaycan Respublikasının ərazisindən kənarda yerləşən
             </p>
+            <div class="sehife_section" ><p>Səhifə 49</p></div>
             <br>
-            <div class="sehife_section" id="sigorta50">Səhifə 50</div>
-            <br>
-            <p>
+            <p class="pt120" id="sigorta50">
                 əmlakı, sığorta etdiyi risklər üzrə sığorta məbləği, verdiyi zəmanətlər, sığorta və təkrarsığorta üzrə bağladığı əqdlər, digər hüquqi şəxslərin nizamnamə kapitalında iştirak payları barədə məlumatları sığorta nəzarəti orqanının yazılı sorğusuna əsasən həmin sorğuda müəyyən edilmiş müddətdə ona təqdim etməlidir.
                 <br><strong>78.8.</strong> Sığortaçı illik maliyyə hesabatlarını maliyyə ili başa çatdıqdan 3 ay müddətində müvafiq auditor rəyi ilə birlikdə Azərbaycan Respublikasında nəşr olunan 2 qəzetdə dərc etdirməli və özünün rəsmi internet səhifəsində yerləşdirməlidir.
             </p>
@@ -2001,10 +1975,9 @@
             <p>
                 <strong>80.1.</strong> Sığortaçı olmaq üçün təsis edilən hüquqi şəxs dövlət qeydiyyatına alınanadək onun nizamnamə kapitalı tələb olunan kapitalın sığorta nəzarəti orqanı tərəfindən müəyyən olunmuş minimum məbləğindən az olmayan hissəsində pul ilə ödənilməlidir.
             </p>
+            <div class="sehife_section" ><p>Səhifə 50</p></div>
             <br>
-            <div class="sehife_section" id="sigorta51">Səhifə 51</div>
-            <br>
-            <p>
+            <p class="pt120" id="sigorta51">
                 <strong>80.2.</strong> Sığortaçının nizamnamə kapitalının formalaşdırılması üçün kredit və ya borc şəklində cəlb olunmuş pul vəsaitindən, girov götürülmüş və ya qanunsuz yolla əldə edilmiş əmlakdan, habelə qanunvericilikdə nəzərdə tutulmuş hallar istisna olmaqla, dövlət və bələdiyyə büdcələrinin, büdcədənkənar fondların pul vəsaitlərindən və dövlət hakimiyyəti orqanlarının sərəncamında olan digər vəsaitdən istifadə edilə bilməz.
             </p>
             <br>
@@ -2031,10 +2004,9 @@
                 <br>
                 Sığorta vasitəçiləri
             </h2>
+            <div class="sehife_section" ><p>Səhifə 51</p></div>
             <br>
-            <div class="sehife_section" id="sigorta52">Səhifə 52</div>
-            <br>
-            <h3 class="madde-item">Maddə 82. Sığorta vasitəçilərinin fəaliyyətinin əsasları</h3>
+            <h3 class="madde-item pt120" id="sigorta52">Maddə 82. Sığorta vasitəçilərinin fəaliyyətinin əsasları</h3>
             <br>
             <p>
                 <strong>82.1.</strong> Bu Qanunun məqsədləri üçün sığorta agentləri və sığorta brokerləri sığorta vasitəçiləri hesab edilir.
@@ -2057,10 +2029,9 @@
                 <br><strong>83.2.3.</strong> sığorta vasitəçiliyi fəaliyyəti üzrə lisenziyasının əvvəllər ləğv edilməməsi;
                 <br><strong>83.2.4.</strong> iqtisadi fəaliyyət və mülkiyyət əleyhinə ağır və ya xüsusilə ağır cinayətə görə heç zaman məhkum edilməməsi;
             </p>
+            <div class="sehife_section" ><p>Səhifə 52</p></div>
             <br>
-            <div class="sehife_section" id="sigorta53">Səhifə 53</div>
-            <br>
-            <p>
+            <p class="pt120" id="sigorta53">
                 <strong>83.2.5.</strong> sığorta əməliyyatlarına nəzarət etmək, istiqamətləndirmək və ya cəlb etmək üçün məcbur etmə, təzyiq və ya təsir göstərmə imkanı verən mövqeyə malik olmaması.
                 <br><strong>83.3.</strong> Hüquqi şəxs sığorta agenti fəaliyyətinə lisenziya almaq üçün onun əmək müqaviləsi əsasında işçisi olan ən azı bir şəxs fiziki şəxs kimi sığorta agenti lisenziyasına malik olmalıdır.
                 <br><strong>83.4.</strong> Hüquqi şəxs olan sığorta brokeri, habelə müstəsna olaraq sığorta agenti olmaq üçün təsis edilmiş hüquqi şəxs müvafiq sığorta vasitəçiliyi fəaliyyətinə lisenziya almaq üçün onun icra orqanının rəhbəri fiziki şəxs kimi həmin lisenziyaya malik olmalıdır.
@@ -2084,10 +2055,9 @@
                 <br><strong>84.1.2.3.</strong> rəhbər vəzifəyə təyin edilən şəxsin bu Qanunun 91-ci maddəsinin tələblərinə uyğunluğunu təsdiq edən sənədlər;
                 <br><strong>84.1.2.4.</strong> bu Qanunun 83.3-cü maddəsində nəzərdə tutulmuş işçinin müvafiq lisenziyaya malik olmasını təsdiq edən sənəd.
             </p>
+            <div class="sehife_section" ><p>Səhifə 53</p></div>
             <br>
-            <div class="sehife_section" id="sigorta54">Səhifə 54</div>
-            <br>
-            <p>
+            <p class="pt120" id="sigorta54">
                 <strong>84.2.</strong> Şəxsin bu Qanunun 83.2.4-cü maddəsində nəzərdə tutulan tələbə uyğunluğuna dair sənədi sığorta nəzarəti orqanının sorğusu əsasında daxili işlər orqanı təqdim edir.
                 <br><strong>84.3.</strong> Müvafiq sığorta vasitəçiliyi fəaliyyəti ilə məşğul olmaq üçün təsis edilmiş hüquqi şəxsin icra orqanının rəhbəri kimi namizədliyi verilmiş fiziki şəxslərə, həmçinin bu Qanunun 83.3-cü maddəsində nəzərdə tutulmuş işçiyə müvafiq lisenziyanın verilməsi ilə bağlı hüquqi şəxsin müraciətinə baxılarkən bu Qanunun 84.1.1.2-ci maddəsində göstərilmiş sənədin təqdim edilməsi tələb olunmur.
             </p>
@@ -2108,10 +2078,9 @@
             </p>
             <br>
             <h3 class="madde-item">Maddə 87. Sığorta vasitəçilərinin lisenziyalarının forması, yenilənməsi və reyestri</h3>
+            <div class="sehife_section" ><p>Səhifə 54</p></div>
             <br>
-            <div class="sehife_section" id="sigorta55">Səhifə 55</div>
-            <br>    
-            <p>
+            <p class="pt120" id="sigorta55">
                 <strong>87.1.</strong> Bu Qanunun 87.2-ci maddəsi nəzərə alınmaqla, sığortaçıların lisenziyasının forması ilə bağlı 53-cü maddəsinin, reyestri ilə bağlı 54-cü maddəsinin və yenilənməsi ilə bağlı 60-cı maddəsinin müvafiq tələbləri sığorta agentlərinin və sığorta brokerlərinin lisenziyalarının formasına, reyestrinə və yenilənməsinə də tətbiq edilir.
                 <br><strong>87.2.</strong> Sığorta vasitəçilərinə verilən lisenziyada fəaliyyət növü kimi müvafiq olaraq «sığorta agenti fəaliyyəti» və ya «sığorta brokeri fəaliyyəti» qeyd edilir.
             </p>
@@ -2138,10 +2107,9 @@
             </p>
             <br>
             <h3 class="madde-item">Maddə 90. Hüquqi şəxs olan sığorta brokerinin və müstəsna olaraq sığorta agenti fəaliyyəti ilə məşğul olan hüquqi şəxsin adı</h3>
+            <div class="sehife_section" ><p>Səhifə 55</p></div>
             <br>
-            <div class="sehife_section" id="sigorta56">Səhifə 56</div>
-            <br> 
-            <p>
+            <p class="pt120" id="sigorta56">
                 <strong>90.1.</strong> Hüquqi şəxs olan sığorta brokerinin və müstəsna olaraq sığorta agenti fəaliyyəti ilə məşğul olan hüquqi şəxsin adı Azərbaycan dilində müəyyən edilməlidir.
                 <br><strong>90.2.</strong> Hüquqi şəxs olan sığorta brokerinin və müstəsna olaraq sığorta agenti fəaliyyəti ilə məşğul olan hüquqi şəxsin adında məna ifadə etməyən sözlərdən, o cümlədən hərf birləşmələrindən ibarət olan adlardan istifadə edilməsi qadağandır.
                 <br><strong>90.3.</strong> Hüquqi şəxs olan sığorta brokeri və müstəsna olaraq sığorta agenti fəaliyyəti ilə məşğul olan hüquqi şəxs adının əks olunduğu lövhələrdə, blanklarda, möhürlərdə və kargüzarlıqla bağlı rəsmi xarakterli bütün digər ləvazimatlarda, reklam və elanlarda nizamnaməsində müəyyən olunan tam və ya qısaldılmış addan istifadə etməlidir.
@@ -2160,10 +2128,9 @@
                 <br><strong>91.3.1.</strong> icra orqanının rəhbəri və onun müavinləri - maliyyə sahəsində ştat işçisi kimi ən azı 2 il;
                 <br><strong>91.3.2.</strong> baş mühasibi – mühasib kimi ən azı 2 il.
             </p>
+            <div class="sehife_section" ><p>Səhifə 56</p></div>
             <br>
-            <div class="sehife_section" id="sigorta57">Səhifə 57</div>
-            <br> 
-            <p>
+            <p class="pt120" id="sigorta57">
                 <strong>91.4.</strong> Müvafiq sığorta vasitəçisi lisenziyasına malik olmayan fiziki şəxs hüquqi şəxs olan sığorta brokerinin və müstəsna olaraq sığorta agenti fəaliyyəti ilə məşğul olan hüquqi şəxsin icra orqanının rəhbəri ola bilməz.
             </p>
             <br>
@@ -2184,10 +2151,9 @@
                 <br><strong>93.2.</strong> Qanunvericilikdə nəzərdə tutulmuş hallardan başqa hüquqi şəxs olan sığorta brokerlərinin maliyyə hesabatlarının müstəqil auditor tərəfindən yoxlanılması tələb olunmur.
                 <br><strong>93.3.</strong> Sığorta vasitəçilərinin hesabatları və ya məlumatları ilə bağlı əlavə tələblər sığorta nəzarəti orqanının qəbul etdiyi müvafiq təlimat və ya qaydalarda nəzərdə tutula bilər.
             </p>
+            <div class="sehife_section" ><p>Səhifə 57</p></div>
             <br>
-            <div class="sehife_section" id="sigorta58">Səhifə 58</div>
-            <br> 
-            <h3 class="madde-item">Maddə 94. Sığorta vasitəçilərinin digər fəaliyyət növləri ilə məşğul olması</h3>
+            <h3 class="madde-item pt120" id="sigorta58">Maddə 94. Sığorta vasitəçilərinin digər fəaliyyət növləri ilə məşğul olması</h3>
             <br>
             <p>
                 <strong>94.1.</strong> Sığorta brokeri fəaliyyəti sığorta brokerinin, sığorta agenti fəaliyyəti isə müstəsna olaraq sığorta agenti fəaliyyəti ilə məşğul olan hüquqi şəxsin əsas fəaliyyət növüdür.
@@ -2204,7 +2170,7 @@
                 <br>
                 Sığorta sektorunda dövlət tənzimləməsi və nəzarəti
             </h2>
-            <br> 
+            <br>
             <h3 class="madde-item">Maddə 95. Sığorta sektorunda dövlət tənzimləməsi və nəzarətinin vəzifələri</h3>
             <br>
             <p>
@@ -2215,14 +2181,13 @@
                 <br><strong>95.1.4.</strong> sığortaçıların, sığortalıların, sığorta olunanların, faydalanan şəxslərin və sığorta bazarının digər iştirakçılarının hüquqlarının və qanuni mənafelərinin, habelə dövlətin maraqlarının qorunması üçün tədbirlər həyata keçirmək;
                 <br><strong>95.1.5.</strong>95.1.5. “Cinayət yolu ilə əldə edilmiş pul vəsaitlərinin və ya digər əmlakın leqallaşdırılmasına və terrorçuluğun maliyyələşdirilməsinə qarşı mübarizə haqqında” Azərbaycan Respublikası Qanununun tələblərinə əməl edilməsini təmin etmək.7
             </p>
+            <div class="sehife_section" ><p>Səhifə 58</p></div>
             <br>
-            <div class="sehife_section" id="sigorta59">Səhifə 59</div>
-            <br> 
-            <p>
+            <p class="pt120" id="sigorta59">
                 <strong>95.2.</strong> Sığorta nəzarəti orqanı, onun vəzifəli şəxsi, əməkdaşı, təyin edilmiş müvəqqəti inzibatçı sığorta sektorunda tənzimləmə və nəzarətlə bağlı səlahiyyətlərini, habelə ləğvetmə ilə bağlı funksiyalarını həyata keçirərkən qanunazidd olması və qəsdən zərər vurmağa yönəldilməsi qanunvericiliyə uyğun qaydada sübuta yetirilməyən hərəkəti (hərəkətsizliyi) nəticəsində yaranan zərərlərə görə məsuliyyət daşımırlar.
                 <br><strong>95.3.</strong> Sığorta nəzarəti orqanı sığortaçıların, sığorta vasitəçilərinin, o cümlədən xarici təkrarsığortaçıların və xarici sığorta brokerlərinin, habelə sığorta sahəsində yardımçı fəaliyyət göstərən hüquqi şəxslərin və müvafiq müstəqil ekspertlərin reyestrini aparır. Bu reyestrlərin aparılması qaydalarını sığorta nəzarəti orqanı müəyyən edir.
             </p>
-            <br> 
+            <br>
             <h3 class="madde-item">Maddə 96. Sığorta nəzarətinin həyata keçirilməsinin maliyyələşdirilməsi</h3>
             <br>
             <p>
@@ -2236,16 +2201,15 @@
                 <br><strong>96.2.4.</strong> sığorta sahəsində ixtisas artırma, təbliğat və təşviqat işlərinin həyata keçirilməsi.
                 <br><strong>96.3.</strong> Sığortaçılar bu Qanunun 96.1.2-ci maddəsində nəzərdə tutulmuş məcburi ayırmaları maliyyə ilinin hər rübü üzrə həmin rüb başa çatdıqdan sonra 20 gün ərzində sığorta nəzarəti orqanının müvafiq hesabına köçürməlidirlər.
             </p>
-            <br> 
+            <br>
             <h3 class="madde-item">Maddə 97. Səyyar yoxlamalar</h3>
             <br>
             <p>
                 <strong>97.1.</strong> Sığorta nəzarəti orqanı sığortaçılar və sığorta vasitəçiləri tərəfindən sığorta qanunvericiliyinə əməl edilməsini, həmçinin sığortaçının maliyyə
             </p>
+            <div class="sehife_section" ><p>Səhifə 59</p></div>
             <br>
-            <div class="sehife_section" id="sigorta60">Səhifə 60</div>
-            <br> 
-            <p>
+            <p class="pt120" id="sigorta60">
                 sabitliyini yerində araşdırma aparmaqla yoxlamaq məqsədi ilə növbəti və ya növbədənkənar səyyar yoxlama keçirir.
                 <br><strong>97.2.</strong> Sığortaçıda və sığorta vasitəçisində növbəti səyyar yoxlamalar iki ildə bir dəfədən az olmayaraq, sığorta nəzarəti orqanının müəyyən etdiyi qrafik üzrə aparılır. Növbəti səyyar yoxlama sığortaçının və ya sığorta vasitəçisinin sığorta qanunvericiliyi ilə bağlı olan bütün fəaliyyətini əhatə edir.
                 <br><strong>97.3.</strong> Növbədənkənar səyyar yoxlama aşağıdakı hallarda aparıla bilər:
@@ -2257,7 +2221,7 @@
                 <br><strong>97.3.6.</strong> bu Qanuna əsasən verilmiş hər hansı təqdimata və ya sanksiyaya səbəb olmuş hallar, həmin təqdimat və ya sanksiyanın verildiyi tarixdən 2 il ərzində yenidən aşkar edildikdə;
                 <br><strong>97.3.7.</strong> sığorta qanunvericiliyinin yerinə yetirilməsi və ya hər hansı təcrübənin tətbiqi vəziyyətinin araşdırılması məqsədilə sığorta bazarı üzrə ümumi monitorinq keçirildikdə.
             </p>
-            <br> 
+            <br>
             <h3 class="madde-item">Maddə 98. Səyyar yoxlamanın təyin edilməsi haqqında qərar</h3>
             <br>
             <p>
@@ -2270,10 +2234,9 @@
                 <br><strong>98.2.5.</strong> səyyar yoxlamanın başlanma tarixi, müddəti və başa çatdırılma tarixi;
                 <br><strong>98.2.6.</strong> səyyar yoxlama aparılması tapşırılan yoxlayıcının (yoxlayıcıların) adı, soyadı, atasının adı və sığorta nəzarəti orqanında tutduğu vəzifə.
             </p>
+            <div class="sehife_section" ><p>Səhifə 60</p></div>
             <br>
-            <div class="sehife_section" id="sigorta61">Səhifə 61</div>
-            <br>
-            <h3 class="madde-item">Maddə 99. Səyyar yoxlamanın müddəti</h3>
+            <h3 class="madde-item pt120" id="sigorta61">Maddə 99. Səyyar yoxlamanın müddəti</h3>
             <br>
             <p>
                 <strong>99.1.</strong> Səyyar yoxlama 45 iş günündən çox olmayan müddətə təyin edilir.
@@ -2296,10 +2259,9 @@
                 <br><strong>100.3.</strong> Fəaliyyəti yoxlanılan sığortaçı və ya sığorta vasitəçisi sığorta nəzarəti orqanına yoxlamanın aparılmasında kömək etməli, yoxlayıcıların maneəsiz bütün sənədlərlə tanış olmasına və məlumat mənbələrinə daxil olmasına, işçilərinin tələb edilən məlumat, izahat və rəy verməsinə şərait yaratmalıdır.
                 <br><strong>100.4.</strong> Səyyar yoxlamanın davam etdirilməsi yoxlayıcının sorğusuna və ya müraciətinə cavab verilənədək, müvafiq rəy təqdim olunanadək, yaxud müvafiq mütəxəssislərin xidməti başa çatdırılanadək mümkün olmadıqda, sığorta nəzarəti orqanının qərarı ilə səyyar yoxlamanın müddəti dayandırılır. Bu halda səyyar yoxlamanın başa çatma tarixi dayandırılma müddəti qədər uzadılır.
             </p>
+            <div class="sehife_section" ><p>Səhifə 61</p></div>
             <br>
-            <div class="sehife_section" id="sigorta62">Səhifə 62</div>
-            <br>
-            <h3 class="madde-item">Maddə 101. Səyyar yoxlamanın nəticələri</h3>
+            <h3 class="madde-item pt120" id="sigorta62">Maddə 101. Səyyar yoxlamanın nəticələri</h3>
             <br>
             <p>
                 <strong>101.1.</strong> Yoxlayıcı səyyar yoxlamanın nəticələrinə dair yoxlama aktı tərtib edir. Yoxlama aktı yoxlanılan subyektin icra orqanı, o fiziki şəxs olduqda isə, özü ilə müzakirə edilir, yoxlayıcı və yoxlanılan subyektin səlahiyyətli şəxsləri tərəfindən imzalanaraq rəsmiləşdirilir.
@@ -2320,10 +2282,9 @@
                 <br><strong>102.2.5.1.</strong> sığortaçının rəhbər işçisinin hərəkətlərinin bu Qanunun tələblərinə uyğun olmadığını hesab etmək üçün əsaslar olduqda;
                 <br><strong>102.2.5.2.</strong> sığortaçının rəhbər işçisi sığortaçıdakı vəzifəsinin icrası ilə bağlı 1 il ərzində ən azı iki dəfə inzibati məsuliyyətə cəlb olunduqda;
             </p>
+            <div class="sehife_section" ><p>Səhifə 62</p></div>
             <br>
-            <div class="sehife_section" id="sigorta63">Səhifə 63</div>
-            <br>
-            <p>
+            <p class="pt120" id="sigorta63">
                 <strong>102.2.6.</strong> Bu Qanunun 96.1.2-ci maddəsində müəyyən edilmiş məcburi ayırmaların sığortaçı tərəfindən həyata keçirilməsini;
                 <br><strong>102.2.7.</strong> sığorta qanunvericiliyinə və ya sığorta müqaviləsinə əsasən verilməli olan, lakin ödənilməsindən imtina edilmiş sığorta ödənişinin həyata keçirilməsini;
                 <br><strong>102.2.8.</strong> sığorta nəzarəti orqanının, yaxud onun səyyar yoxlayıcısının tələb etdiyi sənədlərin və məlumatların təqdim edilməsini;
@@ -2346,10 +2307,9 @@
                 <br><strong>103.1.4.</strong> lisenziyanı ləğv etmək.
                 <br><strong>103.2.</strong> Bu Qanunun 103.1.2-ci maddəsi təkrarsığortaçılara və sığorta vasitəçilərinə şamil edilmir.
             </p>
+            <div class="sehife_section" ><p>Səhifə 63</p></div>
             <br>
-            <div class="sehife_section" id="sigorta64">Səhifə 64</div>
-            <br>
-            <p>
+            <p class="pt120" id="sigorta64">
                 <strong>103.3.</strong> Bu Qanunun 103.1.1-103.1.3-cü maddələrində nəzərdə tutulmuş sanksiyalar bu Qanunun 102.2-ci maddəsində nəzərdə tutulmuş təqdimatların verilməsi ilə birlikdə tətbiq edilə bilər.
             </p>
             <br>
@@ -2374,10 +2334,9 @@
                 <br><strong>105.4.</strong> Sığortaçı lisenziyasının qüvvəsinin məhdudlaşdırıldığı sığorta növü üzrə əvvəllər bağlamış olduğu sığorta müqavilələrində üzərinə götürdüyü öhdəlikləri həmin müqavilələrin müddəti başa çatanadək və ya onlara sığorta qanunvericiliyində nəzərdə tutulmuş əsaslarla vaxtından əvvəl xitam verilənədək yerinə yetirməlidir.
                 <br><strong>105.5.</strong> Lisenziyanın qüvvəsinin məhdudlaşdırılması haqqında qərarda belə məhdudlaşdırılmaya əsas verən hallar göstərilməlidir.
             </p>
+            <div class="sehife_section" ><p>Səhifə 64</p></div>
             <br>
-            <div class="sehife_section" id="sigorta65">Səhifə 65</div>
-            <br>
-            <p>
+            <p class="pt120" id="sigorta65">
                 <strong>105.6.</strong> Lisenziyanın qüvvəsinin məhdudlaşdırılması, həmçinin belə məhdudlaşdırmanın götürülməsi barədə məlumat müvafiq qərar qəbul edildikdən 3 iş günü müddətində sığorta nəzarəti orqanının mətbuat xidməti tərəfindən yayılmaqla, həmin orqanın rəsmi internet səhifəsində yerləşdirilməlidir.
             </p>
             <br>
@@ -2397,10 +2356,9 @@
                 <br><strong>106.4.</strong> Lisenziyanın qüvvəsinin dayandırılması haqqında qərarda buna əsas verən hallar və lisenziyanın dayandırıldığı müddət göstərilməlidir.
                 <br><strong>106.5.</strong> Lisenziyanın qüvvəsinin dayandırılması və ya bərpa edilməsi barədə məlumat, müvafiq qərar qəbul edildikdən 3 iş günü müddətində sığorta nəzarəti
             </p>
+            <div class="sehife_section" ><p>Səhifə 65</p></div>
             <br>
-            <div class="sehife_section" id="sigorta66">Səhifə 66</div>
-            <br>
-            <p>
+            <p class="pt120" id="sigorta66">
                 orqanının mətbuat xidməti tərəfindən yayılmaqla, həmin orqanın rəsmi internet səhifəsində yerləşdirilməlidir.
             </p>
             <br>
@@ -2428,10 +2386,9 @@
                 <br><strong>108.4.3.</strong> sığortaçıya ödənilmiş pul vəsaitlərinin hesaba daxil edilməsi;
                 <br><strong>108.4.4.</strong> sığortaçıya daxil olmuş sığorta haqlarından müvafiq təkrarsığorta müqaviləsi üzrə təkrarsığorta haqlarının ödənilməsi;
             </p>
+            <div class="sehife_section" ><p>Səhifə 66</p></div>
             <br>
-            <div class="sehife_section" id="sigorta67">Səhifə 67</div>
-            <br>
-            <p>
+            <p class="pt120" id="sigorta67">
                 <strong>108.4.5.</strong> lisenziyanın ləğv edilməsindən əvvəl bağlanmış sığorta müqavilələri üzrə sığorta hadisəsinin baş verməsi ilə əlaqədar sığorta ödənişinin verilməsi;
                 <br><strong>108.4.6.</strong> sığorta brokerinin sığorta haqqı hesabındakı və ya sığorta ödənişi hesabındakı pul vəsaitlərinin təyinatı üzrə müvafiq qaydada ödənilməsi.
                 <br><strong>108.5.</strong> Qanunvericiliklə müəyyən olunmuş vəzifələrinin yerinə yetirilməsi, o cümlədən sığorta ödənişlərinin vaxtında verilməsi məqsədilə iş günlərində ləğv edilən sığortaçının ofis binasında müvafiq mütəxəssislərin olması təmin edilməlidir.
@@ -2448,10 +2405,9 @@
                 <br><strong>109.2.1.</strong> müvəqqəti inzibatçı bu Qanunla İdarə Heyətinin sədri üçün müəyyənləşdirilmiş tələblərə cavab verməlidir;
                 <br><strong>109.2.2.</strong> lisenziyası ləğv edilən sığortaçının kreditoru, səhmdarı, işçisi və onların yaxın qohumları müvəqqəti inzibatçı təyin edilə bilməzlər.
             </p>
+            <div class="sehife_section" ><p>Səhifə 67</p></div>
             <br>
-            <div class="sehife_section" id="sigorta68">Səhifə 68</div>
-            <br>
-            <p>
+            <p class="pt120" id="sigorta68">
                 <strong>109.3.</strong> Müvəqqəti inzibatçı sığortaçının mövcud maliyyə vəziyyəti barədə hesabatı sığorta nəzarəti orqanına və bu orqanın sığortaçının ləğvi haqqında iddia qaldırdığı məhkəməyə təqdim edir.
             </p>
             <br>
@@ -2474,10 +2430,9 @@
                <br><strong>111.2.</strong> Sığorta nəzarəti orqanı sığorta növü (növləri) üzrə fəaliyyətin bərpa edilməsi haqqında qərarı barədə 3 iş günü müddətində sığortaçıya, lisenziyanın qüvvəsinin bərpa edilməsi haqqında qərar barədə isə, 5 iş günü müddətində lisenziya sahibinə məlumat göndərir.
                <br><strong>111.3.</strong> Sığorta nəzarəti orqanının lisenziyanın qüvvəsinin, yaxud sığorta növü (növləri) üzrə fəaliyyətin bərpa edilməsi haqqında qərarı müvafiq məlumat
             </p>
+            <div class="sehife_section" ><p>Səhifə 68</p></div>
             <br>
-            <div class="sehife_section" id="sigorta69">Səhifə 69</div>
-            <br>
-            <p>lisenziya sahibinə çatdırılması təsdiq olunan qaydada təqdim edildiyi andan qüvvəyə minir.</p>
+            <p class="pt120" id="sigorta69">lisenziya sahibinə çatdırılması təsdiq olunan qaydada təqdim edildiyi andan qüvvəyə minir.</p>
             <br>
             <h2>XIII Fəsil
                 <br>
@@ -2503,10 +2458,9 @@
                 <br><strong>113.5.</strong> Ləğv edilən sığortaçının əmlakının satılması ləğvetmə komissiyası tərəfindən müvafiq qanunvericiliyə uyğun olaraq həyata keçirilir.
                 <br><strong>113.6.</strong> Sığorta nəzarəti orqanı könüllü qaydada ləğv edilən sığortaçının ləğvetmə komissiyasının fəaliyyətinə nəzarət edir.
             </p>
+            <div class="sehife_section" ><p>Səhifə 69</p></div>
             <br>
-            <div class="sehife_section" id="sigorta70">Səhifə 70</div>
-            <br>
-            <h3 class="madde-item">Maddə 114. Sığortaçının könüllü qaydada ləğvinin məcburi qaydada ləğvetməyə çevrilməsi</h3>
+            <h3 class="madde-item pt120" id="sigorta70">Maddə 114. Sığortaçının könüllü qaydada ləğvinin məcburi qaydada ləğvetməyə çevrilməsi</h3>
             <br>
             <p>
                 <strong>114.1.</strong> Sığortaçının könüllü qaydada ləğv edilməsi prosesində bu Qanunun tələblərinə əməl edilmədikdə, habelə sığortalıların və başqa kreditorların qanuni mənafelərinin pozulması faktı aşkar olunduqda sığorta nəzarəti orqanı ləğvetmə komissiyasına bu Qanunla nəzərdə tutulmuş qaydada təqdimat verə bilər.
@@ -2529,10 +2483,9 @@
                 <br><strong>116.2.</strong> Məcburi qaydada ləğv edilən sığortaçının ləğvetmə komissiyası yaradıldığı tarixdən etibarən müvəqqəti inzibatçının səlahiyyətləri həmin komissiyaya keçir.
                 <br><strong>116.3.</strong> Könüllü qaydada ləğv edilən sığortaçının ləğvetmə komissiyası və onun üzvləri ilə bağlı bu Qanunun 113-cü maddəsində müəyyən edilmiş tələblər bu Qanunun 116.4-cü maddəsi nəzərə alınmaqla, məcburi qaydada ləğv edilən sığortaçının ləğvetmə komissiyasına da şamil edilir.
             </p>
+            <div class="sehife_section" ><p>Səhifə 70</p></div>
             <br>
-            <div class="sehife_section" id="sigorta71">Səhifə 71</div>
-            <br>
-            <p>
+            <p class="pt120" id="sigorta71">
                <strong>116.4.</strong> Məcburi qaydada ləğv edilən sığortaçının ləğvetmə komissiyasının tərtib etdiyi ləğvetmə haqqında hesabat və ləğvetmə balansı məhkəmə tərəfindən təsdiq edildikdən sonra sığorta nəzarəti orqanına təqdim edilməlidir.
             </p>
             <br>
@@ -2561,10 +2514,9 @@
                 <strong>119.1.</strong> Sığortaçı ləğv edildikdə onun kreditorlarının qanunvericiliklə müəyyən edilmiş qaydada sığortaçı tərəfindən qəbul edilən tələbləri aşağıdakı qaydada ödənilir:
                 <br><strong>119.1.1.</strong> birinci növbədə, icbari sığorta müqavilələri ilə bağlı sığorta hadisəsi üzrə tələblər;
             </p>
+            <div class="sehife_section" ><p>Səhifə 71</p></div>
             <br>
-            <div class="sehife_section" id="sigorta72">Səhifə 72</div>
-            <br>
-            <p>
+            <p class="pt120" id="sigorta72">
                 <strong>119.1.2.</strong> ikinci növbədə, şəxsi sığorta üzrə könüllü sığorta müqavilələri ilə bağlı sığorta hadisəsi üzrə tələblər;
                 <br><strong>119.1.3.</strong> üçüncü növbədə, əmlak sığortası üzrə könüllü sığorta müqavilələri ilə bağlı sığorta hadisəsi üzrə tələblər;
                 <br><strong>119.1.4.</strong> dördüncü növbədə, müddəti başa çatmamış sığorta müqavilələri üzrə sığorta haqqının müvafiq hissəsinin bu Qanuna uyğun olaraq qaytarılması ilə bağlı tələblər;
@@ -2589,10 +2541,9 @@
                 <strong>120.1.</strong> Sığorta nəzarəti orqanının bu Qanunun tətbiqi ilə bağlı hər hansı qərarından və fəaliyyətindən məhkəməyə şikayət edilə bilər.
                 <br><strong>120.2.</strong> Bu Qanunun 120.1-ci maddəsində nəzərdə tutulmuş şikayətin verilməsi sığorta nəzarəti orqanının bu Qanunun tətbiqi ilə bağlı fəaliyyətini məhdudlaşdırmır.
             </p>
+            <div class="sehife_section" ><p>Səhifə 72</p></div>
             <br>
-            <div class="sehife_section" id="sigorta73">Səhifə 73</div>
-            <br>
-            <h3 class="madde-item">Maddə 121. Vətəndaş qüsursuzluğunun müəyyən edilməsi</h3>
+            <h3 class="madde-item pt120" id="sigorta73">Maddə 121. Vətəndaş qüsursuzluğunun müəyyən edilməsi</h3>
             <br>
             <p>Bu Qanunun məqsədləri üçün müvafiq fiziki şəxsin vətəndaş qüsursuzluğu onun sığorta nəzarəti orqanına bu barədə ərizə təqdim etməsindən sonra həmin orqanın sorğusu ilə səlahiyyətli dövlət orqanının verdiyi müvafiq arayış əsasında müəyyən edilir.</p>
             <br>
@@ -2616,10 +2567,9 @@
                 <strong>124.1.</strong> Hüquqi və fiziki şəxslər sığorta qanunvericiliyinin pozulmasına görə qanunvericiliklə müəyyən edilmiş məsuliyyət daşıyırlar.
                 <br><strong>124.2.</strong> Sığortaçılar, təkrarsığortacılar və sığorta vasitəçiləri “Cinayət yolu ilə əldə edilmiş pul vəsaitlərinin və ya digər əmlakın leqallaşdırılmasına və terrorçuluğun maliyyələşdirilməsinə qarşı mübarizə haqqında” Azərbaycan
             </p>
+            <div class="sehife_section"><p>Səhifə 73</p></div>
             <br>
-            <div class="sehife_section" id="sigorta74">Səhifə 74</div>
-            <br>
-            <p>
+            <p class="pt120" id="sigorta74">
                 Respublikası Qanununun tələblərinə əməl edilməməsinə görə qanunvericiliklə müəyyən edilmiş qaydada məsuliyyət daşıyırlar.
             </p>
             <br>
@@ -2646,10 +2596,9 @@
                 <br><strong>127.2.</strong> Bu Qanunun qüvvəyə mindiyi tarixdən əvvəl sığorta və ya sığorta vasitəçiliyi fəaliyyəti üzrə lisenziyası ləğv olunmuş, yaxud lisenziya verilməsindən imtina edilmiş, adında müvafiq olaraq “sığorta”, “təkrarsığorta” və “sığorta brokeri” sözü olan hüquqi şəxslər bu Qanun qüvvəyə mindiyi tarixdən 3 ay müddətində bu Qanunun 4.1-ci maddəsinin tələbini təmin etməli və ya könüllü qaydada ləğv edilməlidirlər.
                 <br><strong>127.3.</strong> Hüquqi şəxslər Bu Qanunun 127.2-ci maddəsində nəzərdə tutulmuş müddətə riayət etmədikdə sığorta nəzarəti orqanı onların məcburi qaydada ləğv olunmaları barədə məhkəmədə iddia qaldırmalıdır.
             </p>
+            <div class="sehife_section" ><p>Səhifə 74</p></div>
             <br>
-            <div class="sehife_section" id="sigorta75">Səhifə 75</div>
-            <br>
-            <h3 class="madde-item">Maddə 128. Həyat və qeyri-həyat sığortası üzrə fəaliyyətin ayrılmasına dair tələblər</h3>
+            <h3 class="madde-item pt120" id="sigorta75">Maddə 128. Həyat və qeyri-həyat sığortası üzrə fəaliyyətin ayrılmasına dair tələblər</h3>
             <br>
             <p>
                 <strong>128.1.</strong> Bu Qanunun 14.1-ci maddəsinin tələbi bu Qanunun qüvvəyə mindiyi tarixədək sığorta fəaliyyətinə lisenziya almış, habelə həm həyat, həm də qeyri-həyat sığortası sahələri üzrə fəaliyyət göstərməyə icazəsi olan sığortaçılara bu Qanun qüvvəyə mindiyi tarixdən 3 il müddətində şamil edilmir.
@@ -2668,10 +2617,9 @@
             <h3 class="madde-item">Maddə 130. Müddətsiz lisenziyaların verilməsi</h3>
             <br>
             <p>Bu Qanunun qüvvəyə mindiyi tarixədək sığorta və ya təkrarsığorta fəaliyyətinə lisenziya almış sığortaçıların bu Qanun qüvvəyə mindiyi tarixdən sonra müvafiq müddətin bitməsi ilə əlaqədar sığorta nəzarəti orqanına edəcəkləri</p>
+            <div class="sehife_section" ><p>Səhifə 75</p></div>
             <br>
-            <div class="sehife_section" id="sigorta76">Səhifə 76</div>
-            <br>
-            <p>müraciətlərə bu Qanunla müddətsiz lisenziyanın verilməsi ilə bağlı müəyyən edilmiş tələblər və prosedurlar şamil olunur.</p>
+            <p class="pt120" id="sigorta76">müraciətlərə bu Qanunla müddətsiz lisenziyanın verilməsi ilə bağlı müəyyən edilmiş tələblər və prosedurlar şamil olunur.</p>
             <br>
             <h3 class="madde-item">Maddə 131. İnvestisiyalara dair tələblər</h3>
             <br>
@@ -2703,10 +2651,9 @@
             </h4>
             <br>
             <p class="qanun-tarixi">Bakı şəhəri, 25 dekabr 2007-ci il</p>
+            <div class="sehife_section" ><p>Səhifə 76</p></div>
             <br>
-            <div class="sehife_section" id="sigorta77">Səhifə 77</div>
-            <br>
-            <p class="qanun_nomresi">№ 519-IIIQ</p>
+            <p class="qanun_nomresi pt120" id="sigorta77">№ 519-IIIQ</p>
             <br>
             <p><i>2008-ci il 15 mart tarixində “Xalq qəzeti”nin 58-ci (25823) nömrəsində dərc edilib.</i></p>
             <br>
@@ -2716,7 +2663,10 @@
                 <strong>1.</strong> 2008-ci il 13 iyun tarixli 648-IIIQD nömrəli Azərbaycan Respublikasının Qanunu (<strong>Azərbaycan Respublikasının Qanunvericilik Toplusu, 2008-ci il, №7, maddə 602</strong>)
                 <br><strong>2.</strong> 2009-cu il 30 iyun tarixli 856-IIIQD nömrəli Azərbaycan Respublikasının Qanunu (<strong>“Respublika” qəzeti 22 iyul 2009-cu il, № 158</strong>)
             </p>
+            <div class="sehife_section" ><p>Səhifə 77</p></div>
+
         </div>
-    </div>
+        <button class="scrollButton"><i class="bi bi-chevron-up"></i></button>
+</div>
 
 @endsection

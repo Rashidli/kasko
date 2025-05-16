@@ -25,35 +25,7 @@
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        @foreach($contact_items as $contact_item)
-
-                                            <tr>
-                                                <th scope="row">{{$contact_item->id}}</th>
-                                                <th scope="row">{{$contact_item->title}}</th>
-                                                {{--                                                <td><img src="{{asset('storage/'.$contact_item->image)}}" style="width: 100px; height: 50px" alt=""></td>--}}
-                                                <td>
-                                                    @if($contact_item->is_active)
-                                                        <i
-                                                            class="ri-checkbox-blank-circle-fill font-size-10 text-success align-middle me-2"></i>Active
-                                                    @else
-                                                        Deactive
-                                                    @endif
-                                                </td>
-                                                <td>
-                                                    <a href="{{route('contact_items.edit',$contact_item->id)}}" class="btn btn-primary"
-                                                       style="margin-right: 15px">Edit</a>
-                                                    <form action="{{route('contact_items.destroy', $contact_item->id)}}" method="post"
-                                                          style="display: inline-block">
-                                                        {{ method_field('DELETE') }}
-                                                        @csrf
-                                                        <button onclick="return confirm('Məlumatın silinməyin təsdiqləyin')"
-                                                                type="submit" class="btn btn-danger">Delete
-                                                        </button>
-                                                    </form>
-                                                </td>
-                                            </tr>
-
-                                        @endforeach
+                                        <livewire:contact_item-sort-table />
                                         </tbody>
                                     </table>
                                     <br>

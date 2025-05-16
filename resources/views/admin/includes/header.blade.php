@@ -29,6 +29,8 @@
     @livewireStyles
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 
 <body data-topbar="dark">
@@ -43,23 +45,23 @@
             <div class="d-flex">
                 <!-- LOGO -->
                 <div class="navbar-brand-box">
-{{--                    <a href="{{route('home')}}" class="logo logo-dark">--}}
-{{--                                <span class="logo-sm">--}}
-{{--                                    <img src="{{asset('assets/images/logo-sm.png')}}" alt="logo-sm" height="22">--}}
-{{--                                </span>--}}
-{{--                        <span class="logo-lg">--}}
-{{--                                    <img src="{{asset('assets/images/logo-dark.png')}}" alt="logo-dark" height="20">--}}
-{{--                                </span>--}}
-{{--                    </a>--}}
+                    {{--                    <a href="{{route('home')}}" class="logo logo-dark">--}}
+                    {{--                                <span class="logo-sm">--}}
+                    {{--                                    <img src="{{asset('assets/images/logo-sm.png')}}" alt="logo-sm" height="22">--}}
+                    {{--                                </span>--}}
+                    {{--                        <span class="logo-lg">--}}
+                    {{--                                    <img src="{{asset('assets/images/logo-dark.png')}}" alt="logo-dark" height="20">--}}
+                    {{--                                </span>--}}
+                    {{--                    </a>--}}
 
-{{--                    <a href="{{route('home')}}" class="logo logo-light">--}}
-{{--                                <span class="logo-sm">--}}
-{{--                                    <img src="{{asset('assets/images/logo-sm.png')}}" alt="logo-sm-light" height="22">--}}
-{{--                                </span>--}}
-{{--                        <span class="logo-lg">--}}
-{{--                                    <img src="{{asset('assets/images/logo-light.png')}}" alt="logo-light" height="20">--}}
-{{--                                </span>--}}
-{{--                    </a>--}}
+                    {{--                    <a href="{{route('home')}}" class="logo logo-light">--}}
+                    {{--                                <span class="logo-sm">--}}
+                    {{--                                    <img src="{{asset('assets/images/logo-sm.png')}}" alt="logo-sm-light" height="22">--}}
+                    {{--                                </span>--}}
+                    {{--                        <span class="logo-lg">--}}
+                    {{--                                    <img src="{{asset('assets/images/logo-light.png')}}" alt="logo-light" height="20">--}}
+                    {{--                                </span>--}}
+                    {{--                    </a>--}}
                 </div>
 
                 <button type="button" class="btn btn-sm px-3 font-size-24 header-item waves-effect"
@@ -68,12 +70,12 @@
                 </button>
 
                 <!-- App Search-->
-                <form class="app-search d-none d-lg-block">
-                    <div class="position-relative">
-                        <input type="text" class="form-control" placeholder="Search...">
-                        <span class="ri-search-line"></span>
-                    </div>
-                </form>
+                {{--                <form class="app-search d-none d-lg-block">--}}
+                {{--                    <div class="position-relative">--}}
+                {{--                        <input type="text" class="form-control" placeholder="Search...">--}}
+                {{--                        <span class="ri-search-line"></span>--}}
+                {{--                    </div>--}}
+                {{--                </form>--}}
             </div>
 
             <div class="d-flex">
@@ -110,7 +112,8 @@
                 <div class="dropdown d-inline-block user-dropdown">
                     <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
                             data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <span class="d-none d-xl-inline-block ms-1">{{Auth::user()->name}}</span>
+                        <span
+                            class="d-none d-xl-inline-block ms-1">{{Auth::user()->name}} {{Auth::user()->surname}}</span>
                         <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
                     </button>
                     <div class="dropdown-menu dropdown-menu-end">
@@ -150,19 +153,38 @@
 
                     <!-- Users Management -->
 
-                        <li>
-                            <a href="javascript: void(0);" class="has-arrow waves-effect">
-                                <i class="ri-user-line"></i>
-                                <span>İstifadəçilər</span>
-                            </a>
-                            <ul class="sub-menu" aria-expanded="false">
-                                @can('create-users')<li><a href="{{ route('users.create') }}">İstifadəçi yarat</a></li>@endcan
-                                @can('list-users')<li><a href="{{ route('users.index') }}">İstifadəçilər</a></li>@endcan
-                                    @can('list-roles')<li><a href="{{ route('roles.index') }}">Roles</a></li>@endcan
-                                    @can('list-permissions')<li><a href="{{ route('permissions.index') }}">Permissions</a></li>@endcan
-                            </ul>
-                        </li>
-
+                    <li>
+                        <a href="javascript: void(0);" class="has-arrow waves-effect">
+                            <i class="ri-user-line"></i>
+                            <span>İstifadəçilər</span>
+                        </a>
+                        <ul class="sub-menu" aria-expanded="false">
+                            @can('create-users')
+                                <li><a href="{{ route('users.create') }}">İstifadəçi yarat</a></li>
+                            @endcan
+                            @can('list-users')
+                                <li><a href="{{ route('users.index') }}">İstifadəçilər</a></li>
+                            @endcan
+                            @can('list-roles')
+                                <li><a href="{{ route('roles.index') }}">Roles</a></li>
+                            @endcan
+                            @can('list-permissions')
+                                <li><a href="{{ route('permissions.index') }}">Permissions</a></li>
+                            @endcan
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="{{ route('customers.index') }}">
+                            <i class="ri-image-line"></i>
+                            <span>Userlər</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('property.insurances') }}">
+                            <i class="ri-image-line"></i>
+                            <span>DƏİS</span>
+                        </a>
+                    </li>
 
                     <!-- Hero Section -->
                     @can('list-sliders')
@@ -209,11 +231,13 @@
                         <li>
                             <a href="javascript: void(0);" class="has-arrow waves-effect">
                                 <i class="ri-mail-line"></i>
-                                <span>Mesajlar</span>
+                                <span>Sifarişlər</span>
                             </a>
                             <ul class="sub-menu" aria-expanded="false">
                                 @foreach($categories as $category)
-                                    <li><a href="{{ route('form_submissions.index', ['category_id' => $category->id]) }}">{{ $category->title }}</a></li>
+                                    <li>
+                                        <a href="{{ route('form_submissions.index', ['category_id' => $category->id]) }}">{{ $category->title }}</a>
+                                    </li>
                                 @endforeach
                             </ul>
                         </li>
@@ -310,7 +334,7 @@
                     @endcan
 
                     <!-- Translations -->
-                    @can('list-translations')
+                    @can('list-translates')
                         <li>
                             <a href="{{ route('words.index') }}">
                                 <i class="ri-global-line"></i>
@@ -353,13 +377,79 @@
                     @can('list-tags')
                         <li>
                             <a href="{{ route('tags.index') }}">
-                                <i class="ri-price-tag-line"></i>
+                                <i class="ri-price-tag-3-line"></i> <!-- Etiketlər üçün daha uyğun -->
                                 <span>Google tags</span>
                             </a>
                         </li>
                     @endcan
-                </ul>
 
+                    @can('list-contacts')
+                        <li>
+                            <a href="{{ route('contacts.index') }}">
+                                <i class="ri-mail-line"></i> <!-- Əlaqə mesajları üçün -->
+                                <span>Əlaqə mesajları</span>
+                            </a>
+                        </li>
+                    @endcan
+
+                    @can('list-maps')
+                        <li>
+                            <a href="{{ route('maps.index') }}">
+                                <i class="ri-map-pin-line"></i> <!-- Xəritə üçün -->
+                                <span>Xəritə</span>
+                            </a>
+                        </li>
+                    @endcan
+                    @can('list-order_statuses')
+                        <li>
+                            <a href="{{ route('order_statuses.index') }}">
+                                <i class="ri-map-pin-line"></i>
+                                <span>Sifariş statusları</span>
+                            </a>
+                        </li>
+                    @endcan
+                    @can('list-banners')
+                        <li>
+                            <a href="{{ route('banners.index') }}">
+                                <i class="ri-image-line"></i> <!-- Banner üçün -->
+                                <span>Banner</span>
+                            </a>
+                        </li>
+                    @endcan
+                    @can('list-contact_socials')
+                        <li>
+                            <a href="{{ route('contact_socials.index') }}">
+                                <i class="ri-links-line"></i> <!-- Əlaqə ikonları üçün -->
+                                <span>Əlaqə iconları</span>
+                            </a>
+                        </li>
+                    @endcan
+                    @can('list-share_icons')
+                        <li>
+                            <a href="{{ route('share_icons.index') }}">
+                                <i class="ri-share-line"></i> <!-- Paylaş ikonları üçün -->
+                                <span>Paylaş ikonları</span>
+                            </a>
+                        </li>
+                    @endcan
+                    @can('list-prefixes')
+                        <li>
+                            <a href="{{ route('prefixes.index') }}">
+                                <i class="ri-hashtag"></i> <!-- Prefikslər üçün -->
+                                <span>Prefikslər</span>
+                            </a>
+                        </li>
+                    @endcan
+                    @can('list-working_hours')
+                        <li>
+                            <a href="{{ route('messages.index') }}">
+                                <i class="ri-time-line"></i> <!-- İş saatları üçün -->
+                                <span>İş saatları</span>
+                            </a>
+                        </li>
+                    @endcan
+
+                </ul>
 
 
             </div>

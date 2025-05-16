@@ -20,7 +20,7 @@ class Content extends Model
         'meta_description',
         'meta_keywords'
     ];
-    protected $fillable = ['image','is_active','is_new'];
+    protected $fillable = ['image','is_active','is_new','row','link'];
 
     public function scopeActive($query)
     {

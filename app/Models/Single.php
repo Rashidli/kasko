@@ -12,6 +12,10 @@ class Single extends Model
 
     use HasFactory, Translatable, SoftDeletes;
     public $translatedAttributes = ['title','seo_description','seo_title','seo_keywords', 'slug'];
-    protected $fillable = ['type'];
+    protected $fillable = ['type','row','is_active','years'];
+
+    protected $casts = [
+        'years' => 'array',
+    ];
 
 }

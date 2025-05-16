@@ -33,7 +33,7 @@
                                             <th scope="row">{{$about->id}}</th>
                                             <th scope="row">{{$about->title}}</th>
                                             {{--                                                <td><img src="{{asset('storage/'.$about->image)}}" style="width: 100px; height: 50px" alt=""></td>--}}
-                                            <td>{{$about->is_active == true ? 'Active' : 'Deactive'}}</td>
+                                            <td>{{$about->is_active ? 'Active' : 'Deactive'}}</td>
                                             <td>
                                                 <a href="{{route('abouts.edit',$about->id)}}" class="btn btn-primary"
                                                    style="margin-right: 15px">Edit</a>

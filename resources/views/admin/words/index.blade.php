@@ -13,6 +13,32 @@
                                 <h4 class="card-title">Sözlər</h4>
                                         <a href="{{route('words.create')}}" class="btn btn-primary">+</a>
                                 <br>
+                                    <form action="{{route('words.index')}}" method="get">
+                                        <div class="row">
+
+                                            <div class="col-md-2">
+                                                <div class="mb-3">
+                                                    <label class="col-form-label"> Söz </label>
+                                                    <input type="text" name="name" value="{{request()->name}}"  class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-2">
+                                                <div class="mb-3">
+                                                    <label class="col-form-label"> Axtar </label>
+                                                    <input type="submit"  class="form-control btn btn-primary">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-2">
+                                                <div class="mb-3">
+                                                    <label class="col-form-label"> Sıfırla </label><br>
+                                                    <a href="{{route('words.index')}}" class="btn btn-primary">Sıfırla</a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </form>
                                 <br>
 
                                 <div class="table-responsive">
@@ -30,7 +56,11 @@
 
                                             <tr>
                                                 <th scope="row">{{$key}}</th>
-                                                <td title="{{$word->key}}">{{$word->title}}</td>
+                                                <td title="{{$word->key}}" >
+                                                    <p style="width: 60%; word-break: break-all; white-space: normal; margin: 0">
+                                                        {{$word->title}}
+                                                    </p>
+                                                </td>
                                                 <td>
                                                     <a href="{{route('words.edit',$word->id)}}" class="btn btn-primary" style="margin-right: 15px" >Edit</a>
 {{--                                                    <form action="{{route('words.destroy', $word->id)}}" method="post" style="display: inline-block">--}}

@@ -23,11 +23,11 @@ class ServiceController extends Controller
     function generateUniqueSlug($title)
     {
         $slug = Str::slug($title);
-        $count = Service::whereTranslation('title', $title)->count();
-
-        if ($count > 0) {
-            $slug .= '-' . $count;
-        }
+//        $count = Service::whereTranslation('title', $title)->count();
+//
+//        if ($count > 0) {
+//            $slug .= '-' . $count;
+//        }
 
         return $slug;
     }
@@ -70,15 +70,19 @@ class ServiceController extends Controller
             'az_description'=>'required',
             'en_description'=>'required',
             'ru_description'=>'required',
-            'image'=>'required',
+            'image'=>'nullable',
         ]);
 
         if($request->hasFile('image')){
             $filename = $this->imageUploadService->upload($request->file('image'));
         }
+        if($request->hasFile('icon')){
+            $filename_icon = $this->imageUploadService->upload($request->file('icon'));
+        }
 
         Service::create([
-            'image'=>  $filename,
+            'image'=>  $filename ?? null,
+            'icon'=>  $filename_icon ?? null,
             'category_id' =>$request->category_id,
             'form_id' =>$request->form_id,
             'az'=>[
@@ -91,6 +95,10 @@ class ServiceController extends Controller
                 'meta_title'=>$request->az_meta_title,
                 'meta_description'=>$request->az_meta_description,
                 'meta_keywords'=>$request->az_meta_keywords,
+                'work_message' => $request->az_work_message,
+                'off_message' => $request->az_off_message,
+                'work_text' => $request->az_work_text,
+                'off_text' => $request->az_off_text,
             ],
             'en'=>[
                 'title'=>$request->en_title,
@@ -102,6 +110,10 @@ class ServiceController extends Controller
                 'meta_title'=>$request->en_meta_title,
                 'meta_description'=>$request->en_meta_description,
                 'meta_keywords'=>$request->en_meta_keywords,
+                'work_message' => $request->en_work_message,
+                'off_message' => $request->en_off_message,
+                'work_text' => $request->en_work_text,
+                'off_text' => $request->en_off_text,
             ],
             'ru'=>[
                 'title'=>$request->ru_title,
@@ -113,6 +125,10 @@ class ServiceController extends Controller
                 'meta_title'=>$request->ru_meta_title,
                 'meta_description'=>$request->ru_meta_description,
                 'meta_keywords'=>$request->ru_meta_keywords,
+                'work_message' => $request->ru_work_message,
+                'off_message' => $request->ru_off_message,
+                'work_text' => $request->ru_work_text,
+                'off_text' => $request->ru_off_text,
             ]
         ]);
 
@@ -163,6 +179,9 @@ class ServiceController extends Controller
         if($request->hasFile('image')){
             $service->image = $this->imageUploadService->upload($request->file('image'));
         }
+        if($request->hasFile('icon')){
+            $service->icon = $this->imageUploadService->upload($request->file('icon'));
+        }
 
         $service->update( [
             'category_id' =>$request->category_id,
@@ -177,6 +196,11 @@ class ServiceController extends Controller
                 'meta_title'=>$request->az_meta_title,
                 'meta_description'=>$request->az_meta_description,
                 'meta_keywords'=>$request->az_meta_keywords,
+                'work_message' => $request->az_work_message,
+                'off_message' => $request->az_off_message,
+                'work_text' => $request->az_work_text,
+                'off_text' => $request->az_off_text,
+                'slug'=>$this->generateUniqueSlug($request->az_title),
             ],
             'en'=>[
                 'title'=>$request->en_title,
@@ -187,6 +211,11 @@ class ServiceController extends Controller
                 'meta_title'=>$request->en_meta_title,
                 'meta_description'=>$request->en_meta_description,
                 'meta_keywords'=>$request->en_meta_keywords,
+                'work_message' => $request->en_work_message,
+                'off_message' => $request->en_off_message,
+                'work_text' => $request->en_work_text,
+                'off_text' => $request->en_off_text,
+                'slug'=>$this->generateUniqueSlug($request->en_title),
             ],
             'ru'=>[
                 'title'=>$request->ru_title,
@@ -197,6 +226,11 @@ class ServiceController extends Controller
                 'meta_title'=>$request->ru_meta_title,
                 'meta_description'=>$request->ru_meta_description,
                 'meta_keywords'=>$request->ru_meta_keywords,
+                'work_message' => $request->ru_work_message,
+                'off_message' => $request->ru_off_message,
+                'work_text' => $request->ru_work_text,
+                'off_text' => $request->ru_off_text,
+                'slug'=>$this->generateUniqueSlug($request->ru_title),
             ]
 
         ]);

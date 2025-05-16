@@ -1,9 +1,9 @@
 @extends('front.layouts.master')
 
-@section('title', 'Dövlət qulluğu haqqında qanun')
-@section('description', 'Dövlət qulluğu haqqında qanun')
-@section('keywords', 'Dövlət qulluğu haqqında qanun')
-
+@section('title', $dq_nin_is_haqqinda_qanun->seo_title)
+@section('description', $dq_nin_is_haqqinda_qanun->seo_description)
+@section('keywords', $dq_nin_is_haqqinda_qanun->seo_keywords)
+@section('image', 'https://kasko.az/storage/869aeca8-d5c6-42ff-b754-5987d24d8e28.webp')
 @section('content')
 
 <div class="sigortaQanun-container p-lr">
@@ -206,6 +206,8 @@ qanunvericiliyi ilə müəyyən edilmiş qaydada, o cümlədən məhkəmə qayda
                 <strong>6.</strong> 2 oktyabr 2008-ci il tarixli 699-IIIQD nömrəli Azərbaycan Respublikasının Qanunu (<strong>“Azərbaycan” qəzeti, 16 noyabr 2008-ci il, № 257</strong>)
             </p>
         </div>
+        <button class="scrollButton"><i class="bi bi-chevron-up"></i></button>
+
     </div>
 
 @endsection

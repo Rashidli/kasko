@@ -17,11 +17,13 @@ class Blog extends Model
         'img_alt',
         'img_title',
         'slug',
+        'short_text',
+        'short_description',
         'meta_title',
         'meta_description',
         'meta_keywords'
     ];
-    protected $fillable = ['image','is_active','is_new'];
+    protected $fillable = ['image','is_active','is_new','row','view','banner_desktop'];
 
     public function scopeActive($query)
     {
@@ -36,6 +38,11 @@ class Blog extends Model
     public function services()
     {
         return $this->belongsToMany(Service::class, 'blog_service');
+    }
+
+    public function views()
+    {
+        return $this->hasMany(BlogView::class);
     }
 
 }

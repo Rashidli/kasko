@@ -17,22 +17,21 @@ class SingleController extends Controller
         $this->middleware('permission:edit-singles', ['only' => ['edit']]);
         $this->middleware('permission:delete-singles', ['only' => ['destroy']]);
     }
-    function generateUniqueSlug($title)
+    function generateUniqueSlug($title) : string
     {
-        $slug = Str::slug($title);
-        $count = Single::whereTranslation('title', $title)->count();
+        return Str::slug($title);
+//        $count = Single::whereTranslation('title', $title)->count();
+//
+//        if ($count > 0) {
+//            $slug .= '-' . $count;
+//        }
 
-        if ($count > 0) {
-            $slug .= '-' . $count;
-        }
-
-        return $slug;
     }
 
     public function index()
     {
 
-        $singles = Single::paginate(10);
+        $singles = Single::all();
         return view('admin.singles.index', compact('singles'));
 
     }
@@ -100,7 +99,6 @@ class SingleController extends Controller
      */
     public function edit(Single $single)
     {
-
         return view('admin.singles.edit', compact('single'));
 
     }
@@ -111,33 +109,37 @@ class SingleController extends Controller
 
     public function update(Request $request, Single $single)
     {
+
         $request->validate([
             'az_title'=>'required',
             'en_title'=>'required',
             'ru_title'=>'required',
         ]);
 
-
-
         $single->update( [
             'type'=>  $request->type,
+            'is_active'=>  $request->is_active,
+            'years' => $request->years,
             'az'=>[
                 'title'=>$request->az_title,
                 'seo_title'=>$request->az_seo_title,
                 'seo_description'=>$request->az_seo_description,
                 'seo_keywords'=>$request->az_seo_keywords,
+                'slug'=>$this->generateUniqueSlug($request->az_title),
             ],
             'en'=>[
                 'title'=>$request->en_title,
                 'seo_title'=>$request->en_seo_title,
                 'seo_description'=>$request->en_seo_description,
                 'seo_keywords'=>$request->en_seo_keywords,
+                'slug'=>$this->generateUniqueSlug($request->en_title),
             ],
             'ru'=>[
                 'title'=>$request->ru_title,
                 'seo_title'=>$request->ru_seo_title,
                 'seo_description'=>$request->ru_seo_description,
                 'seo_keywords'=>$request->ru_seo_keywords,
+                'slug'=>$this->generateUniqueSlug($request->ru_title),
             ]
 
         ]);

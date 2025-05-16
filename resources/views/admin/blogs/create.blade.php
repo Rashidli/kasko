@@ -33,6 +33,20 @@
                                                 @endif
                                             </div>
                                             <div class="mb-3">
+                                                <label class="col-form-label">Qısa mətn (əsas səhifə üçün)* {{ $lang }}</label>
+                                                <input class="form-control" type="text" value="{{old($lang . '_short_description')}}" name="{{ $lang }}_short_description">
+                                                @if($errors->first("{$lang}_short_description"))
+                                                    <small class="form-text text-danger">{{ $errors->first("{$lang}_short_description") }}</small>
+                                                @endif
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="col-form-label">Qısa text {{ $lang }}</label>
+                                                <input class="form-control" type="text" value="{{old($lang . '_short_text')}}" name="{{ $lang }}_short_text">
+                                                @if($errors->first("{$lang}_short_text"))
+                                                    <small class="form-text text-danger">{{ $errors->first("{$lang}_short_text") }}</small>
+                                                @endif
+                                            </div>
+                                            <div class="mb-3">
                                                 <label class="col-form-label">Text* {{ $lang }}</label>
                                                 <textarea id="editor_{{ $lang }}" class="form-control" name="{{ $lang }}_description">{{old($lang . '_description')}}</textarea>
                                                 @if($errors->first("{$lang}_description"))
@@ -119,6 +133,15 @@
                                         <small class="form-text text-danger">{{ $errors->first('image') }}</small>
                                     @endif
                                 </div>
+
+                                <br>
+{{--                                <div class="mb-3">--}}
+{{--                                    <label class="col-form-label">Banner*(374-653)</label>--}}
+{{--                                    <input class="form-control" type="file" name="banner_desktop">--}}
+{{--                                    @if($errors->first('banner_desktop'))--}}
+{{--                                        <small class="form-text text-danger">{{ $errors->first('banner_desktop') }}</small>--}}
+{{--                                    @endif--}}
+{{--                                </div>--}}
                                 <div class="mb-3 text-end">
                                     <button class="btn btn-primary">Yadda saxla</button>
                                 </div>

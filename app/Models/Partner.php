@@ -11,7 +11,7 @@ class Partner extends Model
 {
     use HasFactory, Translatable, SoftDeletes;
     public $translatedAttributes = ['img_alt','img_title'];
-    protected $fillable = ['image','is_active'];
+    protected $fillable = ['image','is_active','row'];
 
     public function scopeActive($query)
     {

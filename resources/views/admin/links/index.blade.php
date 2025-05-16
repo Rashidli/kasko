@@ -26,28 +26,7 @@
                                         </tr>
                                     </thead>
 
-                                    <tbody>
-                                    @foreach($links as $link)
-
-                                        <tr>
-                                            <th scope="row">{{$link->id}}</th>
-                                            <th scope="row">{{$link->title}}</th>
-                                            {{--                                                <td><img src="{{asset('storage/'.$link->image)}}" style="width: 100px; height: 50px" alt=""></td>--}}
-                                            <td>{{$link->is_active == true ? 'Active' : 'Deactive'}}</td>
-                                            <td>
-                                                <a href="{{route('links.edit',$link->id)}}" class="btn btn-primary"
-                                                   style="margin-right: 15px">Edit</a>
-                                                <form action="{{route('links.destroy', $link->id)}}" method="post" style="display: inline-block">
-                                                    {{ method_field('DELETE') }}
-                                                    @csrf
-                                                    <button onclick="return confirm('Məlumatın silinməyin təsdiqləyin')" type="submit" class="btn btn-danger">Delete</button>
-                                                </form>
-                                            </td>
-                                        </tr>
-
-                                    @endforeach
-
-                                    </tbody>
+                                    <livewire:link-sort-table />
                                 </table>
                                 <br>
                                 {{ $links->links('admin.vendor.pagination.bootstrap-5') }}

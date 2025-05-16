@@ -25,25 +25,7 @@
                                         <th>Actions</th>
                                     </tr>
                                     </thead>
-                                    <tbody>
-                                    @foreach($form_fields as $form_field)
-                                        <tr>
-                                            <th scope="row">{{$form_field->id}}</th>
-                                            <td>{{$form_field->name}}</td>
-                                            <td>{{$form_field->type}}</td>
-                                            <td>{{$form_field->translate('az')->label}}</td>
-                                            <td>{{$form_field->is_active ? 'Active' : 'Inactive'}}</td>
-                                            <td>
-                                                <a href="{{route('forms.form_fields.edit', [$form->id, $form_field->id])}}" class="btn btn-primary" style="margin-right: 15px">Edit</a>
-                                                <form action="{{route('forms.form_fields.destroy', [$form->id, $form_field->id])}}" method="post" style="display: inline-block">
-                                                    {{ method_field('DELETE') }}
-                                                    @csrf
-                                                    <button onclick="return confirm('Are you sure?')" type="submit" class="btn btn-danger">Delete</button>
-                                                </form>
-                                            </td>
-                                        </tr>
-                                    @endforeach
-                                    </tbody>
+                                    <livewire:form-field-sort-table :form="$form"/>
                                 </table>
                                 <br>
                                 {{ $form_fields->links('admin.vendor.pagination.bootstrap-5') }}

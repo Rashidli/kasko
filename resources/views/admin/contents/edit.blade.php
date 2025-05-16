@@ -11,6 +11,13 @@
                         <h4 class="card-title">Dəyişdir</h4>
                     </div>
                     <div class="card-body">
+                        <nav aria-label="breadcrumb" style="margin-bottom: 20px;">
+                            <ol class="breadcrumb bg-light p-3 rounded">
+                                <li class="breadcrumb-item"><a href="{{ route('home') }}">Dashboard</a></li>
+                                <li class="breadcrumb-item"><a href="{{ route('contents.index') }}">Siyahı</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">{{ $content->translate('az')?->title }}</li>
+                            </ol>
+                        </nav>
                         <!-- Language Tabs -->
                         <ul class="nav nav-tabs" id="langTabs" role="tablist">
                             @foreach(['az', 'en', 'ru'] as $lang)
@@ -34,6 +41,13 @@
                                                     <small class="form-text text-danger">{{ $errors->first("{$lang}_title") }}</small>
                                                 @endif
                                             </div>
+{{--                                            <div class="mb-3">--}}
+{{--                                                <label class="col-form-label">Slug* {{ strtoupper($lang) }}</label>--}}
+{{--                                                <input class="form-control" type="text" name="{{ $lang }}_slug" value="{{ old("{$lang}_slug", $content->translate($lang)?->slug) }}">--}}
+{{--                                                @if($errors->first("{$lang}_slug"))--}}
+{{--                                                    <small class="form-text text-danger">{{ $errors->first("{$lang}_slug") }}</small>--}}
+{{--                                                @endif--}}
+{{--                                            </div>--}}
 
                                             <div class="mb-3">
                                                 <label class="col-form-label">Text* {{ strtoupper($lang) }}</label>
@@ -103,7 +117,22 @@
                                 </div>
                             @endforeach
                         </div>
-
+                        <div class="row mt-4">
+                            <div class="col-md-6">
+                                <div class="card mb-3">
+                                    <div class="card-header">Button link</div>
+                                    <div class="card-body">
+                                        <div class="form-group">
+                                            <label>Button link</label>
+                                            <input type="text" name="link" class="form-control" value="{{$content->link}}">
+                                            @if($errors->first('link'))
+                                                <small class="form-text text-danger">{{ $errors->first('link') }}</small>
+                                            @endif
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <!-- Image Section -->
                         <div class="row mt-4">
                             <div class="col-md-6">

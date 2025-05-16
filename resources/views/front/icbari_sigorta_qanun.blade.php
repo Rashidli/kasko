@@ -1,16 +1,15 @@
 @extends('front.layouts.master')
 
-@section('title', 'İcbari siğorta haqqında qanun')
-@section('description', 'İcbari siğorta haqqında qanun')
-@section('keywords', 'İcbari siğorta haqqında qanun')
-
+@section('title', $icbari_sigortalar_haqqinda_qanun->seo_title)
+@section('description', $icbari_sigortalar_haqqinda_qanun->seo_description)
+@section('keywords', $icbari_sigortalar_haqqinda_qanun->seo_keywords)
+@section('image', 'https://kasko.az/storage/869aeca8-d5c6-42ff-b754-5987d24d8e28.webp')
 @section('content')
 
 <div class="sigortaQanun-container p-lr">
     <img class="gerb-img" src="{{asset('/')}}front/image/gerb.png" alt="">
         <h2>İcbari sığortalar haqqında</h2>
         <h1>AZƏRBAYCAN RESPUBLİKASININ <span>QANUNU</span></h1>
-        <div class="sehife_section" id="icbari1">Səhifə 1</div>
         <div class="mundericat">
             <div class="fesil">
                 <a href="#icbari5" class="main_mundericat_link">
@@ -102,10 +101,8 @@
                         <p class="basliq"><mark>Maddə 21. Sığorta ödənişindən imtinanın əsasları</mark></p>
                         <span class="shife">19</span>
                     </a>
-                    <br>
-                    <div class="sehife_section" id="icbari2">Səhifə 2</div>
-                    <br>
-                    <a href="#icbari20" class="mundericat_link">
+                    <div class="sehife_section" id="icbari1"><p>Səhifə 1</p></div>
+                    <a href="#icbari20" class="mundericat_link pt120">
                         <p class="basliq"><mark>Maddə 22. Sığortalının hüquqları və vəzifələri</mark></p>
                         <span class="shife">20</span>
                     </a>
@@ -222,10 +219,8 @@
                         <p class="basliq"><mark>Maddə 45. Daşınmaz əmlakın istismarı ilə bağlı mülki məsuliyyətin icbari sığortası üzrə sığortalı və sığorta olunan</mark></p>
                         <span class="shife">37</span>
                     </a>
-                    <br>
-                    <div class="sehife_section" id="icbari3">Səhifə 3</div>
-                    <br>
-                    <a href="#icbari38" class="mundericat_link">
+                    <div class="sehife_section" id="icbari2"><p>Səhifə 2</p></div>
+                    <a href="#icbari38" class="mundericat_link pt120">
                         <p class="basliq"><mark>Maddə 46. Daşınmaz əmlakın istismarı ilə bağlı mülki məsuliyyətin icbari sığortası üzrə üçüncü şəxslər</mark></p>
                         <span class="shife">38</span>
                     </a>
@@ -301,10 +296,8 @@
                         <p class="basliq"><mark>Maddə 62. Avtonəqliyyat vasitəsi sahiblərinin mülki məsuliyyətinin icbari sığortası üzrə informasiya sistemindən emal olunmuş məlumatların əldə edilməsi</mark></p>
                         <span class="shife">46</span>
                     </a>
-                    <br>
-                    <div class="sehife_section" id="icbari4">Səhifə 4</div>
-                    <br>
-                    <a href="#icbari46" class="mundericat_link">
+                    <div class="sehife_section" id="icbari3"><p>Səhifə 3</p></div>
+                    <a href="#icbari46" class="mundericat_link pt120">
                         <p class="basliq"><mark>Maddə 63. Avtonəqliyyat vasitəsi sahiblərinin mülki məsuliyyətinin icbari sığortası üzrə subroqasiya hüququ</mark></p>
                         <span class="shife">46</span>
                     </a>
@@ -395,10 +388,8 @@
                 </div>
             </div>
         </div>
-        <br>
-        <div class="sehife_section" id="icbari5">Səhifə 5</div>
-        <br>
-        <h2>İcbari sığortalar haqqında</h2>
+        <div class="sehife_section" id="icbari4"><p>Səhifə 4</p></div>
+        <h2 class="pt120" id="icbari5">İcbari sığortalar haqqında</h2>
         <h2>AZƏRBAYCAN RESPUBLİKASININ QANUNU</h2>
         <br>
         <div class="sehife-inner">
@@ -416,10 +407,8 @@
                 <br><strong>1.3.</strong> Bu Qanunda başqa cür nəzərdə tutulmadığı halda, istifadə olunan anlayışların izahı Azərbaycan Respublikasının Mülki Məcəlləsi və “Sığorta fəaliyyəti haqqında” Azərbaycan Respublikasının Qanunu ilə müəyyən edilir.
                 <br><strong>1.4.</strong> Bu Qanunda nəzərdə tutulmuş icbari sığorta növlərinin həyata keçirilməsindən irəli gələn münasibətlər bu Qanunla başqa cür müəyyən edilmiş hallar istisna olmaqla, Azərbaycan Respublikasının Mülki Məcəlləsi və “Sığorta fəaliyyəti haqqında” Azərbaycan Respublikasının Qanunu ilə tənzimlənir.
             </p>
-            <br>
-            <div class="sehife_section" id="icbari6">Səhifə 6</div>
-            <br>
-            <h3 class="madde-item">Maddə 2. İcbari sığortalar haqqında qanunvericilik</h3>
+            <div class="sehife_section"><p>Səhifə 5</p></div>
+            <h3 class="madde-item pt120" id="icbari6">Maddə 2. İcbari sığortalar haqqında qanunvericilik</h3>
             <br>
             <p>
                 Azərbaycan Respublikasının icbari sığortalar haqqında qanunvericiliyi Azərbaycan Respublikasının Konstitusiyasından, Azərbaycan Respublikasının Mülki Məcəlləsindən, “Sığorta fəaliyyəti haqqında” Azərbaycan Respublikasının Qanunundan, bu Qanundan, Azərbaycan Respublikasının tərəfdar çıxdığı dövlətlərarası beynəlxalq müqavilələrdən və digər normativ hüquqi aktlardan ibarətdir.
@@ -442,10 +431,9 @@
             <p>
                 <strong>4.1.</strong> Bu Qanunda nəzərdə tutulmuş icbari sığorta növləri fiziki və hüquqi şəxslərin əmlak mənafeləri ilə bağlı məruz qaldıqları zərərlərin əvəzinin ödənilməsini təmin etmək məqsədi ilə tətbiq edilir.
             </p>
+            <div class="sehife_section" ><p>Səhifə 6</p></div>
             <br>
-            <div class="sehife_section" id="icbari7">Səhifə 7</div>
-            <br>
-            <p>
+            <p class="pt120" id="icbari7">
                 <strong>4.2.</strong> Sığorta hadisələri nəticəsində şəxslərin gəlir itkisi icbari sığorta təminatına daxil edilmir.
                 <br><strong>4.3.</strong> Bu Qanunun məqsədləri üçün qəza vəziyyətində və ya istismara yararsız vəziyyətdə olan hər hansı əmlakla (bina, tikili, avtonəqliyyat vasitəsi, cihaz, qurğu, avadanlıq və s.) bağlı əmlak mənafelərinin sığortalanması qadağandır.
                 <br><strong>4.4.</strong> Bu Qanunda nəzərdə tutulmuş hər hansı icbari sığorta növünün aparılması sığorta nəzarəti orqanının sığortaçıya verdiyi müvafiq icazə əsasında həyata keçirilir.
@@ -466,10 +454,9 @@
             <p>
                 <strong>6.1.</strong> İcbari sığorta müqaviləsi əsasında əmlak mənafeləri sığortalanan - fərdi qəza sığortası müqaviləsində xeyrinə icbari sığorta müqaviləsi bağlanan (sığorta olunanlar kateqoriyasına daxil olan), əmlak sığortası üzrə mülkiyyətində və ya faktiki sahibliyində əmlakı olan və ya mülki məsuliyyət
             </p>
+            <div class="sehife_section"><p>Səhifə 7</p></div>
             <br>
-            <div class="sehife_section" id="icbari8">Səhifə 8</div>
-            <br>
-            <p>
+            <p class="pt120" id="icbari8">
                 sığortası üzrə bu Qanunun 6.2-ci maddəsində nəzərdə tutulmuş əsasla müəyyən edilən şəxs sığorta olunan hesab edilir.
                 <br><strong>6.2.</strong> Mülki məsuliyyətin icbari sığortası müqaviləsində göstərilmiş əmlakı qanuni əsaslarla istismar edən istənilən şəxs, həmçinin sığortalı özü həmin əmlakı istismar etdiyi anda, sığorta olunan hesab edilir.
                 <br><strong>6.3.</strong> Bu Qanunun Xüsusi hissəsinin müvafiq müddəaları ilə hər bir icbari sığorta növü üzrə sığortalıların və ya sığorta olunanların konkret kateqoriyası müəyyən olunur.
@@ -489,10 +476,9 @@
             <p>
                 8.1. İcbari sığorta müqaviləsi icbari sığortanın təmin edilməsi üçün sığortaçı ilə sığortalı arasında, müvafiq icbari sığorta şəhadətnaməsinin
             </p>
+            <div class="sehife_section" ><p>Səhifə 8</p></div>
             <br>
-            <div class="sehife_section" id="icbari9">Səhifə 9</div>
-            <br>
-            <p>
+            <p class="pt120" id="icbari9">
                 sığortalıya (müvafiq hallarda sığorta olunanlara) verilməsi yolu ilə bağlanan müqavilədir.
                 <br><strong>8.2.</strong> Bu Qanunun Xüsusi hissəsində başqa cür müəyyən edilməmişdirsə, icbari sığorta müqaviləsi 1 il müddətinə bağlanılır.
                 <br><strong>8.3.</strong> Müvafiq əmlakla bağlı bu Qanunla nəzərdə tutulmuş icbari sığorta təminatının əldə edilməsi barədə icbari sığorta müqaviləsi bağlanmışdırsa, bu Qanunun Xüsusi hissəsində başqa cür nəzərdə tutulduğu hallar istisna olmaqla, həmin müqavilənin qüvvədə olduğu müddət ərzində əmlakın sahibi dəyişdikdə, o cümlədən əmlak qanuni əsaslarla icarəyə və ya digər qaydada başqa şəxsin istifadəsinə verildikdə, bu Qanunun 8.4-cü maddəsi nəzərə alınmaqla, müqavilə müddətinin sonunadək yeni icbari sığorta müqaviləsinin bağlanması tələb olunmur. Bu halda bu Qanunla sığortalıya aid edilən bütün hüquqlar və vəzifələr əmlakın yeni sahibinə və ya istifadəçisinə şamil edilir.
@@ -508,10 +494,9 @@
                 <br><strong>9.2.</strong> İcbari sığorta müqaviləsi sığortaçı tərəfindən müvafiq sığorta şəhadətnaməsinin sığortalıya və ya sığorta olunana verilməsi yolu ilə bağlanır.
                 <br><strong>9.3.</strong> İcbari sığorta şəhadətnaməsinin forması, onun çap olunma və doldurulma qaydaları sığorta şəhadətnaməsinin məzmunu ilə bağlı Azərbaycan Respublikasının Mülki Məcəlləsində nəzərdə tutulmuş tələblər
             </p>
+            <div class="sehife_section"><p>Səhifə 9</p></div>
             <br>
-            <div class="sehife_section" id="icbari10">Səhifə 10</div>
-            <br>
-            <p>
+            <p class="pt120" id="icbari10">
                 nəzərə alınmaqla hər bir icbari sığorta növü üzrə ayrı-ayrılıqda sığorta nəzarəti orqanı tərəfindən müəyyən edilir.
                 <br><strong>9.4.</strong> Sığorta şəhadətnaməsi sığorta haqqının ödənildiyi gün, qrup halında sığorta zamanı isə sığorta haqqının ödənilməsindən 3 iş günü müddətində verilir.
                 <br><strong>9.5.</strong> Sığorta müqaviləsinə uyğun olaraq sığorta hadisəsi üzrə sığorta ödənişi verildikdə, bu Qanunun Xüsusi hissəsində başqa cür nəzərdə tutulmadığı hallarda müvafiq icbari sığorta şəhadətnaməsi sığortaçı tərəfindən geri alınır və sığortalının sığorta məbləğini qanunvericiliklə müəyyənləşdirilmiş miqdarda bərpa etmək üçün tələb olunan məbləğə mütənasib olaraq əlavə sığorta haqqı ödəməsi şərtilə ona sığorta şəhadətnaməsinin son qüvvədə olma tarixinədək müddətə qüvvədə olan şəhadətnaməyə əlavə verilir.
@@ -528,10 +513,9 @@
             </p>
             <br>
             <h3 class="madde-item">Maddə 11. İcbari sığorta haqqı</h3>
+            <div class="sehife_section" ><p>Səhifə 10</p></div>
             <br>
-            <div class="sehife_section" id="icbari11">Səhifə 11</div>
-            <br>
-            <p>
+            <p class="pt120" id="icbari11">
                 <strong>11.1.</strong> İcbari sığorta haqqı sığortaçıya nağd və ya nağdsız hеsablaşma yolu ilə bu Qanunun Xüsusi hissəsində başqa cür nəzərdə tutulmuş hallar istisna olmaqla, birdəfəlik ödənilir.
                 <br><strong>11.2.</strong> Bu Qanunda nəzərdə tutulmuş hallarda sığortalıya sığorta ödənişi verilərkən, sığortalı sığorta müqaviləsinə vaxtından əvvəl xitam vermək niyyətində olmadıqda, sığorta məbləğinin bərpa edilməsi üçün ödənilməli olan əlavə sığorta haqqı sığorta ödənişi məbləğindən çıxılır.
             </p>
@@ -550,10 +534,9 @@
             <p>
                 <strong>13.1.</strong> İcbari sığorta növlərində sığorta hadisəsi müvafiq icbari sığorta müqaviləsində göstərilmiş əmlakın istismarı və ya fəaliyyətin həyata keçirilməsi nəticəsində sığorta olunana və ya üçüncü şəxsə dəyən zərərin əvəzinin ödənilməsi üçün əsas olan, həmin müqavilənin qüvvədə olduğu müddət ərzində baş verən, bu Qanunun Xüsusi hissəsində nəzərdə tutulmuş hadisələr və hallardır.
             </p>
+            <div class="sehife_section" ><p>Səhifə 11</p></div>
             <br>
-            <div class="sehife_section" id="icbari12">Səhifə 12</div>
-            <br>
-            <p>
+            <p class="pt120" id="icbari12">
                 <strong>13.2.</strong> Bu Qanunun məqsədləri üçün mülki məsuliyyətin icbari sığortasında müvafiq sığorta şəhadətnaməsində göstərilən əmlakın (binanın, tikilinin, avtonəqliyyat vasitəsinin, cihazın, qurğunun, avadanlığın və s.) sığorta olunan tərəfindən istismar edilməsi nəticəsində üçüncü şəxslərin sağlamlığına və (və ya) əmlakına vurulmuş zərərin əvəzinin ödənilməsi üzrə sığortalının və ya sığorta olunanın mülki məsuliyyətinin yaranması faktı sığorta hadisəsi sayılır.
                 <br><strong>13.3.</strong> Bu Qanunun məqsədləri üçün fərdi qəzadan icbari sığortada müvafiq sığorta müqaviləsində müəyyən edilmiş hallarda baş verən fərdi qəza nəticəsində sığorta olunanın sağlamlığına zərər dəyməsi sığorta hadisəsi sayılır.
                 <br><strong>13.4.</strong> Sığorta şəhadətnaməsinin kimin adına verilməsindən asılı olmayaraq, fərdi qəza və ya mülki məsuliyyət üzrə sığorta təminatı, müvafiq sığorta müqaviləsində göstərilmiş əmlakı qanuni əsaslarla təyinatına uyğun istismar edən istənilən şəxsin hərəkəti və ya hərəkətsizliyi nəticəsində baş vermiş müvafiq hadisələrə və hallara şamil olunur.
@@ -571,10 +554,9 @@
                 <br><strong>14.2.1.</strong> zərərçəkənin ölməsi, o cümlədən aldığı bədən xəsarəti, xəstələnməsi, zəhərlənməsi və ya kontuziya olması nəticəsində sığorta hadisəsi baş verdiyi tarixdən 3 il ərzində ölməsi — 100 faiz;
                 <br><strong>14.2.2.</strong> zərərçəkənin məhkəmənin qanuni qüvvəyə minmiş qərarı ilə ölmüş elan edilməsi — 100 faiz;
             </p>
+            <div class="sehife_section" ><p>Səhifə 12</p></div>
             <br>
-            <div class="sehife_section" id="icbari13">Səhifə 13</div>
-            <br>
-            <p>
+            <p class="pt120" id="icbari13">
                 <strong>14.2.3.</strong> zərərçəkənin bədən xəsarəti alması, zəhərlənməsi, yaxud kontuziya olması nəticəsində sığorta hadisəsi baş verdiyi tarixdən 3 il ərzində ona qanunvericilikdə nəzərdə tutulmuş qaydada əlillik qrupu təyin olunması - I qrup əlilliyə görə 80 faiz, II qrup əlilliyə görə 60 faiz, III qrup əlilliyə görə 40 faiz;
                 <br><strong>14.2.4.</strong> əlillik qrupu təyin olunmadan ağır xəsarət alması – 30 faiz;
                 <br><strong>14.2.5.</strong> yüngül xəsarət alması – 5 faiz.
@@ -598,10 +580,9 @@
             <p>
                 <strong>16.1.</strong> Sığorta hadisəsi nəticəsində dövlət və bələdiyyə əmlakına dəyən zərərin qiymətləndirilməsi belə əmlakın qiymətləndirilməsi üçün qanunvericiliklə müəyyən edilmiş xüsusi tələblər nəzərə alınmaqla sığortaçı, habelə sığortalı və ya faydalanan şəxs tərəfindən təmin edilməlidir.
             </p>
+            <div class="sehife_section" ><p>Səhifə 13</p></div>
             <br>
-            <div class="sehife_section" id="icbari14">Səhifə 14</div>
-            <br>
-            <p>
+            <p class="pt120" id="icbari14">
                 <strong>16.2.</strong> Sığortaçı sığorta hadisəsi nəticəsində dəymiş zərərin məbləğini bilavasitə özü və ya sığorta qanunvericiliyinin tələblərini nəzərə almaqla təyin etdiyi sığorta sahəsində yardımçı fəaliyyət göstərən müvafiq şəxs vasitəsilə müəyyən edir. Zərərin sığortaçı tərəfindən müəyyən edilmiş həcmi barədə tərəflər arasında razılıq əldə edilmədikdə, zərərin miqdarının qiymətləndirilməsi sığorta qanunvericiliyinin tələbləri nəzərə alınmaqla tərəflərin qarşılıqlı razılığı ilə təyin olunan qiymətləndirmə fəaliyyəti ilə məşğul olan müstəqil ekspert tərəfindən aparılır.
                 <br><strong>16.3.</strong> Sığortalı və ya sığorta olunan zərər məbləğinin sığortaçı tərəfindən və ya onun razılığı ilə bu Qanunun 16.4-cü maddəsində nəzərdə tutulmuş müddətdə qiymətləndirilməsinin başladığı anadək sığorta qanunvericiliyində nəzərdə tutulmuş hallar istisna olmaqla, zərər dəymiş əmlakı sığorta hadisəsindən dərhal sonrakı vəziyyətində saxlamadıqda və ya dəymiş zərərin qiymətləndirilməsi üçün şərait yaratmadıqda, zərərin sığortaçı tərəfindən müvafiq şəkildə qiymətləndirilməsinin nəticələrini qəbul etməlidir.
                 <br><strong>16.4.</strong> Sığortaçı sığorta hadisəsinin baş verməsi barədə qanunvericiliyin tələblərinə uyğun olaraq məlumatlandırıldığı tarixdən 7 iş günü müddətində əmlaka dəymiş zərərin məbləğinin qiymətləndirilməsini təşkil etmədikdə sığortalı və sığorta olunan, həmçinin zərər çəkmiş üçüncü şəxs təyin etdiyi qiymətləndirmə fəaliyyəti ilə məşğul olan müstəqil ekspert və ya mütəxəssis vasitəsilə əmlaka dəymiş zərərin ədalətli şəkildə qiymətləndirilməsinə və aradan qaldırılmasına başlaya bilər. Bu halda əgər sığortaçı əmlaka dəymiş zərərin vaxtında qiymətləndirilməməsini əmlak sahibinin ölümü və ya xəstəliyi, həmçinin sığortalının, sığorta olunanın və ya zərər çəkmiş üçüncü şəxsin əmlakın qiymətləndirilməsi üçün şərait yaratmaması nəticəsində baş verdiyini sübut edə bilməsə, o, zərər çəkmiş üçüncü şəxs tərəfindən bu maddədə nəzərdə tutulmuş qaydada həyata keçirilmiş qiymətləndirmənin nəticələrini qəbul etməlidir.
@@ -615,10 +596,9 @@
                 <br><strong>17.1.1.1.</strong> icbari sığorta şəhadətnaməsinin tarixi və nömrəsi;
                 <br><strong>17.1.1.2.</strong> icbari sığortanın növü;
             </p>
+            <div class="sehife_section" ><p>Səhifə 14</p></div>
             <br>
-            <div class="sehife_section" id="icbari15">Səhifə 15</div>
-            <br>
-            <p>
+            <p class="pt120" id="icbari15">
                 <strong>17.1.1.3.</strong> sığortalının adı;
                 <br><strong>17.1.1.4.</strong> sığorta olunanın adı;
                 <br><strong>17.1.1.5.</strong> sığorta hadisəsi hesab edilə bilən halın baş vermə yeri, tarixi və vaxtı;
@@ -635,10 +615,9 @@
                 öldükdə, onun ölümünün hadisə ilə səbəb əlaqəsində olmasını təsdiq edən tibbi ekspertiza rəyinin,
                 ölüm haqqında şəhadətnamənin, habelə ölənin ailə üzvlərinin onunla qohumluq əlaqəsini təsdiq edən
                 müvafiq sənədlərin (doğum haqqında şəhadətnamənin, yaxud
+                <div class="sehife_section" ><p>Səhifə 15</p></div>
                 <br>
-                <div class="sehife_section" id="icbari16">Səhifə 16</div>
-                <br>
-                şəxsiyyət vəsiqəsinin, ərə (arvada) münasibətdə nikah haqqında şəhadətnamənin) notariat qaydasında təsdiq edilmiş surətləri;
+                <p class="pt120" id="icbari16">şəxsiyyət vəsiqəsinin, ərə (arvada) münasibətdə nikah haqqında şəhadətnamənin) notariat qaydasında təsdiq edilmiş surətləri;</p>
                 <br><strong>17.1.9.</strong> mülki məsuliyyətin icbari sığortası üzrə sığortalı və ya sığorta olunan tərəfindən əmlaka vurulan zərərin əvəzi ödənilmiş olduqda və ya sağlamlığa vurulan zərərlə əlaqədar hər hansı ödəmə həyata keçirildikdə belə ödəməni təsdiq edən sənədin müvafiq qaydada təsdiq edilmiş surəti;
                 <br><strong>17.1.10.</strong> faydalanan şəxs fiziki şəxs olduqda onun şəxsiyyət vəsiqəsinin surəti, hüquqi şəxs olduqda isə onun nümayəndəsinə verilmiş müvafiq etibarnamə və həmin nümayəndənin şəxsiyyət vəsiqəsinin notariat qaydasında təsdiq edilmiş surəti;
                 <br><strong>17.1.11.</strong> bu Qanunun Xüsusi hissəsində nəzərdə tutulmuş digər sənədlər.
@@ -654,12 +633,11 @@
             <p>
                 Bu Qanunun 17.1-ci maddəsində göstərilən sənədlərdən sonuncusunun sığortaçıya təqdim edildiyi və (və ya) alındığı tarixdən 7 iş günündən gec olmayaraq sığortaçı sığorta ödənişini verməli, müvafiq hallarda zərərin qiymətləndirilməsi, əmlakın təmiri, bərpası və ya yenisi ilə əvəz edilməsi üçün yazılı qaydada təsdiqlənən tədbir görməli, yaxud sığortalıya, sığorta olunana və ya faydalanan şəxsə sığorta ödənişinin verilməsindən imtina haqqında yazılı şəkildə əsaslandırılmış bildiriş verməlidir.
             </p>
-            <br>
-            <div class="sehife_section" id="icbari17">Səhifə 17</div>
+            <div class="sehife_section" ><p>Səhifə 16</p></div>
             <br>
             <h3 class="madde-item">Maddə 19. Sağlamlığa dəyən zərər üzrə sığorta ödənişinin verilməsi qaydası</h3>
             <br>
-            <p>
+            <p class="pt120" id="icbari17">
                 <strong>19.1.</strong> Sığortaçı sığorta olunanın və ya üçüncü şəxsin sağlamlığına dəymiş zərərin əvəzini digər şəxsi sığortaya aid sığorta növləri və (və ya) sosial sığorta üzrə verilən sığorta ödənişlərini, həmçinin fərdi qəza sığortası üzrə zərərvuran şəxs tərəfindən ödənilən hər hansı vəsaiti nəzərə almadan bu Qanunda nəzərdə tutulmuş qaydada ödəyir.
                 <br><strong>19.2.</strong> Bu Qanunun 21-ci maddəsində nəzərdə tutulmuş müvafiq hallar istisna olmaqla, sığortaçı mülki məsuliyyətin icbari sığortası üzrə sığorta hadisəsinin baş verməsində sığortalının və ya sığorta olunanın təqsirinin dərəcəsindən asılı olmayaraq, hər bir halda üçüncü şəxsin sağlamlığına dəyən zərərin əvəzini bu Qanunla müəyyən edilmiş qaydada ödəməlidir.
                 <br><strong>19.3.</strong> Mülki məsuliyyətin sığortası üzrə üçüncü şəxs onun sağlamlığına dəyən zərərin əvəzinin ödənilməsini sığortalıdan, sığorta olunandan və yaxud bu Qanunla müəyyən edilmiş sığorta məbləği həddində sığortaçıdan tələb edə bilər.
@@ -668,10 +646,9 @@
                 <br><strong>19.6.</strong> Sığorta olunan və ya üçüncü şəxs sağlamlığına dəymiş zərərə görə bu Qanunla nəzərdə tutulmuş sığorta ödənişini sağlığında tam və ya qismən almamışdırsa, ona verilməli olan sığorta ödənişinin məbləği və ya bu məbləğin qalan hissəsi faydalanan şəxs qismində onun ailə üzvlərinə ödənilir.
                 <br><strong>19.7.</strong> Sığorta olunan və ya üçüncü şəxs sığorta hadisəsi nəticəsində sağlamlığına dəymiş zərərdən bu hadisənin baş verdiyi tarixdən 3 il müddətində ölərsə, onun almış olduğu müvafiq sığorta ödənişinin məbləği ilə sığorta məbləği arasındakı fərq ailə üzvlərinə ödənilir.
             </p>
+            <div class="sehife_section" ><p>Səhifə 17</p></div>
             <br>
-            <div class="sehife_section" id="icbari18">Səhifə 18</div>
-            <br>
-            <p>
+            <p class="pt120" id="icbari18">
                 <strong>19.8.</strong> Sığorta olunanın bir sığorta hadisəsi nəticəsində iki və ya daha artıq üçüncü şəxsin sağlamlığına vurduğu zərərlər üzrə ayrı-ayrılıqda hesablanan sığorta məbləğinin ümumi həcmi müvafiq sığorta məbləğini aşarsa, sığorta ödənişi üçüncü şəxslərə həmin sığorta məbləğinin hər bir üçüncü şəxsə dəymiş zərərə mütənasib olan həcmdə verilir.
                 <br><strong>19.9.</strong> Üçüncü şəxsin ölümü halında sığortalının və ya sığorta olunanın qanunvericiliyə uyğun olaraq ödədiyi dəfn xərcləri sığorta ödənişi məbləğinə daxil edilmir.
             </p>
@@ -686,10 +663,9 @@
                 <br><strong>20.5.</strong> Üçüncü şəxs onun əmlakına dəymiş zərərin əvəzinin ödənilməsini sığortalıdan, sığorta olunandan, yaxud bu Qanunla müəyyən edilmiş sığorta məbləği həddində sığortaçıdan tələb edə bilər. Onlardan biri zərərin əvəzini tam ödədikdə, üçüncü şəxsin iddiası təmin edilmiş hesab olunur.
                 <br><strong>20.6.</strong> Sığorta hadisəsi nəticəsində üçüncü şəxsin əmlakına vurulan zərərin əvəzi sığortalı və ya sığorta olunan, həmçinin üçüncü şəxsin bağlamış olduğu digər müvafiq sığorta müqaviləsinin tərəfi olan sığortaçı tərəfindən
             </p>
+            <div class="sehife_section"><p>Səhifə 18</p></div>
             <br>
-            <div class="sehife_section" id="icbari19">Səhifə 19</div>
-            <br>
-            <p>
+            <p class="pt120" id="icbari19">
                 tam ödənildikdə, sığortaçı sığorta ödənişini sığorta məbləği həddində sığortalıya və ya sığorta olunana, yaxud da subroqasiya qaydasında tələb irəli sürmüş digər sığortaçıya verir. Bu halda sığorta ödənişinin məbləği sığortalının və ya sığorta olunanın, yaxud digər sığortaçının faydalanan şəxsə ödəmiş olduğu məbləğdən çox ola bilməz.
                 <br><strong>20.7.</strong> Sığorta hadisəsi nəticəsində üçüncü şəxsin əmlakına dəymiş zərərlə əlaqədar sığortalı və ya sığorta olunan, həmçinin üçüncü şəxsin bağlamış olduğu digər müvafiq sığorta müqaviləsinin tərəfi olan sığortaçı tərəfindən zərərçəkənə ödənilmiş məbləğ zərər məbləğindən az olduqda, sığortaçı sığorta ödənişini ödənilmiş məbləğlə zərər məbləği arasındakı fərq həcmində zərərçəkənə, ödənilmiş məbləğin əvəzini isə sığortalıya və ya sığorta olunana, yaxud da subroqasiya qaydasında tələb irəli sürmüş digər sığortaçıya verməklə həyata keçirir.
             </p>
@@ -704,10 +680,9 @@
                 <br><strong>21.1.4.</strong> sığorta tələbi sığortalının və ya sığorta olunanın cərimə, dəbbə pulu, peniya ödəməsi üzrə əmlak mənafeləri ilə bağlı olduqda.
                 <br><strong>21.2.</strong> Bu Qanunun Xüsusi hissəsində icbari sığorta növləri üzrə sığorta ödənişinin verilməsindən imtinanın digər əsasları da nəzərdə tutula bilər.
             </p>
+            <div class="sehife_section" ><p>Səhifə 19</p></div>
             <br>
-            <div class="sehife_section" id="icbari20">Səhifə 20</div>
-            <br>
-            <h3 class="madde-item">Maddə 22. Sığortalının hüquqları və vəzifələri</h3>
+            <h3 class="madde-item pt120" id="icbari20">Maddə 22. Sığortalının hüquqları və vəzifələri</h3>
             <br>
             <p>
                 <strong>22.1.</strong> Sığortalının aşağıdakı hüquqları vardır:
@@ -725,10 +700,9 @@
                 <br><strong>22.2.3.</strong> sığorta predmetinə dair qüvvədə olan və ya sonradan bağlanan digər sığorta müqavilələri barədə sığortaçıya məlumat vеrmək;
                 <br><strong>22.2.4.</strong> bu Qanunla üzərinə məlumatlandırma vəzifəsi qoyulmuş digər şəxslər tərəfindən müvafiq məlumat verilməmiş olduqda sığorta hadisəsi
             </p>
+            <div class="sehife_section"><p>Səhifə 20</p></div>
             <br>
-            <div class="sehife_section" id="icbari21">Səhifə 21</div>
-            <br>
-            <p>
+            <p class="pt120" id="icbari21">
                 hesab edilə bilən halın baş verməsi və zərərçəkənlərin olması barədə, bu Qanunla müəyyən edilmiş qaydada və müddətdə aidiyyəti üzrə müvafiq dövlət orqanlarına, həmçinin sığortaçıya məlumat vermək;
                 <br><strong>22.2.5.</strong> sığorta hadisəsi hesab edilə bilən hal baş verdikdə, zərərçəkən(lər)ə müvafiq icbari sığorta müqaviləsinin mövcudluğu barədə məlumat vermək;
                 <br><strong>22.2.6.</strong> sığorta hadisəsi hesab edilə bilən halın baş verməsi zamanı və ondan dərhal sonra zərərin qarşısının alınması və (və ya) onun azaldılması, həmçinin əmlakın xilas еdilməsi istiqamətində, eyni zamanda zərər çəkmiş və ya zərər çəkmə еhtimalı olan şəxslərin həyatını və ya sağlamlığını xilas еtmək üçün ağlabatan və mümkün olan bütün tədbirləri həyata keçirmək;
@@ -740,10 +714,9 @@
                 <br><strong>22.2.12.</strong> sığorta qanunvericiliyi ilə nəzərdə tutulmuş digər vəzifələri yerinə yetirmək.
                 <br><strong>22.3.</strong> Əgər icbari sığorta müqaviləsi üzrə sığortalı ilə sığorta olunan eyni şəxs deyilsə, sığortalının bu Qanunun 22.1.1-ci maddəsində nəzərdə tutulandan başqa digər hüquqları və 22.2.1, 22.2.2, 22.2.3, 22.2.11-ci maddələrində nəzərdə tutulanlardan başqa digər vəzifələri sığorta olunanın hüquq və vəzifələrinə də aiddir.
             </p>
+            <div class="sehife_section" ><p>Səhifə 21</p></div>
             <br>
-            <div class="sehife_section" id="icbari22">Səhifə 22</div>
-            <br>
-            <h3 class="madde-item">Maddə 23. Sığortaçının hüquq və vəzifələri</h3>
+            <h3 class="madde-item pt120" id="icbari22">Maddə 23. Sığortaçının hüquq və vəzifələri</h3>
             <br>
             <p>
                 <strong>23.1.</strong> Sığortaçının aşağıdakı hüquqları vardır:
@@ -759,10 +732,9 @@
                 <br><strong>23.2.1.</strong> sığortalını və sığorta olunanı müvafiq icbari sığortanın şərtləri, onun icbarı sığorta müqaviləsindən irəli gələn hüquq və vəzifələri ilə tanış etmək;
                 <br><strong>23.2.2.</strong> sığorta riskini özü və ya nümayəndəsi, o cümlədən sığorta qanunvericiliyinə uyğun olaraq sığorta sahəsində yardımçı fəaliyyət göstərən hüquqi şəxslər və ya müstəqil ekspertlər vasitəsilə qiymətləndirmək;
             </p>
+            <div class="sehife_section"><p>Səhifə 22</p></div>
             <br>
-            <div class="sehife_section" id="icbari23">Səhifə 23</div>
-            <br>
-            <p>
+            <p class="pt120" id="icbari23">
                 <strong>23.2.3.</strong> sığortalılardan sığorta haqqını aldıqdan sonra sığorta şəhadətnaməsini bu Qanunla müəyyən edilmiş müddətdə vеrmək;
                 <br><strong>23.2.4.</strong> bu Qanunla nəzərdə tutulmuş hallarda sığorta müqaviləsinə dəyişikliklər etmək;
                 <br><strong>23.2.5.</strong> sığorta hadisəsi hesab edilə bilən halın baş verməsi barədə məlumat aldıqda, onu dərhal qeydiyyata almaq;
@@ -782,10 +754,9 @@
                 <br><strong>24.1.5.</strong> bu Qanunla müəyyən edilmiş hallarda və qaydada sığorta ödənişi almaq;
                 <br><strong>24.1.6.</strong> sığortaçının sığorta ödənişindən imtina barədə qərarından, zərərin müəyyənləşdirilməsi ilə bağlı müstəqil ekspertin təyin edilməsi tələbinin sığortaçı tərəfindən yerinə yetirilməməsindən və ya sığorta ödənişinin
             </p>
+            <div class="sehife_section" ><p>Səhifə 23</p></div>
             <br>
-            <div class="sehife_section" id="icbari24">Səhifə 24</div>
-            <br>
-            <p>
+            <p class="pt120" id="icbari24">
                 məbləği ilə razılaşmadığı halda qanunvericilikdə nəzərdə tutulmuş qaydada şikayət etmək;
                 <br><strong>24.2.</strong> Bu Qanunla müəyyən edilmiş hallarda zərərçəkənin bu maddədə nəzərdə tutulmuş hüquqları digər faydalanan şəxslərə keçir.
             </p>
@@ -800,10 +771,9 @@
                 <br><strong>25.1.4.</strong> sığorta hadisəsi icbari sığorta şəhadətnaməsində göstərilən əmlakın onun texniki təyinatına uyğun olmayan məqsədlərlə istifadə edilməsi zamanı baş verdikdə;
                 <br><strong>25.1.5.</strong> sığortalı (sığorta olunan) və ya onun nümayəndəsi sığorta hadisəsi zamanı əmlaka daha çox zərərin dəyməsinin qarşısının alınması və (və ya) onun azaldılması istiqamətində, həmçinin zərər çəkmiş və ya zərər çəkmə
             </p>
+            <div class="sehife_section" ><p>Səhifə 24</p></div>
             <br>
-            <div class="sehife_section" id="icbari25">Səhifə 25</div>
-            <br>
-            <p>
+            <p class="pt120" id="icbari25">
                 ehtimalı olan şəxslərin həyatını xilas etmək üçün mümkün olan tədbirləri qəsdən görmədikdə; bu zaman subroqasiya hüququ o həcmdə yaranır ki, qeyd olunan tədbirlər görülmüş olsaydı, zərərin miqdarı həmin həcmdə azalmış olardı.
                 <br><strong>25.1.6.</strong> sığorta hadisəsi sığortalının və ya zərərçəkən olmayan sığorta olunanın bu və ya digər fəaliyyət növü ilə məşğul olarkən, belə fəaliyyət növünü tənzimləyən qanunvericiliyin tələblərini pozmaqla qəsdən törədilən əməli ilə müşayiət olunduqda;
                 <br><strong>25.1.7.</strong> sığortalı və ya sığorta olunan sığorta müqaviləsi bağlanarkən, sığorta müqaviləsinin məzmununa daxil edilməli olan, həmçinin özünə məlum olan və sığortaçının müqavilədən imtina etmək, yaxud onu məzmunu dəyişdirilmiş şəkildə bağlamaq qərarına təsir göstərə bilən, habelə müqavilə bağlandıqdan sonra sığorta riskinin dəyişməsi ilə bağlı bütün hallar barədə sığortaçıya qəsdən məlumat vermədikdə, yaxud qəsdən yanlış məlumat verdikdə;
@@ -812,10 +782,9 @@
                 <br><strong>25.3.</strong> Bu Qanunun Xüsusi hissəsində icbari sığortanın ayrı-ayrı növləri üzrə sığortaçının subroqasiya hüququnun digər əsasları və hər bir halda müvafiq sığorta ödənişi məbləğindən çox olmayan digər məbləğləri də nəzərdə tutula bilər.
                 <br><strong>25.4.</strong> Bu Qanunun 32.1.1-ci maddəsində nəzərdə tutulmuş halda kompensasiya ödənişi həyata keçirildikdə, müvafiq icbari sığorta müqaviləsi üzrə faydalanan şəxsin sığortaçı və ya müvafiq hallarda sığortaçının ləğvetmə komissiyası qarşısındakı tələb hüququ verilmiş kompensasiya ödənişi həcmində Büroya keçir.
             </p>
+            <div class="sehife_section"><p>Səhifə 25</p></div>
             <br>
-            <div class="sehife_section" id="icbari26">Səhifə 26</div>
-            <br>
-            <h3 class="madde-item">Maddə 26. Sığortaçının qarşısıalınma tədbirləri fondu</h3>
+            <h3 class="madde-item pt120" id="icbari26">Maddə 26. Sığortaçının qarşısıalınma tədbirləri fondu</h3>
             <br>
             <p>
                 <strong>26.1.1.</strong> Sığortaçı baş verə biləcək sığorta hadisələri hesab edilə bilən halların baş verməsinin qarşısını almaq məqsədi ilə həyata keçirilən tədbirlərin, o cümlədən bununla bağlı təbliğat-təşviqat işlərinin maliyyələşdirilməsi, habelə belə hallar baş verdikdə zərərin qarşısının alınmasına və azaldılmasına yönələn lazımi xərclərin ödənilməsi üçün bu Qanunun 12.2-ci maddəsində nəzərdə tutulmuş müvafiq məcburi ayırmalar hesabına qarşısıalınma tədbirləri fondunu formalaşdırmalıdır.
@@ -831,10 +800,9 @@
                 <br><strong>27.1.3.</strong> bu Qanunda nəzərdə tutulmuş icbari sığorta növləri ilə əlaqədar qanunvericiliyin və təcrübi işin təkmilləşdirilməsi üzrə təkliflər vermək;
                 <br><strong>27.1.4.</strong> bu Qanunda nəzərdə tutulmuş icbari sığorta növləri üzrə hadisələrin araşdırılması və zərərlərin qiymətləndirilməsi ilə bağlı texniki ekspert müayinələrinin həyata keçirilməsi üçün metodoloji təlimatlar işləyib hazırlamaq və tətbiq etmək;
             </p>
+            <div class="sehife_section" ><p>Səhifə 26</p></div>
             <br>
-            <div class="sehife_section" id="icbari27">Səhifə 27</div>
-            <br>
-            <p>
+            <p class="pt120" id="icbari27">
                 <strong>27.1.5.</strong> bu Qanunda nəzərdə tutulmuş icbari sığorta növləri üzrə fəaliyyət göstərən beynəlxalq təşkilatlarla münasibətlərdə Büronun iştirakçılarını təmsil etmək;
                 <br><strong>27.1.6.</strong> Azərbaycan Respublikasının ərazisində baş verən hadisələr nəticəsində sağlamlığına zərər dəyən üçüncü şəxslərə bu Qanunda nəzərdə tutulmuş müvafiq hallarda kompensasiya ödənişlərinin verilməsini təmin etmək;
                 <br><strong>27.1.7.</strong> bu Qanunda nəzərdə tutulan elektron informasiya sisteminin mövcudluğunu, istifadəsini və onun digər elektron informasiya sistemləri ilə əlaqələndirilməsini təmin etmək;
@@ -851,10 +819,9 @@
                 <br><strong>28.3.</strong> İştirak haqqı Büronun iştirakçısı olmaq üçün müraciət etmiş sığortaçının ödəməli olduğu məbləğdir.
                 <br><strong>28.4.</strong> İştirak haqqının məbləği sığorta nəzarəti orqanı tərəfindən müəyyən edilir.
             </p>
+            <div class="sehife_section"><p>Səhifə 27</p></div>
             <br>
-            <div class="sehife_section" id="icbari28">Səhifə 28</div>
-            <br>
-            <p>
+            <p class="pt120" id="icbari28">
                 <strong>28.5.</strong> İştirak haqqının ödənilməsini və bu Qanunun 30.1-ci maddəsində nəzərdə tutulmuş təminat depozitinin yerləşdirilməsini təsdiq edən sənədlərin Büroya daxil olduğu tarixdən sığortaçı Büronun iştirakçı sığortaçıların reyestrinə daxil edilir.
             </p>
             <br>
@@ -876,10 +843,9 @@
                 <br><strong>30.2.</strong> Təminat depozitinin məbləği sığorta nəzarəti orqanı tərəfindən müəyyən edilir.
                 <br><strong>30.3.</strong> Təqvim haqları kompensasiya ödənişləri ehtiyatlarının mənbələrindən biri kimi iştirakçı sığortaçıların bu Qanunda müəyyən edilmiş qaydada Büroya ödədikləri mütəmadi haqlardır.
             </p>
+            <div class="sehife_section"><p>Səhifə 28</p></div>
             <br>
-            <div class="sehife_section" id="icbari29">Səhifə 29</div>
-            <br>
-            <p>
+            <p class="pt120" id="icbari29">
                 <strong>30.4.</strong> Sığortaçı təqvim haqlarını Büronun iştirakçı sığortaçıların reyestrinə daxil edildiyi tarixdən bu Qanunun 29.3-cü maddəsinin tələbi nəzərə alınmaqla, Büroda iştirakına xitam verildiyi tarixədək ödəyir.
                 <br><strong>30.5.</strong> Təqvim haqlarının hesablanması üçün ilk hesabat dövrü sığortaçının Büronun iştirakçı sığortaçıların reyestrinə daxil edildiyi rübün birinci günündən növbəti rübün birinci gününədək olan dövr hesab edilir.
                 <br><strong>30.6.</strong> Təqvim haqları sığortaçının Büronun iştirakçı sığortaçıların reyestrinə daxil edildiyi gündən başlayaraq, icbari sığorta müqavilələri üzrə daxil olan sığorta haqlarının 5 faizi həcmində ödənilir.
@@ -894,11 +860,9 @@
                 <br><strong>31.3.</strong> İştirakçı sığortaçının ödəməli olduğu əlavə haqların məbləği onun bu Qanunda nəzərdə tutulmuş icbari sığorta növlərinə aid sığorta müqavilələri üzrə son bir il müddətində daxil olan sığorta haqlarının bütün iştirakçı sığortaçıların həmin növə aid sığorta müqavilələri üzrə həmin müddət ərzində daxil olan sığorta haqlarına nisbətinə mütənasib olaraq müəyyən edilir.
                 <br><strong>31.4.</strong> Əlavə haqların ödənilməsinə zərurət yarandıqda, bu haqların hər bir konkret hal üzrə ödənilmə üsulu və müddətini sığorta nəzarəti orqanı müəyyən edir.
             </p>
+            <div class="sehife_section" ><p>Səhifə 29</p></div>
             <br>
-            <div class="sehife_section" id="icbari30">Səhifə 30</div>
-            <br>
-            <br>
-            <h3 class="madde-item">Maddə 32. Kompensasiya ödənişlərinin təyinatı</h3>
+            <h3 class="madde-item pt120" id="icbari30">Maddə 32. Kompensasiya ödənişlərinin təyinatı</h3>
             <br>
             <p>
                 <strong>32.1.</strong> Əmlaka və sağlamlığa dəyən zərərə görə bu Qanunda nəzərdə tutulmuş sığorta ödənişlərinin həyata keçirilməsi aşağıdakı hallarda mümkün olmadıqda, Büro tərəfindən kompensasiya ödənişi verilir:
@@ -916,10 +880,9 @@
                 <strong>33.1.</strong> Kompensasiya ödənişi bu ödənişi tələb etmək hüququna malik olan şəxsin yazılı müraciəti əsasında ödənilir.
                 <br><strong>33.2.</strong> Kompensasiya ödənişləri üzrə bu ödənişi almaq hüququna malik olan şəxslə Büro arasındakı münasibətlərə müvafiq icbari sığorta ilə bağlı
             </p>
+            <div class="sehife_section"><p>Səhifə 30</p></div>
             <br>
-            <div class="sehife_section" id="icbari31">Səhifə 31</div>
-            <br>
-            <p>
+            <p class="pt120" id="icbari31">
                 faydalanan şəxs və sığortaçı arasındakı münasibətlər üzrə qanunvericiliklə müəyyən olunmuş tələblər tətbiq olunur.
                 <br><strong>33.3.</strong> Bu Qanunun 32.1.2-ci və 32.1.3-cü maddələrində nəzərdə tutulmuş hallarda kompensasiya ödənişi o zaman verilir ki, üçüncü şəxsin sağlamlığına zərər dəyməsinə səbəb olmuş hadisə avtonəqliyyat vasitəsi sahiblərinin mülki məsuliyyətinin icbari sığorta müqaviləsinin mövcud olmasının şərti olaraq hesab edildiyi halda sığorta hadisəsi kimi qiymətləndirilə bilsin.
                 <br><strong>33.4.</strong> Kompensasiya ödənişləri müvafiq icbari sığorta növünə dair qanunvericilikdə sığorta ödənişlərinin verilməsi üçün nəzərdə tutulmuş qaydada və məbləğdə həyata keçirilir.
@@ -938,10 +901,9 @@
                 <br><strong>34.3.4.</strong> iştirakçı sığortaçının lisenziyasının qüvvəsinin dayandırılması və ya bərpası;
                 <br><strong>34.3.5.</strong> iştirakçı sığortaçıya müvəqqəti inzibatçının təyin edilməsi;
             </p>
+            <div class="sehife_section"><p>Səhifə 31</p></div>
             <br>
-            <div class="sehife_section" id="icbari32">Səhifə 32</div>
-            <br>
-            <p>
+            <p class="pt120" id="icbari32">
                 <strong>34.3.6.</strong> iştirakçı sığortaçının sığorta fəaliyyətinə verilmiş lisenziyasının ləğvi.
                 <br><strong>34.4.</strong> Sığorta nəzarəti orqanı nəzarət funksiyalarını həyata keçirərkən, iştirakçı sığortaçıların bu Qanuna uyğun olaraq Büro qarşısındakı öhdəliklərinin yerinə yetirilməməsi, o cümlədən Büroya ödənilməli olan məbləğlərin tam və ya düzgün ödənilməməsi hallarını aşkar etdikdə, belə halların aradan qaldırılması barədə həmin sığortaçıya icrası məcburi olan göstəriş verərək bu barədə Büronu məlumatlandırır.
             </p>
@@ -963,10 +925,9 @@
                 <br><strong>35.3.4.</strong> Azərbaycan Respublikasının qanunvericiliyi ilə icazə verilməyən yerlərdə inşa edilmiş daşınmaz əmlak.
                 <br><strong>35.4.</strong> Yaşayış binalarının, yaşayış evlərinin və mənzillərin icbari sığortası onların konstruktiv elementlərinə, otaqlarına, o cümlədən şüşələr də daxil olmaqla qapı və pəncərə konstruksiyalarına, su, kanalizasiya və qaz təchizatına, habelə istilik sisteminə aid borulara, rabitə, elektrik və digər
             </p>
+            <div class="sehife_section"><p>Səhifə 32</p></div>
             <br>
-            <div class="sehife_section" id="icbari33">Səhifə 33</div>
-            <br>
-            <p>
+            <p class="pt120" id="icbari33">
                 naqillərinə, bəzək elementlərinə, o cümlədən bütün növ xarici, yaxud daxili mala və suvaq işlərinə, divar, tavan və döşəməyə dəyən zərərlərə təminat verir.
                 <br><strong>35.5.</strong> Yaşayış binası bu Fəslin tələblərinə uyğun olaraq icbari sığorta etdirilmiş olduğu halda, həmin binada yerləşən qeyri-yaşayış sahələrinin bu Fəslin məqsədləri üçün icbari sığorta etdirilməsi tələb olunmur.
             </p>
@@ -989,10 +950,9 @@
                 <br><strong>36.3.1.</strong> sığortalının, faydalanan şəxsin və ya onların rəhbər işçilərinin hadisənin baş verməsinə yönəldilmiş qəsdən etdiyi hərəkətlər;
                 <br><strong>36.3.2.</strong> sığortalanmış əmlaka təmir, emal və ya digər istehsalat məqsədləri üçün tətbiq olunan istehsal alovunun, yaxud istiliyin təsiri nəticəsində, eyni zamanda yanğın baş verməmişdirsə, belə əmlaka zərərin dəyməsi;
             </p>
+            <div class="sehife_section"><p>Səhifə 33</p></div>
             <br>
-            <div class="sehife_section" id="icbari34">Səhifə 34</div>
-            <br>
-            <p>
+            <p class="pt120" id="icbari34">
                 <strong>36.3.3.</strong> hadisə zamanı və ya hadisədən sonra əmlakın hər hansı hissəsinin oğurlanması;
                 <br><strong>36.3.4.</strong> qrunt sularının səviyyəsinin dəyişməsi;
                 <br><strong>36.3.5.</strong> suyun borulardan və ya rezervuardan şaxta vurma, aşınma, yeyilmə, tədricən xarab olma, boruların və rezervuarların təmiri, köçürülməsi və ya tutumunun artırılması nəticəsində axması.
@@ -1017,10 +977,9 @@
                 <br><strong>39.1.1.</strong> tikililər və binalar üzrə – sığorta predmeti olan əmlakın yerləşdiyi yerdə eyni cür tikilinin və binanın inşasının dəyəri – bərpa dəyəri məbləğində. Bərpa dəyəri müəyyən edilərkən materialların köhnəlmə əmsalı və sığorta predmeti olan əmlakın texniki vəziyyəti nəzərə alınır;
                 <br><strong>39.1.2.</strong> Qeyri-yaşayış sahələri üzrə – sığorta predmeti olan əmlakın yerləşdiyi yerdə eyni cür və həmin texniki vəziyyətdə olan əmlakın orta bazar dəyəri məbləğində.
             </p>
+            <div class="sehife_section" ><p>Səhifə 34</p></div>
             <br>
-            <div class="sehife_section" id="icbari35">Səhifə 35</div>
-            <br>
-            <p>
+            <p class="pt120" id="icbari35">
                 <strong>39.2.</strong> Yaşayış evləri və mənzillər istisna olmaqla, digər daşınmaz əmlakın icbari sığortası üzrə azadolma məbləği müvafiq icbari sığorta müqaviləsində razılaşdırılır.
                 <br><strong>39.3.</strong> Yaşayış evləri və mənzillərin icbari sığortası üzrə sığorta məbləğləri və şərtsiz azadolma məbləğləri aşağıdakı kimi müəyyən edilir:
                 <br><strong>39.3.1.</strong> Bakı şəhərində yerləşən daşınmaz əmlak üzrə sığorta məbləği 25.000 manat, azadolma məbləği 250 manat;
@@ -1042,10 +1001,9 @@
             <p>
                 <strong>41.1.</strong> Daşınmaz əmlakın icbari sığortası üzrə sığortalanmış əmlaka dəyən zərərə görə sığorta ödənişinin verilməsi bu Qanunun 39-cu maddəsində nəzərdə tutulmuş müvafiq sığorta məbləğləri həddində bu
             </p>
+            <div class="sehife_section" ><p>Səhifə 35</p></div>
             <br>
-            <div class="sehife_section" id="icbari36">Səhifə 36</div>
-            <br>
-            <p>
+            <p class="pt120" id="icbari36">
                 Qanunun Ümumi hissəsində müəyyən edilmiş ümumi əsaslarla həyata keçirilir.
                 <br><strong>41.2.</strong> Şəxs mülkiyyətində və (və ya) sahibliyində olan bu Qanunun 35.2-ci maddəsində nəzərdə tutulmuş hər hansı əmlakını sığorta etdirmək vəzifəsini yerinə yetirmədikdə, həmin əmlaka dəymiş zərərə görə dövlət vəsaiti hesabına kompensasiya verilməsi barədə səlahiyyətli dövlət orqanları tərəfindən müvafiq qərar verildiyi halda, ödənilə biləcək belə kompensasiyanın məbləği zərər məbləğinin 20% -dən artıq ola bilməz.
             </p>
@@ -1063,10 +1021,9 @@
             </p>
             <br>
             <h3 class="madde-item">Maddə 43. Daşınmaz əmlakın istismarı ilə bağlı mülki məsuliyyətini icbari sığorta etdirməli olan şəxslər</h3>
+            <div class="sehife_section"><p>Səhifə 36</p></div>
             <br>
-            <div class="sehife_section" id="icbari37">Səhifə 37</div>
-            <br>
-            <p>
+            <p class="pt120" id="icbari37">
                 <strong>43.1.</strong> Mülkiyyətində bu Qanunun 42.3-cü maddəsində nəzərdə tutulmuş hər hansı əmlak olan və ya belə əmlaka faktiki sahibliyi həyata keçirən, həmçinin onu icarəyə götürmüş və ya etibarnamə əsasında idarə edən, yaxud digər qanuni əsaslarla istismar edən müvafiq şəxslər bu Fəslin məqsədləri üçün həmin əmlakın sahibi hesab olunurlar.
                 <br><strong>43.2.</strong> Aşağıdakı şəxslər sahibi olduğu, bu Qanunun 42.3-cü maddəsində nəzərdə tutulmuş hər hansı əmlakın istismarı, o cümlədən müvafiq sahədə inşaat, təmir, yenidənqurma və ya digər işlərin aparılması nəticəsində üçüncü şəxslərə dəyə biləcək zərərlə bağlı mülki məsuliyyətini, bu Qanunun 8.3-cü maddəsini nəzərə almaqla, icbari qaydada sığorta etdirməlidir:
                 <br><strong>43.2.1.</strong> hüquqi şəxslər;
@@ -1085,10 +1042,9 @@
             </p>
             <br>
             <h3 class="madde-item">Maddə 45. Daşınmaz əmlakın istismarı ilə bağlı mülki məsuliyyətin icbari sığortası üzrə sığortalı və sığorta olunan</h3>
+            <div class="sehife_section" ><p>Səhifə 37</p></div>
             <br>
-            <div class="sehife_section" id="icbari38">Səhifə 38</div>
-            <br>
-            <p>
+            <p class="pt120" id="icbari38">
                 <strong>45.1.</strong> Sahibi olduğu daşınmaz əmlakın istismarı, o cümlədən müvafiq sahədə inşaat, təmir, yenidənqurma və ya digər işlərin aparılması ilə bağlı üçüncü şəxslərə vurulan zərərə görə əmlak mənafelərinin sığortası üzrə sığortaçı ilə mülki məsuliyyətin icbari sığortası müqaviləsini bağlayan və müvafiq icbari sığorta şəhadətnaməsinin adına verildiyi şəxs sığortalı hesab edilir.
                 <br><strong>45.2.</strong> İcbari sığorta şəhadətnaməsinin kimin adına verilməsindən asılı olmayaraq, bu Fəslə uyğun olaraq istismarı, o cümlədən ərazisində inşaat, təmir, yenidənqurma və ya digər işlərin aparılması ilə bağlı sahibinin mülki məsuliyyəti sığortalanmış əmlakı qanuni əsaslarla istifadə edən və ya onun ərazisində belə əsaslarla fəaliyyət göstərən istənilən şəxs üçüncü şəxslər qarşısında mülki məsuliyyətinə görə əmlak mənafeyi sığortalanmış sığorta olunan hesab edilir.
             </p>
@@ -1106,10 +1062,9 @@
                 <br><strong>47.1.1.</strong> fiziki şəxslərin sağlamlığına dəyən zərər üzrə ümumi sığorta məbləği 50.000 manatdan çox olmamaq şərtilə, bir fiziki şəxsin sağlamlığına dəyən zərər üzrə 5000 manat;
                 <br><strong>47.1.2.</strong> əmlaka dəyən zərər üzrə 50.000 manat.
             </p>
+            <div class="sehife_section" ><p>Səhifə 38</p></div>
             <br>
-            <div class="sehife_section" id="icbari39">Səhifə 39</div>
-            <br>
-            <h3 class="madde-item">Maddə 48. Daşınmaz əmlakın istismarı ilə bağlı mülki məsuliyyətin icbari sığortası üzrə sığorta haqları</h3>
+            <h3 class="madde-item pt120" id="icbari39">Maddə 48. Daşınmaz əmlakın istismarı ilə bağlı mülki məsuliyyətin icbari sığortası üzrə sığorta haqları</h3>
             <br>
             <p>
                 Daşınmaz əmlakın istismarı ilə bağlı mülki məsuliyyətin icbari sığortası üzrə sığorta haqlarının məbləği müvafiq əmlakın təyinatından asılı olaraq, sığorta nəzarəti orqanı tərəfindən müəyyən edilir.
@@ -1127,10 +1082,9 @@
             </h2>
             <br>
             <h3 class="madde-item">Maddə 50. Avtonəqliyyat vasitəsi sahiblərinin mülki məsuliyyətinin icbari sığortasının məqsədi və təyinatı</h3>
+            <div class="sehife_section" ><p>Səhifə 39</p></div>
             <br>
-            <div class="sehife_section" id="icbari40">Səhifə 40</div>
-            <br>
-            <p>
+            <p class="pt120" id="icbari40">
                 <strong>50.1.</strong> Avtonəqliyyat vasitəsi sahiblərinin mülki məsuliyyətinin icbari sığortası mexaniki avtonəqliyyat vasitələrinin Azərbaycan Respublikasının ərazisində istifadəsi nəticəsində fiziki şəxslərin sağlamlığına, həmçinin fiziki və hüquqi şəxslərin əmlakına vurduğu zərərlərin əvəzinin ödənilməsi məqsədi ilə tətbiq edilir.
                 <br><strong>50.2.</strong> Aşağıdakı avtonəqliyyat vasitələrinin istifadəsi ilə bağlı üçüncü şəxslər qarşısında mülki məsuliyyətin sığortası icbaridir:
                 <br><strong>50.2.1.</strong> Mühərrikinin silindrlərinin həcmi 50 sm3
@@ -1149,10 +1103,9 @@
                 <br><strong>51.2.</strong> Bu Qanunun Ümumi hissəsində icbari sığorta müqaviləsinə xitam verilməsi ilə bağlı nəzərdə tutulmuş müddəalar avtonəqliyyat vasitəsi sahiblərinin mülki məsuliyyətinin icbari sığorta müqaviləsinə, bu Qanunun 51.3-cü maddəsi nəzərə alınmaqla şamil edilir.
                 <br><strong>51.3.</strong> Bu Qanuna uyğun olaraq bağlanmış avtonəqliyyat vasitəsi sahiblərinin mülki məsuliyyətin icbari sığortası müqaviləsinin aid olduğu əmlakın özgəninkiləşdirildiyi hər bir halda həmin icbari sığorta müqaviləsinə xitam verilir.
             </p>
+            <div class="sehife_section" ><p>Səhifə 40</p></div>
             <br>
-            <div class="sehife_section" id="icbari41">Səhifə 41</div>
-            <br>
-            <h3 class="madde-item">Maddə 52. Avtonəqliyyat vasitəsi sahiblərinin mülki məsuliyyətinin icbari sığortası üzrə sığorta hadisəsi</h3>
+            <h3 class="madde-item pt120" id="icbari41">Maddə 52. Avtonəqliyyat vasitəsi sahiblərinin mülki məsuliyyətinin icbari sığortası üzrə sığorta hadisəsi</h3>
             <br>
             <p>
                 <strong>52.1.</strong> Avtonəqliyyat vasitəsinin Azərbaycan Respublikasının ərazisində istifadəsi nəticəsində zərərçəkən üçüncü şəxslərin sağlamlığına və (və ya) əmlakına dəymiş zərərin əvəzinin ödənilməsi üzrə mülki məsuliyyətin yaranması faktı sığorta hadisəsi hesab olunur.
@@ -1167,10 +1120,9 @@
                 <br><strong>53.3.</strong> Avtonəqliyyat vasitəsinin sahiblərinin mülki məsuliyyətini icbari sığorta etdirərək sığorta haqqı ödəyən və müvafiq icbari sığorta müqaviləsinin tərəfi olan şəxs sığortalı hesab edilir.
                 <br><strong>53.4.</strong> İcbari sığorta şəhadətnaməsinin kimin adına verilməsindən asılı olmayaraq, istifadəsi ilə bağlı sahibinin mülki məsuliyyəti bu Fəslə uyğun olaraq sığortalanmış avtonəqliyyat vasitəsini qanuni əsaslarla istifadə edən
             </p>
+            <div class="sehife_section" ><p>Səhifə 41</p></div>
             <br>
-            <div class="sehife_section" id="icbari42">Səhifə 42</div>
-            <br>
-            <p>
+            <p class="pt120" id="icbari42">
                 istənilən şəxs üçüncü şəxslər qarşısında mülki məsuliyyətinə görə əmlak mənafeyi sığortalanmış sığorta olunan hesab edilir.
             </p>
             <br>
@@ -1194,10 +1146,9 @@
                 <br><strong>56.1.2.</strong> üçüncü şəxslərin əmlakına dəyən zərər üzrə 5000 manat.
                 <br><strong>56.2.</strong> Avtonəqliyyat vasitəsi sahiblərinin mülki məsuliyyətinin icbari sığorta müqaviləsi üzrə sığorta məbləğləri müvafiq sığorta ödənişlərinin həyata keçirilməsindən asılı olmayaraq, həmin müqavilənin qüvvədə olduğu müddət ərzində dəyişmir.
             </p>
+            <div class="sehife_section" ><p>Səhifə 42</p></div>
             <br>
-            <div class="sehife_section" id="icbari43">Səhifə 43</div>
-            <br>
-            <h3 class="madde-item">Maddə 57. Avtonəqliyyat vasitəsi sahiblərinin mülki məsuliyyətinin icbari sığortası üzrə sığorta haqları</h3>
+            <h3 class="madde-item pt120" id="icbari43">Maddə 57. Avtonəqliyyat vasitəsi sahiblərinin mülki məsuliyyətinin icbari sığortası üzrə sığorta haqları</h3>
             <br>
             <p>
                 <strong>57.1.</strong> Avtonəqliyyat vasitəsi sahiblərinin mülki məsuliyyətinin icbari sığortası üzrə sığorta haqqı məbləğlərinin hesablanması qaydası sığorta nəzarəti orqanı tərəfindən müəyyənləşdirilir.
@@ -1215,10 +1166,9 @@
                 <br><strong>58.2.4.</strong> hadisə nəticəsində dəymiş zərərin həcminin 1000 manatdan çox olmaması hadisə iştirakçıları və sığortaçı tərəfindən ağlabatan şəkildə ehtimal edildikdə.
                 <br><strong>58.3.</strong> Bir sığorta hadisəsi nəticəsində bir neçə üçüncü şəxsə dəyən zərərə görə sığortaçının bu Qanunun müvafiq olaraq 14.2-ci və (və ya) 15.3-cü
             </p>
+            <div class="sehife_section" ><p>Səhifə 43</p></div>
             <br>
-            <div class="sehife_section" id="icbari44">Səhifə 44</div>
-            <br>
-            <p>
+            <p class="pt120" id="icbari44">
                 maddələrində nəzərdə tutulmuş qaydada zərərçəkənlərin hər birinə münasibətdə ayrı-ayrılıqda hesablanan öhdəliyinin ümumi həcmi bu Qanunun müvafiq olaraq 56.1.1-ci və (və ya) 56.1.2-ci maddələrində müəyyən edilmiş sığorta məbləğlərini aşarsa, hər bir zərərçəkənə verilən sığorta ödənişi bir sığorta hadisəsi üzrə müəyyən edilmiş ümumi sığorta məbləğinin ona dəymiş zərərə mütənasib hissəsində həyata keçirilir.
                 <br><strong>58.4.</strong> Bu Qanunun 17.1.4-cü maddəsində nəzərdə tutulmuş arayışın bu Fəslin məqsədləri üçün tələb olunan forması sığorta nəzarəti orqanı tərəfindən müəyyən edilir.
                 <br><strong>58.5.</strong> Bu Qanunun 58.2-ci maddəsində nəzərdə tutulmuş protokolun forması və tərtib edilmə qaydası sığorta nəzarəti orqanı tərəfindən müəyyən edilir.
@@ -1231,11 +1181,9 @@
                 <br><strong>59.2.</strong> İnformasiya sistemi müvafiq məlumatların onun informasiya ehtiyatına internet vasitəsilə daxil edilməsi və ya qəbul olunmasını, orada aydın şəkildə, oxunaqlı vəziyyətdə saxlanılması və emalını təmin etmək imkanlarına malik olmalıdır.
                 <br><strong>59.3.</strong> İnformasiya sisteminin qurulması və istifadəsi ilə bağlı texniki-proqram kompleksinin formalaşdırılması və ona texniki xidmət sığorta nəzarəti orqanının nəzarəti altında Büro tərəfindən həyata keçirilir.
             </p>
+            <div class="sehife_section" ><p>Səhifə 44</p></div>
             <br>
-            <div class="sehife_section" id="icbari45">Səhifə 45</div>
-            <br>
-            <br>
-            <h3 class="madde-item">Maddə 60. Avtonəqliyyat vasitəsi sahiblərinin mülki məsuliyyətinin icbari sığortası üzrə informasiya sisteminin məlumatlarla təchiz edilməsi</h3>
+            <h3 class="madde-item pt120" id="icbari45">Maddə 60. Avtonəqliyyat vasitəsi sahiblərinin mülki məsuliyyətinin icbari sığortası üzrə informasiya sisteminin məlumatlarla təchiz edilməsi</h3>
             <br>
             <p>
                 <strong>60.1.</strong> İnformasiya sisteminin qurulması və istifadəsinin təmin edilməsi zamanı həmin sistemin funksiyalarının səmərəli və vaxtında həyata keçirilməsi üçün Büro fiziki və hüquqi şəxslərdən, həmçinin dövlət orqanlarından məlumatlar, o cümlədən sığorta sirrini təşkil edən məlumatlar almaq hüququna malikdir.
@@ -1253,10 +1201,9 @@
                 <br><strong>61.2.</strong> İcbari sığorta müqaviləsinin müvafiq məlumatların informasiya sisteminə daxil edilməsi yolu ilə bağlanması və müqavilədə əks olunan bütün məlumatların həmin sistemdə saxlanılması sığortaçı tərəfindən təmin edilməlidir.
                 <br><strong>61.3.</strong> Sığortaçı və Büro baş vermiş sığorta hadisəsinin tənzimlənməsi üçün lazım olan bütün məlumatları informasiya sistemindən əldə etmək imkanına malik olmaqla yanaşı, sığorta hadisəsinə dair informasiya
             </p>
+            <div class="sehife_section"><p>Səhifə 45</p></div>
             <br>
-            <div class="sehife_section" id="icbari46">Səhifə 46</div>
-            <br>
-            <p>
+            <p class="pt120" id="icbari46">
                 sisteminin elektron qaydada tələb etdiyi məlumatları ora daxil etməli və saxlanılmasını təmin etməlidirlər.
                 <br><strong>61.4.</strong> İnformasiya sistemi sığortalının bağladığı icbari sığorta müqaviləsinin mövcudluğu barədə mobil rabitə və internet vasitəsilə təsdiqləyici bilgi almaq və həmin müqavilədə əks olunan məlumatları əldə etmək imkanını təmin etməlidir.
                 <br><strong>61.5.</strong> İnformasiya sisteminə daxil edilmiş hər hansı məlumata yalnız Büronun razılığı ilə və həmin məlumatı daxil etmiş istifadəçi tərəfindən düzəliş edilə bilər.
@@ -1273,10 +1220,9 @@
             </p>
             <br>
             <h3 class="madde-item">Maddə 63. Avtonəqliyyat vasitəsi sahiblərinin mülki məsuliyyətinin icbari sığortası üzrə subroqasiya hüququ</h3>
+            <div class="sehife_section" ><p>Səhifə 46</p></div>
             <br>
-            <div class="sehife_section" id="icbari47">Səhifə 47</div>
-            <br>
-            <p>
+            <p class="pt120" id="icbari47">
                 <strong>63.1.</strong> Bu Qanunun 63.2-ci maddəsi nəzərə alınmaqla, 25-ci maddəsinə əlavə olaraq avtonəqliyyat vasitələrinin sahiblərinin mülki məsuliyyətinin icbari sığortası üzrə baş vermiş sığorta hadisəsi zamanı sürücü hadisə yerindən yayınmış olduqda da sığorta ödənişi vermiş sığortaçının hadisəni törətmiş şəxsə qarşı verilmiş sığorta ödənişi məbləğində subroqasiya hüququ yaranır.
                 <br><strong>63.2.</strong> Subroqasiya hüququnun bu Qanunun 25.1.5-ci, 25.1.6-cı və 25.1.7-ci maddələrində nəzərdə tutulmuş əsasları bu Fəslin məqsədləri üçün tətbiq edilmir.
                 <br><strong>63.3.</strong> Bu Qanunun 32.1.2-ci və 32.1.3-cü maddələrində nəzərdə tutulmuş hallarda kompensasiya ödənişi həyata keçirdikdə, zərərçəkənin ona vurulmuş zərərə görə məsuliyyət daşıyan şəxs qarşısındakı tələb hüququ həmin ödəniş həcmində Büroya keçir.
@@ -1294,10 +1240,9 @@
             </p>
             <br>
             <h3 class="madde-item">Maddə 65. Sərnişinləri fərdi qəza sığortası üzrə icbari sığorta etdirməli olan nəqliyyat vasitələrinin sahibləri</h3>
+            <div class="sehife_section" ><p>Səhifə 47</p></div>
             <br>
-            <div class="sehife_section" id="icbari48">Səhifə 48</div>
-            <br>
-            <p>
+            <p class="pt120" id="icbari48">
                 <strong>65.1.</strong> Bu Fəslin məqsədləri üçün Azərbaycan Respublikasının ərazisində, həmçinin xarici ölkələrə və ya xarici ölkələrdən qanunvericilikdə müəyyən edilmiş qaydada sərnişin daşıma xidmətlərini həyata keçirmək üçün mülkiyyətində nəqliyyat vasitəsi olan və ya belə nəqliyyat vasitəsinə faktiki sahibliyi həyata keçirən, həmçinin onu icarəyə götürmüş, yaxud digər qanuni əsaslarla istismar edən fiziki və hüquqi şəxslər nəqliyyat vasitələrinin sahibləri hesab olunurlar.
                 <br><strong>65.2.</strong> Bu Qanunun 64.1-ci maddəsində nəzərdə tutulmuş nəqliyyat vasitələrinin sahibləri müvafiq nəqliyyat vasitəsilə daşıdıqları sərnişinləri fərdi qəza sığortası üzrə icbari sığorta etdirməlidirlər.
                 <br><strong>65.3.</strong> Bu Fəslin tələbləri şəhərdaxili və ya qəsəbədaxili sərnişin daşıyan nəqliyyat vasitələrinin sahiblərinə şamil edilmir.
@@ -1315,10 +1260,9 @@
                 <strong>67.1.</strong> Müvafiq nəqliyyat vasitəsilə daşınan sərnişinlərin icbari fərdi qəza sığortası müqaviləsini bağlayan və müvafiq icbari sığorta şəhadətnaməsinin adına verildiyi, bu Qanunun 64.1-ci maddəsində nəzərdə tutulmuş hər hansı nəqliyyat vasitəsinin sahibi sığortalı hesab edilir.
                 <br><strong>67.2.</strong> Bu Fəsildə nəzərdə tutulmuş istənilən nəqliyyat vasitəsində daşınan və fərdi qəzadan icbari sığortalanmış sərnişinlər sığorta olunanlar hesab edilirlər.
             </p>
+            <div class="sehife_section" ><p>Səhifə 48</p></div>
             <br>
-            <div class="sehife_section" id="icbari49">Səhifə 49</div>
-            <br>
-            <h3 class="madde-item">Maddə 68. Sərnişinlərin icbari fərdi qəza sığortası üzrə sığorta məbləğləri</h3>
+            <h3 class="madde-item pt120" id="icbari49">Maddə 68. Sərnişinlərin icbari fərdi qəza sığortası üzrə sığorta məbləğləri</h3>
             <br>
             <p>
                 <strong>68.1.</strong> Sərnişinlərin icbari fərdi qəza sığortası üzrə sığorta məbləğləri aşağıdakı kimi müəyyən edilir:
@@ -1342,10 +1286,9 @@
             <h2>KEÇİD MÜDDƏALARI</h2>
             <br>
             <h3 class="madde-item">Maddə 71. Qanunun qüvvədə olan icbari sığorta müqavilələrinə şamil edilməməsi</h3>
+            <div class="sehife_section" id="icbari49"><p>Səhifə 49</p></div>
             <br>
-            <div class="sehife_section" id="icbari50">Səhifə 50</div>
-            <br>
-            <p>
+            <p class="pt120" id="icbari50">
                 Bu Qanunun qüvvəyə minməsindən əvvəl bağlanmış icbari sığorta müqavilələri həmin müqavilələrdə nəzərdə tutulmuş, müqavilələrin başa çatma müddətinədək qüvvəsini saxlayır.
             </p>
             <br>
@@ -1373,10 +1316,9 @@
             <p>
                 Sağlamlığa və əmlaka vurulan zərərə görə sığorta tələbi, belə tələb hüququ yaranmış sığortalının, sığorta olunanın və ya üçüncü şəxsin sığorta
             </p>
+            <div class="sehife_section" ><p>Səhifə 50</p></div>
             <br>
-            <div class="sehife_section" id="icbari51">Səhifə 51</div>
-            <br>
-            <p>
+            <p class="pt120" id="icbari51">
                 hadisəsinin baş verməsini bildiyi və ya bilməli olduğu tarixdən 3 il müddətində irəli sürülə bilər.
             </p>
             <br>
@@ -1405,10 +1347,9 @@
                 <strong>78.1</strong>. Bu Qanun dərc edildiyi tarixdən 1 ay sonra qüvvəyə minir.
                 <br><strong>78.2.</strong> Bu Qanunun 78.1-ci maddəsində nəzərdə tutulmuş qüvvəyə minmə tarixindən Azərbaycan Respublikasının “Azərbaycan
             </p>
+            <div class="sehife_section" ><p>Səhifə 51</p></div>
             <br>
-            <div class="sehife_section" id="icbari52">Səhifə 52</div>
-            <br>
-            <p>
+            <p class="pt120" id="icbari52">
                 Respublikasında avtonəqliyyat vasitəsi sahiblərinin mülki məsuliyyətinin icbari sığortası haqqında” 1996-cı il 31 may tarixli 113-IQ nömrəli, “İcbari ekoloji sığorta haqqında” 2002-ci il 12 mart tarixli 271-IIQ nömrəli, "Azərbaycan Respublikasında nəqliyyat vasitəsi sahiblərinin mülki məsuliyyətinin icbari sığortası haqqında" Azərbaycan Respublikasının Qanununa əlavələr və dəyişikliklər edilməsi barədə” 2003-cü il 25 mart tarixli 425-IIQD nömrəli, "İcbari ekoloji sığorta haqqında" Azərbaycan Respublikası Qanununun tətbiqi ilə əlaqədar Azərbaycan Respublikasının İnzibati Xətalar Məcəlləsinə əlavə edilməsi barədə” 2003-cü il 25 mart tarixli 427-IIQD nömrəli, “Sərnişinlərin icbari sığortası haqqında” 2003-cü il 17 iyun tarixli 474-IIQ nömrəli, “Yanğından icbari sığorta haqqında” 2004-cü il 6 yanvar tarixli 573-IIQ nömrəli, “Sərnişinlərin icbari sığortası haqqında" Azərbaycan Respublikası Qanununun tətbiqi ilə əlaqədar Azərbaycan Respublikasının bəzi qanunvericilik aktlarına əlavə və dəyişiklik edilməsi barədə” 2004-cü il 20 aprel tarixli 638-IIQD nömrəli, “Yanğından icbari sığorta haqqında" Azərbaycan Respublikası Qanununun tətbiqi ilə əlaqədar Azərbaycan Respublikasının bəzi qanunlarına əlavə və dəyişiklik edilməsi barədə” 2004-cü il 10 sentyabr tarixli 752-IIQD nömrəli qanunları ləğv edilir.
             </p>
             <br>
@@ -1421,7 +1362,11 @@
             <p class="qanun-tarixi">Bakı şəhəri, 24 iyun 2011-ci il</p>
             <br>
             <p class="qanun_nomresi">№ 165-IVQ</p>
+            <div class="sehife_section" ><p>Səhifə 52</p></div>
+
         </div>
-    </div>
+        <button class="scrollButton"><i class="bi bi-chevron-up"></i></button>
+
+</div>
 
 @endsection

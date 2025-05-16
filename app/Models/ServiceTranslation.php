@@ -13,7 +13,7 @@ class ServiceTranslation extends Model
     protected $fillable = [
         'title',
         'description',
-        'blog_id',
+        'service_id',
         'locale',
         'img_alt',
         'img_title',
@@ -21,6 +21,10 @@ class ServiceTranslation extends Model
         'meta_title',
         'meta_keywords',
         'meta_description',
-        'short_description'
+        'short_description',
+        'work_message',
+        'off_message',
+        'work_text',
+        'off_text',
     ];
 }

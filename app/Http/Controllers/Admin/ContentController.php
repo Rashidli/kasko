@@ -21,11 +21,11 @@ class ContentController extends Controller
     function generateUniqueSlug($title)
     {
         $slug = Str::slug($title);
-        $count = Content::whereTranslation('title', $title)->count();
-
-        if ($count > 0) {
-            $slug .= '-' . $count;
-        }
+//        $count = Content::whereTranslation('title', $title)->count();
+//
+//        if ($count > 0) {
+//            $slug .= '-' . $count;
+//        }
 
         return $slug;
     }
@@ -67,6 +67,7 @@ class ContentController extends Controller
             'en_description'=>'required',
             'ru_description'=>'required',
             'image'=>'required',
+            'link'=>'nullable',
         ]);
 
         if($request->hasFile('image')){
@@ -75,6 +76,7 @@ class ContentController extends Controller
 
         Content::create([
             'image'=>  $filename,
+            'link'=>  $request->link,
             'az'=>[
                 'title'=>$request->az_title,
                 'description'=>$request->az_description,
@@ -148,6 +150,7 @@ class ContentController extends Controller
             'az_description'=>'required',
             'en_description'=>'required',
             'ru_description'=>'required',
+            'link'=>'nullable',
         ]);
 
         if($request->hasFile('image')){
@@ -155,7 +158,7 @@ class ContentController extends Controller
         }
 
         $content->update( [
-
+            'link'=>  $request->link,
             'is_active'=> $request->is_active,
             'az'=>[
                 'title'=>$request->az_title,
@@ -165,6 +168,7 @@ class ContentController extends Controller
                 'meta_title'=>$request->az_meta_title,
                 'meta_description'=>$request->az_meta_description,
                 'meta_keywords'=>$request->az_meta_keywords,
+                'slug'=>$this->generateUniqueSlug($request->az_title),
             ],
             'en'=>[
                 'title'=>$request->en_title,
@@ -174,6 +178,7 @@ class ContentController extends Controller
                 'meta_title'=>$request->en_meta_title,
                 'meta_description'=>$request->en_meta_description,
                 'meta_keywords'=>$request->en_meta_keywords,
+                'slug'=>$this->generateUniqueSlug($request->en_title),
             ],
             'ru'=>[
                 'title'=>$request->ru_title,
@@ -183,6 +188,7 @@ class ContentController extends Controller
                 'meta_title'=>$request->ru_meta_title,
                 'meta_description'=>$request->ru_meta_description,
                 'meta_keywords'=>$request->ru_meta_keywords,
+                'slug'=>$this->generateUniqueSlug($request->ru_title),
             ]
 
         ]);

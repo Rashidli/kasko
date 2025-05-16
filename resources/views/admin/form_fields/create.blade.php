@@ -28,14 +28,14 @@
                             @if($errors->first('type')) <small class="form-text text-danger">{{ $errors->first('type') }}</small> @endif
                         </div>
 
-                        <div class="mb-3">
-                            <label class="col-form-label">Is Required</label>
-                            <select name="is_required" class="form-control">
-                                <option value="1" {{ old('is_required') == 1 ? 'selected' : '' }}>Yes</option>
-                                <option value="0" {{ old('is_required') == 0 ? 'selected' : '' }}>No</option>
-                            </select>
-                            @if($errors->first('is_required')) <small class="form-text text-danger">{{ $errors->first('is_required') }}</small> @endif
-                        </div>
+{{--                        <div class="mb-3">--}}
+{{--                            <label class="col-form-label">Is Required</label>--}}
+{{--                            <select name="is_required" class="form-control">--}}
+{{--                                <option value="1" {{ old('is_required') == 1 ? 'selected' : '' }}>Yes</option>--}}
+{{--                                <option value="0" {{ old('is_required') == 0 ? 'selected' : '' }}>No</option>--}}
+{{--                            </select>--}}
+{{--                            @if($errors->first('is_required')) <small class="form-text text-danger">{{ $errors->first('is_required') }}</small> @endif--}}
+{{--                        </div>--}}
 
                         <div class="mb-3">
                             <label class="col-form-label">Is Active</label>

@@ -6,26 +6,26 @@
 
 @section('content')
 
-    <div class="page-direction p-lr">
+    <!-- <div class="page-direction p-lr">
         <a href="{{route('welcome')}}" class="prev-page">
             {{$home_page->title}}
-        </a>
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g clip-path="url(#clip0_171_1378)">
-                <path d="M4.1665 10H15.8332" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M12.5 13.3333L15.8333 10" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M12.5 6.66666L15.8333 9.99999" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </g>
-            <defs>
-                <clipPath id="clip0_171_1378">
-                    <rect width="20" height="20" fill="white"/>
-                </clipPath>
-            </defs>
-        </svg>
-        <a href="javascript: void(0)" class="current-page">
-            {{$words['success_apply']->translate(app()->getLocale())->title}}
-        </a>
-    </div>
+    </a>
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_171_1378)">
+            <path d="M4.1665 10H15.8332" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12.5 13.3333L15.8333 10" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12.5 6.66666L15.8333 9.99999" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+        <defs>
+            <clipPath id="clip0_171_1378">
+                <rect width="20" height="20" fill="white"/>
+            </clipPath>
+        </defs>
+    </svg>
+    <a href="javascript: void(0)" class="current-page">
+{{$words['success_apply']->translate(app()->getLocale())->title}}
+    </a>
+</div> -->
     <div class="success-apply-container p-lr">
         <div class="success-apply">
             <div class="success-icon">
@@ -50,8 +50,31 @@
                 </svg>
 
             </div>
-            <h1>{{$words['success_apply']->translate(app()->getLocale())->title}}</h1>
-            <p>{{$words['will_contact']->translate(app()->getLocale())->title}}</p>
+{{--            @foreach($messages as $message)--}}
+            @if(isset($message))
+                <h1>{{$message}}</h1>
+                <p>{{$message_text}}</p>
+            @else
+                <h1>{{$words['success_apply']->translate(app()->getLocale())->title}}</h1>
+                <p>{{$words['will_contact']->translate(app()->getLocale())->title}}</p>
+            @endif
+
+{{--            @endforeach--}}
+
+{{--            @php--}}
+{{--                use Carbon\Carbon;--}}
+{{--                $now = Carbon::now();--}}
+{{--            @endphp--}}
+
+{{--            @if($now->isWeekday())--}}
+{{--                <p>{{$words['working_hours_success']->translate(app()->getLocale())->title}}</p>--}}
+{{--                <p>{{$words['success_text']->translate(app()->getLocale())->title}}</p>--}}
+{{--            @elseif($now->isWeekend())--}}
+{{--                <p>{{$words['working_hours_success_weekend']->translate(app()->getLocale())->title}}</p>--}}
+{{--                <p>{{$words['success_text_weekend']->translate(app()->getLocale())->title}}</p>--}}
+{{--            @endif--}}
+
+
             <a href="{{route('welcome')}}" class="back-home">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_459_5144)">

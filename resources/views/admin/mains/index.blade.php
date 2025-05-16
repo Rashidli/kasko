@@ -21,33 +21,13 @@
                                     <tr>
                                         <th>№</th>
                                         <th>Başlıq</th>
+                                        <th>Başlıq teqi</th>
                                         <th>Status</th>
                                         <th>Əməliyyat</th>
                                     </tr>
                                     </thead>
 
-                                    <tbody>
-                                    @foreach($mains as $main)
-
-                                        <tr>
-                                            <th scope="row">{{$main->id}}</th>
-                                            <th scope="row">{{$main->title}}</th>
-                                            {{--                                                <td><img src="{{asset('storage/'.$main->image)}}" style="width: 100px; height: 50px" alt=""></td>--}}
-                                            <td>{{$main->is_active == true ? 'Active' : 'Deactive'}}</td>
-                                            <td>
-                                                <a href="{{route('mains.edit',$main->id)}}" class="btn btn-primary"
-                                                   style="margin-right: 15px">Edit</a>
-                                                <form action="{{route('mains.destroy', $main->id)}}" method="post" style="display: inline-block">
-                                                    {{ method_field('DELETE') }}
-                                                    @csrf
-                                                    <button onclick="return confirm('Məlumatın silinməyin təsdiqləyin')" type="submit" class="btn btn-danger">Delete</button>
-                                                </form>
-                                            </td>
-                                        </tr>
-
-                                    @endforeach
-
-                                    </tbody>
+                                    <livewire:main-sort-table />
                                 </table>
                                 <br>
                                 {{ $mains->links('admin.vendor.pagination.bootstrap-5') }}

@@ -12,7 +12,13 @@
                 <div class="card">
                     <div class="card-body">
                         <h4 class="card-title">{{ $single->translate('en')->title }}</h4>
-
+                        <nav aria-label="breadcrumb" style="margin-bottom: 20px;">
+                            <ol class="breadcrumb bg-light p-3 rounded">
+                                <li class="breadcrumb-item"><a href="{{ route('home') }}">Dashboard</a></li>
+                                <li class="breadcrumb-item"><a href="{{ route('singles.index') }}">Siyahı</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">{{ $single->translate('az')?->title }}</li>
+                            </ol>
+                        </nav>
                         <!-- Tabs Navigation -->
                         <ul class="nav nav-tabs" id="langTabs" role="tablist">
                             @foreach(['az', 'en', 'ru'] as $lang)
@@ -31,6 +37,12 @@
                                         <input class="form-control" type="text" name="{{ $lang }}_title" value="{{ old("{$lang}_title", $single->translate($lang)->title) }}">
                                         @if($errors->first("{$lang}_title")) <small class="form-text text-danger">{{ $errors->first("{$lang}_title") }}</small> @endif
                                     </div>
+
+{{--                                    <div class="mb-3">--}}
+{{--                                        <label class="col-form-label">Slug {{ strtoupper($lang) }}</label>--}}
+{{--                                        <input class="form-control" type="text" name="{{ $lang }}_slug" value="{{ old("{$lang}_slug", $single->translate($lang)->slug) }}">--}}
+{{--                                        @if($errors->first("{$lang}_slug")) <small class="form-text text-danger">{{ $errors->first("{$lang}_slug") }}</small> @endif--}}
+{{--                                    </div>--}}
 
                                     <div class="mb-3">
                                         <label class="col-form-label">Meta title {{ strtoupper($lang) }}</label>
@@ -60,6 +72,34 @@
                                 @if($errors->first('type')) <small class="form-text text-danger">{{ $errors->first('type') }}</small> @endif
                             </div>
 
+                                <div class="mb-3">
+                                    <label class="col-form-label">Active</label>
+                                    <select name="is_active" class="form-control">
+                                        <option value="1" {{ $single->is_active  ? 'selected' : '' }}>Active</option>
+                                        <option value="0" {{ !$single->is_active ? 'selected' : '' }}>Deactive</option>
+                                    </select>
+                                </div>
+
+                                @if($single->type == 'casco_calculator')
+                                    <!-- İlləri göstər və yenilə -->
+                                    <div class="mb-3">
+                                        <label class="col-form-label">İllər</label>
+                                        <select name="years[]" class="form-control js-example-basic-single" multiple>
+                                            @foreach($single->years ?? [] as $year)
+                                                <option value="{{ $year }}" selected>{{ $year }}</option>
+                                            @endforeach
+                                        </select>
+                                        <small class="form-text text-muted">Birdən çox il seçmək üçün CTRL düyməsini basıb saxlayın.</small>
+                                    </div>
+
+                                    <!-- Yeni İl Əlavə Et -->
+                                    <div class="mb-3">
+                                        <label class="col-form-label">Yeni İl Əlavə Et</label>
+                                        <input type="number" class="form-control" id="newYear" placeholder="Məsələn: 2025" min="1900" max="{{ date('Y') }}">
+                                        <button type="button" class="btn btn-primary mt-2" onclick="addYear()">Əlavə Et</button>
+                                    </div>
+                                @endif
+
                             <div class="mb-3">
                                 <button class="btn btn-primary">Yadda saxla</button>
                             </div>
@@ -78,3 +118,17 @@
 <!-- Include Bootstrap JS and dependencies -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+<script>
+    function addYear() {
+        const newYearInput = document.getElementById('newYear');
+        const year = newYearInput.value;
+        const select = document.querySelector('select[name="years[]"]');
+
+        if (year && !Array.from(select.options).some(opt => opt.value == year)) {
+            const option = new Option(year, year, true, true);
+            select.add(option);
+            newYearInput.value = '';
+        }
+    }
+</script>

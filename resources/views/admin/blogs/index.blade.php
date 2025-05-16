@@ -21,33 +21,13 @@
                                     <tr>
                                         <th>№</th>
                                         <th>Başlıq</th>
+{{--                                        <th>Oxunma sayı</th>--}}
                                         <th>Status</th>
                                         <th>Əməliyyat</th>
                                     </tr>
                                     </thead>
 
-                                    <tbody>
-                                    @foreach($blogs as $blog)
-
-                                        <tr>
-                                            <th scope="row">{{$blog->id}}</th>
-                                            <th scope="row">{{$blog->title}}</th>
-                                            {{--                                                <td><img src="{{asset('storage/'.$blog->image)}}" style="width: 100px; height: 50px" alt=""></td>--}}
-                                            <td>{{$blog->is_active == true ? 'Active' : 'Deactive'}}</td>
-                                            <td>
-                                                <a href="{{route('blogs.edit',$blog->id)}}" class="btn btn-primary"
-                                                   style="margin-right: 15px">Edit</a>
-                                                <form action="{{route('blogs.destroy', $blog->id)}}" method="post" style="display: inline-block">
-                                                    {{ method_field('DELETE') }}
-                                                    @csrf
-                                                    <button onclick="return confirm('Məlumatın silinməyin təsdiqləyin')" type="submit" class="btn btn-danger">Delete</button>
-                                                </form>
-                                            </td>
-                                        </tr>
-
-                                    @endforeach
-
-                                    </tbody>
+                                    <livewire:blog-sort-table />
                                 </table>
                                 <br>
                                 {{ $blogs->links('admin.vendor.pagination.bootstrap-5') }}

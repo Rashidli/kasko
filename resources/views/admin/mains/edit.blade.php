@@ -59,6 +59,15 @@
                                 </div>
                             @endforeach
 
+
+                                <div class="mb-3">
+                                    <label class="col-form-label">Başlıq tagi h1 yoxsa h2 (yalnız biri h1 ola bilər)</label>
+                                    <select name="type" class="form-control">
+                                        <option value="h2" {{ $main->type == 'h2' ? 'selected' : '' }}>H2</option>
+                                        <option value="h1" {{ $main->type == 'h1' ? 'selected' : '' }}>H1</option>
+                                    </select>
+                                </div>
+
                             <!-- Global Fields -->
                             <div class="mb-3">
                                 <label class="col-form-label">Link</label>

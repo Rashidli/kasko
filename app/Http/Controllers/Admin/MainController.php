@@ -68,6 +68,7 @@ class MainController extends Controller
             'mobile_image'=>  $filenameMobile ?? null,
             'date' => $request->date,
             'link' => $request->link,
+            'type' => $request->type,
             'az'=>[
                 'title'=>$request->az_title,
                 'img_alt'=>$request->az_img_alt,
@@ -144,6 +145,7 @@ class MainController extends Controller
             'date' => $request->date,
             'is_active'=> $request->is_active,
             'link' => $request->link,
+            'type' => $request->type,
             'az'=>[
                 'title'=>$request->az_title,
                 'img_alt'=>$request->az_img_alt,

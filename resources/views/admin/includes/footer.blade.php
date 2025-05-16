@@ -30,6 +30,7 @@
 <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/min/dropzone.min.js"></script>
 
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 @livewireScripts
@@ -86,6 +87,7 @@
 
     $(document).ready(function() {
         $('#editor_az, #editor_en, #editor_ru, #editor1_az, #editor1_en, #editor1_ru').summernote({
+            fontSizeUnits: ['px'],
             height: 100,
             toolbar: [
                 ['style', ['style']],
@@ -97,10 +99,23 @@
                 ['insert', ['link', 'picture', 'video']],
                 ['table', ['table']],
                 ['view', ['fullscreen', 'codeview', 'help']]
-            ]
+            ],
+            fontSizes: ['8', '9', '10', '11', '12', '14', '15', '16', '18', '20', '22', '24', '28', '36', '48', '64', '82', '100'],
+            // callbacks: {
+            //     onChange: function(contents) {
+            //         // Replace pt with px in the editor content
+            //         let updatedContent = contents.replace(/(\d+)pt/g, (match, size) => {
+            //             // Convert pt to px (optional conversion if needed, here 1pt = 1.33px approximation)
+            //             let pxSize = Math.round(size * 1.33);
+            //             return `${pxSize}px`;
+            //         });
+            //         this.code(updatedContent);
+            //     }
+            // }
         });
-
     });
+
+
 </script>
 </body>
 

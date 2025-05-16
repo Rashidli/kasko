@@ -14,11 +14,22 @@ class ImageUploadService
     {
         $manager = new ImageManager(new Driver());
 
-        $image = $manager->read($file);
-        $image = $image->toWebp(60);
+        $extension = strtolower($file->getClientOriginalExtension());
 
-        $filename = Str::uuid()  . '.webp';
-        Storage::put('public/' . $filename, (string) $image);
+        if ($extension === 'svg') {
+            $filename = Str::uuid() . '.svg';
+            Storage::put('public/' . $filename, file_get_contents($file));
+        }elseif ($extension === 'mp4'){
+            $filename = Str::uuid() . '.mp4';
+            Storage::put('public/' . $filename, file_get_contents($file));
+        } else {
+            $image = $manager->read($file);
+            $image = $image->toWebp(60);
+
+            $filename = Str::uuid() . '.webp';
+            Storage::put('public/' . $filename, (string) $image);
+        }
+
         return $filename;
     }
 

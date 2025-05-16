@@ -22,7 +22,7 @@ class FormFieldController extends Controller
      */
     public function index(Form $form)
     {
-        $form_fields = $form->formFields()->paginate(10);
+        $form_fields = $form->formFields()->paginate(30);
         return view('admin.form_fields.index', compact('form', 'form_fields'));
     }
 
@@ -43,7 +43,6 @@ class FormFieldController extends Controller
         $request->validate([
             'name' => 'required|string',
             'type' => 'required|string',
-            'is_required' => 'required|boolean',
             'az_label' => 'required|string',
             'en_label' => 'required|string',
             'ru_label' => 'required|string',
@@ -59,7 +58,7 @@ class FormFieldController extends Controller
         $form->formFields()->create([
             'name' => $request->name,
             'type' => $request->type,
-            'is_required' => $request->is_required,
+            'is_required' => false,
             'is_active' => $request->is_active,
             'az' => [
                 'label' => $request->az_label,
@@ -97,7 +96,6 @@ class FormFieldController extends Controller
         $request->validate([
             'name' => 'required|string',
             'type' => 'required|string',
-            'is_required' => 'required|boolean',
             'az_label' => 'required|string',
             'en_label' => 'required|string',
             'ru_label' => 'required|string',
@@ -113,7 +111,7 @@ class FormFieldController extends Controller
         $form_field->update([
             'name' => $request->name,
             'type' => $request->type,
-            'is_required' => $request->is_required,
+            'is_required' => false,
             'is_active' => $request->is_active,
             'az' => [
                 'label' => $request->az_label,

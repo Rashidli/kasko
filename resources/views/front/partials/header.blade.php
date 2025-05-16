@@ -1,13 +1,14 @@
 <nav>
     <div class="navbar-container p-lr">
         <div class="navbar-inner">
-            <a href="{{route('welcome')}}" class="nav-logo">
-                <img src="{{asset('storage/' . $logo->image)}}" alt="logo" title="logo">
+            <a href="{{route('welcome')}}" class="nav-logo" aria-label="Kasko Logo">
+                <img src="{{asset('storage/' . $logo->image)}}" alt="{{$logo->img_alt}}" title="{{$logo->img_title}}">
             </a>
             <div class="nav-links">
-                <a href="{{route('welcome')}}" class="navLink active">{{$home_page->title}}</a>
+{{--                <a href="{{route('welcome')}}" class="navLink active">{{$home_page->title}}</a>--}}
+      <a href="{{route('welcome')}}#service_section" class="navLink">{{$words['services']->translate(app()->getLocale())->title}}</a>
                 <a href="{{route('welcome')}}#about_section" class="navLink">{{$words['about']->translate(app()->getLocale())->title}}</a>
-                <a href="{{route('welcome')}}#service_section" class="navLink">{{$words['services']->translate(app()->getLocale())->title}}</a>
+
                 <a href="{{route('welcome')}}#advantages_section" class="navLink">{{$words['advantages']->translate(app()->getLocale())->title}}</a>
                 <a href="{{route('welcome')}}#partners" class="navLink">{{$words['partners']->translate(app()->getLocale())->title}}</a>
                 <a href="{{route('dynamic.page', $news_page->slug)}}" class="navLink">{{$news_page->title}}</a>
@@ -29,7 +30,12 @@
                     <div class="other_langs">
                         @foreach($locales as $localeCode => $properties)
                             @if($localeCode !== $currentLocale)
-                                <a href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}" class="other_lang">
+                                @php
+                                    $localeURL = isset($translatedLinks) && array_key_exists($localeCode, $translatedLinks)
+                                        ? $translatedLinks[$localeCode]
+                                        : LaravelLocalization::getLocalizedURL($localeCode, url()->current());
+                                @endphp
+                                <a href="{{ $localeURL }}" class="other_lang">
                                     <img src="{{ asset('front/icons/' . $localeCode . '_flag.svg') }}" alt="{{ strtoupper($localeCode) }}">
                                     {{ strtoupper($localeCode) }}
                                 </a>
@@ -39,7 +45,7 @@
                 </div>
             @endif
 
-            <button class="hamburger" type="button">
+            <button class="hamburger" type="button" aria-label="menu">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_93_201)">
                         <path d="M4 6H20" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -58,11 +64,11 @@
 </nav>
 <div class="mobile_menu">
     <div class="mobile_menu_top">
-        <a href="{{route('welcome')}}" class="mobile-logo">
-            <img src="{{asset('/')}}front/image/nav_logo.png" alt="">
+        <a href="{{route('welcome')}}" class="mobile-logo" aria-label="mobile-logo">
+            <img src="{{asset('storage/' . $logo->image)}}" alt="{{$logo->img_al}}" title="{{$logo->img_title}}" loading="lazy">
         </a>
 
-        <button class="close-menu" type="button">
+        <button class="close-menu" type="button" aria-label="Close Menu">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_93_1980)">
                     <path d="M18 6L6 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -77,9 +83,10 @@
         </button>
     </div>
     <div class="mobile_menu_links">
-        <a href="{{route('welcome')}}" class="mobile_menu_link">{{$home_page->title}}</a>
+{{--        <a href="{{route('welcome')}}" class="mobile_menu_link">{{$home_page->title}}</a>--}}
+    <a href="{{route('welcome')}}#service_section" class="mobile_menu_link">{{$words['services']->translate(app()->getLocale())->title}}</a>
         <a href="{{route('welcome')}}#about_section" class="mobile_menu_link">{{$words['about']->translate(app()->getLocale())->title}}</a>
-        <a href="{{route('welcome')}}#service_section" class="mobile_menu_link">{{$words['services']->translate(app()->getLocale())->title}}</a>
+
         <a href="{{route('welcome')}}#advantages_section" class="mobile_menu_link">{{$words['advantages']->translate(app()->getLocale())->title}}</a>
         <a href="{{route('welcome')}}#partners" class="mobile_menu_link">{{$words['partners']->translate(app()->getLocale())->title}}</a>
         <a href="{{route('dynamic.page', $news_page->slug)}}" class="mobile_menu_link">{{$news_page->title}}</a>
@@ -101,7 +108,12 @@
             <div class="other_langs">
                 @foreach($locales as $localeCode => $properties)
                     @if($localeCode !== $currentLocale)
-                        <a href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}" class="other_lang">
+                        @php
+                            $localeURL = isset($translatedLinks) && array_key_exists($localeCode, $translatedLinks)
+                                ? $translatedLinks[$localeCode]
+                                : LaravelLocalization::getLocalizedURL($localeCode, url()->current());
+                        @endphp
+                        <a href="{{ $localeURL }}" class="other_lang">
                             <img src="{{ asset('front/icons/' . $localeCode . '_flag.svg') }}" alt="{{ strtoupper($localeCode) }}">
                             {{ strtoupper($localeCode) }}
                         </a>

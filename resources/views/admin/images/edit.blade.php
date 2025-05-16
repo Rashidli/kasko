@@ -14,7 +14,39 @@
                         <h4 class="card-title">{{$image->title}}</h4>
                         <div class="row">
                             <div class="col-6">
+                                <nav aria-label="breadcrumb" style="margin-bottom: 20px;">
+                                    <ol class="breadcrumb bg-light p-3 rounded">
+                                        <li class="breadcrumb-item"><a href="{{ route('home') }}">Dashboard</a></li>
+                                        <li class="breadcrumb-item"><a href="{{ route('images.index') }}">Siyahı</a></li>
+                                    </ol>
+                                </nav>
+                                <ul class="nav nav-tabs" id="langTabs" role="tablist">
+                                    @foreach(['az', 'en', 'ru'] as $lang)
+                                        <li class="nav-item" role="presentation">
+                                            <a class="nav-link {{ $loop->first ? 'active' : '' }}" id="{{ $lang }}-tab" data-bs-toggle="tab" href="#{{ $lang }}" role="tab" aria-controls="{{ $lang }}" aria-selected="{{ $loop->first ? 'true' : 'false' }}">{{ strtoupper($lang) }}</a>
+                                        </li>
+                                    @endforeach
+                                </ul>
 
+                                <div class="tab-content" id="langTabsContent">
+                                    @foreach(['az', 'en', 'ru'] as $lang)
+                                        <div class="tab-pane fade {{ $loop->first ? 'show active' : '' }}" id="{{ $lang }}" role="tabpanel" aria-labelledby="{{ $lang }}-tab">
+                                            <!-- Alt Tag -->
+                                            <div class="mb-3">
+                                                <label class="col-form-label">Alt tag {{ strtoupper($lang) }}</label>
+                                                <input class="form-control" type="text" name="{{ $lang }}_img_alt" value="{{ $image->translate($lang)?->img_alt }}">
+                                                @if($errors->first("{$lang}_img_alt")) <small class="form-text text-danger">{{ $errors->first("{$lang}_img_alt") }}</small> @endif
+                                            </div>
+
+                                            <!-- Title Tag -->
+                                            <div class="mb-3">
+                                                <label class="col-form-label">Title tag {{ strtoupper($lang) }}</label>
+                                                <input class="form-control" type="text" name="{{ $lang }}_img_title" value="{{ $image->translate($lang)?->img_title }}">
+                                                @if($errors->first("{$lang}_img_title")) <small class="form-text text-danger">{{ $errors->first("{$lang}_img_title") }}</small> @endif
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                </div>
                                 <div class="mb-3">
                                     <img style="width: 100px; height: 100px;" src="{{asset('storage/' . $image->image)}}" class="uploaded_image" alt="{{$image->image}}">
                                     <div class="form-group">

@@ -34,7 +34,7 @@
                                             <th scope="row">{{$form->id}}</th>
                                             <th scope="row">{{$form->title}}</th>
                                             {{--                                                <td><img src="{{asset('storage/'.$form->image)}}" style="width: 100px; height: 50px" alt=""></td>--}}
-                                            <td>{{$form->is_active == true ? 'Active' : 'Deactive'}}</td>
+                                            <td>{{$form->is_active  ? 'Active' : 'Deactive'}}</td>
                                             <td><a href="{{route('forms.form_fields.index', $form->id)}}" class="btn btn-info">Fields</a></td>
                                             <td>
                                                 <a href="{{route('forms.edit',$form->id)}}" class="btn btn-primary"

@@ -9,7 +9,13 @@
                 <div class="card">
                     <div class="card-body">
                         <h4 class="card-title">Edit Form Field</h4>
-
+                        <nav aria-label="breadcrumb" style="margin-bottom: 20px;">
+                            <ol class="breadcrumb bg-light p-3 rounded">
+                                <li class="breadcrumb-item"><a href="{{ route('home') }}">Dashboard</a></li>
+                                <li class="breadcrumb-item"><a href="{{ route('forms.form_fields.index',$form->id) }}">Siyahı</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">{{ $form_field->name }}</li>
+                            </ol>
+                        </nav>
                         <!-- Non-Translatable Fields -->
                         <div class="mb-3">
                             <label class="col-form-label">Name (Nümunə: full_name) sözlər balaca hərflər altdan xəttlə yazılmalıdı</label>
@@ -29,14 +35,14 @@
                             @if($errors->first('type')) <small class="form-text text-danger">{{ $errors->first('type') }}</small> @endif
                         </div>
 
-                        <div class="mb-3">
-                            <label class="col-form-label">Is Required</label>
-                            <select name="is_required" class="form-control">
-                                <option value="1" {{ old('is_required', $form_field->is_required) == 1 ? 'selected' : '' }}>Yes</option>
-                                <option value="0" {{ old('is_required', $form_field->is_required) == 0 ? 'selected' : '' }}>No</option>
-                            </select>
-                            @if($errors->first('is_required')) <small class="form-text text-danger">{{ $errors->first('is_required') }}</small> @endif
-                        </div>
+{{--                        <div class="mb-3">--}}
+{{--                            <label class="col-form-label">Is Required</label>--}}
+{{--                            <select name="is_required" class="form-control">--}}
+{{--                                <option value="1" {{ old('is_required', $form_field->is_required) == 1 ? 'selected' : '' }}>Yes</option>--}}
+{{--                                <option value="0" {{ old('is_required', $form_field->is_required) == 0 ? 'selected' : '' }}>No</option>--}}
+{{--                            </select>--}}
+{{--                            @if($errors->first('is_required')) <small class="form-text text-danger">{{ $errors->first('is_required') }}</small> @endif--}}
+{{--                        </div>--}}
 
                         <div class="mb-3">
                             <label class="col-form-label">Is Active</label>

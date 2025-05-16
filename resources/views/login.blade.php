@@ -17,6 +17,7 @@
     <link href="{{asset('/')}}assets/css/icons.min.css" rel="stylesheet" type="text/css" />
     <!-- App Css-->
     <link href="{{asset('/')}}assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 </head>
 
@@ -27,19 +28,10 @@
         <div class="card">
             <div class="card-body">
 
-{{--                <div class="text-center mt-4">--}}
-{{--                    <div class="mb-3">--}}
-{{--                        <a href="index.html" class="auth-logo">--}}
-{{--                            <img src="{{asset('/')}}assets/images/logo-dark.png" height="30" class="logo-dark mx-auto" alt="">--}}
-{{--                            <img src="{{asset('/')}}assets/images/logo-light.png" height="30" class="logo-light mx-auto" alt="">--}}
-{{--                        </a>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-
                 <h4 class="text-muted text-center font-size-18"><b>Sign In</b></h4>
 
                 <div class="p-3">
-                    <form class="form-horizontal mt-3" action="{{route('login_submit')}}" method="post">
+                    <form id="loginForm" class="form-horizontal mt-3" action="{{route('login_submit')}}" method="post">
                         @csrf
                         <div class="form-group mb-3 row">
                             <div class="col-12">
@@ -57,18 +49,20 @@
 
                         <div class="form-group mb-3 text-center row mt-3 pt-1">
                             <div class="col-12">
+                                <div class="g-recaptcha" data-sitekey="6LdhrpYqAAAAAPlC9H15nBtyyAmpqfxc7aqMvjMg"></div>
+                            </div>
+                            @if($errors->first('captcha'))
+                                <small class="form-text text-danger">{{$errors->first('captcha')}}</small>
+                            @endif
+                            <small class="form-text text-danger" id="errorMessage" style="display: none">Please complete the reCAPTCHA challenge to submit the form</small>
+                        </div>
+
+                        <div class="form-group mb-3 text-center row mt-3 pt-1">
+                            <div class="col-12">
                                 <button class="btn btn-info w-100 waves-effect waves-light" type="submit">Log In</button>
                             </div>
                         </div>
 
-                        <div class="form-group mb-0 row mt-2">
-{{--                            <div class="col-sm-7 mt-3">--}}
-{{--                                <a href="auth-recoverpw.html" class="text-muted"><i class="mdi mdi-lock"></i> Forgot your password?</a>--}}
-{{--                            </div>--}}
-                            <div class="col-sm-5 mt-3">
-{{--                                <a href="{{route('register')}}" class="text-muted"><i class="mdi mdi-account-circle"></i> Qeydiyyat</a>--}}
-                            </div>
-                        </div>
                     </form>
                 </div>
                 <!-- end -->
@@ -80,7 +74,15 @@
     <!-- end container -->
 </div>
 <!-- end -->
-
+<script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+        if (!grecaptcha.getResponse()) {
+            event.preventDefault();
+            document.getElementById('errorMessage').style.display = 'block';
+            // alert('Please complete the reCAPTCHA challenge to submit the form.');
+        }
+    });
+</script>
 <!-- JAVASCRIPT -->
 <script src="{{asset('/')}}assets/libs/jquery/jquery.min.js"></script>
 <script src="{{asset('/')}}assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -92,4 +94,3 @@
 
 </body>
 </html>
-

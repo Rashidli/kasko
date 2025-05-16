@@ -27,6 +27,11 @@
                                         <input class="form-control" type="text" name="{{ $lang }}_title" value="{{ old("{$lang}_title") }}">
                                         @if($errors->first("{$lang}_title")) <small class="form-text text-danger">{{ $errors->first("{$lang}_title") }}</small> @endif
                                     </div>
+{{--                                    <div class="mb-3">--}}
+{{--                                        <label class="col-form-label">Slug* {{ strtoupper($lang) }}</label>--}}
+{{--                                        <input class="form-control" type="text" name="{{ $lang }}_slug" value="{{ old("{$lang}_slug") }}">--}}
+{{--                                        @if($errors->first("{$lang}_slug")) <small class="form-text text-danger">{{ $errors->first("{$lang}_slug") }}</small> @endif--}}
+{{--                                    </div>--}}
 
                                     <div class="mb-3">
                                         <label class="col-form-label">Meta title {{ strtoupper($lang) }}</label>

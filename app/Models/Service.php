@@ -19,9 +19,13 @@ class Service extends Model
         'meta_title',
         'meta_description',
         'meta_keywords',
-        'short_description'
+        'short_description',
+        'work_message',
+        'off_message',
+        'work_text',
+        'off_text',
     ];
-    protected $fillable = ['image','is_active','category_id','form_id'];
+    protected $fillable = ['image','is_active','category_id','form_id','icon'];
 
     public function scopeActive($query)
     {

@@ -16,10 +16,17 @@ class WordController extends Controller
         $this->middleware('permission:delete-translates', ['only' => ['destroy']]);
     }
 
-    public function index()
+    public function index(Request $request)
     {
+        $name = $request->name;
+        $query = Word::query();
+        if($name){
+            $query->whereHas('translation', function ($q) use ($name){
+                $q->where('title', 'like', '%' . $name . '%');
+            });
+        }
 
-        $words = Word::all();
+        $words = $query->orderBy('id','desc')->get();
         return view('admin.words.index', compact('words'));
 
     }

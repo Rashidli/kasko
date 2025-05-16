@@ -6,7 +6,7 @@
 
 @section('content')
 
-    <div class="page-direction p-lr">
+    <!-- <div class="page-direction p-lr">
         <a href="{{route('welcome')}}" class="prev-page">
             {{$home_page->title}}
         </a>
@@ -25,7 +25,7 @@
         <a href="javascript: void(0)" class="current-page">
             404
         </a>
-    </div>
+    </div> -->
     <div class="error404-container p-lr">
         <div class="error404">
             <div class="error404-icon">

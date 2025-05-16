@@ -49,7 +49,13 @@
 
                                 </div>
                             @endforeach
-
+                                <div class="mb-3">
+                                    <label class="col-form-label">Başlıq tagi h1 yoxsa h2 (yalnız biri h1 ola bilər)</label>
+                                    <select name="type" class="form-control">
+                                        <option value="h2">H2</option>
+                                        <option value="h1">H1</option>
+                                    </select>
+                                </div>
                             <div class="mb-3">
                                 <label class="col-form-label">Link</label>
                                 <input class="form-control" type="text" name="link">

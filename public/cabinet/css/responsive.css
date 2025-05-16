@@ -1,0 +1,1815 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fira+Code:wght@300..700&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Gabarito:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playfair+Display:ital@0;1&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  list-style-type: none;
+}
+* button,
+* input {
+  outline: none;
+  border: none;
+}
+*::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+}
+*::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: #d9d9d9;
+}
+*::-webkit-scrollbar-track:hover {
+  background-color: #d9d9d9;
+}
+*::-webkit-scrollbar-track:active {
+  background-color: #d9d9d9;
+}
+*::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #008bd0;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #008bd0;
+}
+*::-webkit-scrollbar-thumb:active {
+  background-color: #00527a;
+}
+
+@media only screen and (max-width: 1300px) {
+  body .content .container-content .grid-card-item-bonuses {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  body .content .container-content .kasko-insurance-form {
+    padding: 36px;
+    gap: 12px;
+  }
+  body .content .container-content .kasko-insurance-form .form-content .field-content {
+    gap: 12px;
+  }
+  body .sidebar {
+    width: 25%;
+  }
+  body .content {
+    width: 75%;
+  }
+  body .content .header-wrapper {
+    padding: 12px;
+  }
+  body .content .container-content {
+    padding: 12px;
+  }
+  body .content .container-content .grid-card-item {
+    gap: 12px;
+  }
+  body .content .container-content .grid-card-item .card-item {
+    padding: 12px 12px;
+  }
+  body .sidebar .nav-sidebar .ul-sidebar .link-element span {
+    font-size: 15px;
+    letter-spacing: -0.5px;
+    text-wrap: wrap;
+  }
+  body .content .container-content .grid-card-item .card-item .top-content .text-field-icon {
+    font-size: 14px;
+    letter-spacing: -0.5px;
+    text-wrap: nowrap;
+  }
+}
+@media only screen and (max-width: 968px) {
+  body .content .container-content .kasko-insurance-form .form-content .field-content .item-field .telephone-input .nice-select {
+    border-right: none !important;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.1215686275);
+  }
+  body .content .container-content .kasko-insurance-form .form-content .field-content .item-field .telephone-input .nice-select.open {
+    border-right: none !important;
+    border: 1px solid rgba(0, 0, 0, 0.1215686275);
+  }
+  .my-informations-container {
+    display: none !important;
+  }
+  .my-informations-container-mobile {
+    width: 100%;
+    padding: 21px;
+    margin-top: 40px;
+    min-height: 370px;
+    border-radius: 18px;
+    background: #ffffff;
+    display: flex !important;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 28px;
+  }
+  .my-informations-container-mobile h2 {
+    color: #000000;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+    max-width: 700px;
+  }
+  .my-informations-container-mobile .top-title-contact-us {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .my-informations-container-mobile .top-title-contact-us h2 {
+    color: #000000;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+    max-width: 400px;
+  }
+  .my-informations-container-mobile .top-title-contact-us .right-navigators {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+  .my-informations-container-mobile .top-title-contact-us .right-navigators .element-nav {
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: 200ms ease;
+    background: #f8f8f8;
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+  }
+  .my-informations-container-mobile .top-title-contact-us .right-navigators .element-nav.active-nav {
+    background-color: #008bd0;
+    color: #ffffff;
+  }
+  .my-informations-container-mobile .top-title-contact-us .right-navigators .element-nav.active-nav:hover {
+    background-color: #008bd0;
+    cursor: auto;
+  }
+  .my-informations-container-mobile .top-title-contact-us .right-navigators .element-nav:hover {
+    background-color: rgba(0, 139, 208, 0.0549019608);
+  }
+  .my-informations-container-mobile .top-title-contact-us .right-navigators .element-nav:active {
+    transform: scale(0.98);
+  }
+  .my-informations-container-mobile form {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .my-informations-container-mobile form .input-field-contact {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .my-informations-container-mobile form .input-field-contact label {
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 400;
+    font-size: 12px;
+  }
+  .my-informations-container-mobile form .input-field-contact .counter-area {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+  .my-informations-container-mobile form .input-field-contact .counter-area .text-count {
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 400;
+    font-size: 12px;
+    text-align: right;
+  }
+  .my-informations-container-mobile form .input-field-contact textarea {
+    outline: none;
+    width: 100%;
+    height: 120px;
+    resize: none;
+    border: 1px solid rgba(0, 0, 0, 0.1215686275);
+    border-radius: 12px;
+    cursor: pointer;
+    padding: 18px 20px;
+    color: #000000;
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .my-informations-container-mobile form .input-field-contact textarea::-moz-placeholder {
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .my-informations-container-mobile form .input-field-contact textarea::placeholder {
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .my-informations-container-mobile form .input-field-contact textarea:focus {
+    cursor: auto;
+    border: 1px solid #008bd0;
+  }
+  .my-informations-container-mobile form .input-field-contact .nice-select {
+    width: 100%;
+    cursor: pointer;
+    font-weight: 400;
+    height: auto;
+    line-height: normal;
+    font-size: 14px;
+    transition: 200ms ease;
+    border-radius: 12px;
+    padding: 18px 20px;
+    border: 1px solid rgba(0, 0, 0, 0.1215686275);
+    color: #000000;
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .my-informations-container-mobile form .input-field-contact .nice-select:focus {
+    cursor: auto;
+    border: 1px solid #008bd0;
+  }
+  .my-informations-container-mobile form .input-field-contact .nice-select::-moz-placeholder {
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .my-informations-container-mobile form .input-field-contact .nice-select::placeholder {
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .my-informations-container-mobile form .input-field-contact .nice-select::after {
+    content: "";
+    background-image: url("/assets/images/selectdown.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    border: none;
+    top: 58%;
+    left: 97%;
+    transform: translateY(-50%);
+  }
+  .my-informations-container-mobile form .input-field-contact .nice-select .list {
+    margin-top: 8px;
+    overflow-y: auto;
+    height: 168px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+  }
+  .my-informations-container-mobile form .input-field-contact .nice-select .list .option {
+    padding: 6px 20px;
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .my-informations-container-mobile form .input-area {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: flex-start;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .my-informations-container-mobile form .input-area .input-field {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .my-informations-container-mobile form .input-area .input-field label {
+    width: 100%;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 400;
+    font-size: 12px;
+  }
+  .my-informations-container-mobile form .input-area .input-field input {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.1215686275);
+    padding: 18px 20px;
+    cursor: pointer;
+    transition: 200ms ease;
+  }
+  .my-informations-container-mobile form .input-area .input-field input:focus {
+    cursor: auto;
+    border: 1px solid #008bd0;
+  }
+  .my-informations-container-mobile form .input-area .input-field input::-moz-placeholder {
+    color: #000000;
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .my-informations-container-mobile form .input-area .input-field input::placeholder {
+    color: #000000;
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .my-informations-container-mobile form .input-area .input-field .telephone-input {
+    width: 100%;
+    position: relative;
+  }
+  .my-informations-container-mobile form .input-area .input-field .telephone-input input {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.1215686275);
+    padding: 18px 20px;
+    padding-left: 90px;
+    cursor: pointer;
+    transition: 200ms ease;
+  }
+  .my-informations-container-mobile form .input-area .input-field .telephone-input input:focus {
+    cursor: auto;
+  }
+  .my-informations-container-mobile form .input-area .input-field .telephone-input input::-moz-placeholder {
+    color: #000000;
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .my-informations-container-mobile form .input-area .input-field .telephone-input input::placeholder {
+    color: #000000;
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .my-informations-container-mobile form .input-area .input-field .telephone-input input::-webkit-inner-spin-button {
+    display: none;
+  }
+  .my-informations-container-mobile form .input-area .input-field .telephone-input .nice-select {
+    border-left: 1px solid rgba(0, 0, 0, 0.1215686275);
+    border-right: none;
+    position: absolute;
+    width: 100%;
+    max-width: 55px;
+    cursor: pointer;
+    font-weight: 400;
+    height: auto;
+    line-height: normal;
+    font-size: 14px;
+    transition: 200ms ease;
+    padding: 18px 20px;
+  }
+  .my-informations-container-mobile form .input-area .input-field .telephone-input .nice-select:focus {
+    cursor: auto;
+    border: none;
+  }
+  .my-informations-container-mobile form .input-area .input-field .telephone-input .nice-select::-moz-placeholder {
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .my-informations-container-mobile form .input-area .input-field .telephone-input .nice-select::placeholder {
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .my-informations-container-mobile form .input-area .input-field .telephone-input .nice-select::after {
+    content: "";
+    background-image: url("/assets/images/selectdown.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    border: none;
+    top: 58%;
+    left: 100%;
+    transform: translateY(-50%);
+  }
+  .my-informations-container-mobile form .input-area .input-field .telephone-input .nice-select .list {
+    width: 100%;
+    height: auto;
+  }
+  .my-informations-container-mobile form .input-area .input-field button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 4px;
+    background-color: transparent;
+    gap: 8px;
+    transition: 100ms ease;
+  }
+  .my-informations-container-mobile form .input-area .input-field button img {
+    min-width: 20px;
+    width: 20px;
+    height: 20px;
+    min-height: 20px;
+  }
+  .my-informations-container-mobile form .input-area .input-field button p {
+    color: #008bd0;
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .my-informations-container-mobile form .input-area .input-field button:hover {
+    background-color: rgba(195, 235, 255, 0.7411764706);
+  }
+  .my-informations-container-mobile form .input-area .input-field button:active {
+    transform: scale(0.98);
+  }
+  .my-informations-container-mobile form .input-area .input-field-pass {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .my-informations-container-mobile form .input-area .input-field-pass label {
+    width: 100%;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 400;
+    font-size: 12px;
+  }
+  .my-informations-container-mobile form .input-area .input-field-pass .fielding {
+    width: 100%;
+    position: relative;
+  }
+  .my-informations-container-mobile form .input-area .input-field-pass .fielding input {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.1215686275);
+    padding: 18px 20px;
+    padding-right: 60px;
+    cursor: pointer;
+    transition: 200ms ease;
+  }
+  .my-informations-container-mobile form .input-area .input-field-pass .fielding input:focus {
+    cursor: auto;
+    border: 1px solid #008bd0;
+  }
+  .my-informations-container-mobile form .input-area .input-field-pass .fielding input::-moz-placeholder {
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .my-informations-container-mobile form .input-area .input-field-pass .fielding input::placeholder {
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .my-informations-container-mobile form .input-area .input-field-pass .fielding .eye {
+    min-width: 20px;
+    width: 20px;
+    height: 20px;
+    min-height: 20px;
+    position: absolute;
+    z-index: 10;
+    right: 20px;
+    cursor: pointer;
+    transition: 100ms ease;
+    top: 18px;
+  }
+  .my-informations-container-mobile form .input-area .input-field-pass .fielding .eye:active {
+    transform: scale(0.98);
+  }
+  .my-informations-container-mobile form .button-area-field {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .my-informations-container-mobile form .button-area-field .left-pass-checker {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .my-informations-container-mobile form .button-area-field .left-pass-checker span {
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 400;
+    font-size: 12px;
+  }
+  .my-informations-container-mobile form .button-area-field .left-pass-checker .checkers {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 24px;
+    max-width: 647px;
+    width: 100%;
+  }
+  .my-informations-container-mobile form .button-area-field .left-pass-checker .checkers .field {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+  }
+  .my-informations-container-mobile form .button-area-field .left-pass-checker .checkers .field .changed-icon {
+    min-width: 20px;
+    width: 20px;
+    height: 20px;
+    min-height: 20px;
+  }
+  .my-informations-container-mobile form .button-area-field .left-pass-checker .checkers .field .changed-text {
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 400;
+    font-size: 14px;
+    transition: 200ms ease;
+    text-align: left;
+  }
+  .my-informations-container-mobile form .button-area-field .left-pass-checker .checkers .field .changed-text.changed-text-green {
+    color: #2abc6d;
+  }
+  .my-informations-container-mobile form .button-area-field .left-select-area {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .my-informations-container-mobile form .button-area-field .left-select-area .radio-input {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+  }
+  .my-informations-container-mobile form .button-area-field .left-select-area .radio-input label {
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .my-informations-container-mobile form .button-area-field .left-select-area .radio-input input[type=radio] {
+    min-width: 20px;
+    width: 20px;
+    height: 20px;
+    min-height: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+  }
+  .my-informations-container-mobile form .button-area-field .left-select-area .radio-input input[type=radio]:checked {
+    border: 1px solid #1472e2;
+  }
+  .my-informations-container-mobile form .button-area-field button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 4px;
+    background-color: transparent;
+    gap: 8px;
+    transition: 100ms ease;
+  }
+  .my-informations-container-mobile form .button-area-field button img {
+    min-width: 20px;
+    width: 20px;
+    height: 20px;
+    min-height: 20px;
+  }
+  .my-informations-container-mobile form .button-area-field button p {
+    color: #008bd0;
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .my-informations-container-mobile form .button-area-field button:hover {
+    background-color: rgba(195, 235, 255, 0.7411764706);
+  }
+  .my-informations-container-mobile form .button-area-field button:active {
+    transform: scale(0.98);
+  }
+  .my-informations-container-mobile form .button-area-field .ch-p {
+    color: white;
+    background-color: #0a2056;
+    border-radius: 12px;
+    padding: 12px 24px;
+    cursor: pointer;
+  }
+  .my-informations-container-mobile form .button-area-field .ch-p:active {
+    transform: scale(0.98);
+  }
+  .my-informations-container-mobile form .button-area-field .ch-p:hover {
+    background-color: #285e77;
+  }
+  .my-informations-container-mobile form .button-area-field-my-info {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .my-informations-container-mobile form .button-area-field-my-info button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 4px;
+    background-color: transparent;
+    gap: 8px;
+    transition: 100ms ease;
+  }
+  .my-informations-container-mobile form .button-area-field-my-info button img {
+    min-width: 20px;
+    width: 20px;
+    height: 20px;
+    min-height: 20px;
+  }
+  .my-informations-container-mobile form .button-area-field-my-info button p {
+    color: #008bd0;
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .my-informations-container-mobile form .button-area-field-my-info button:hover {
+    background-color: rgba(195, 235, 255, 0.7411764706);
+  }
+  .my-informations-container-mobile form .button-area-field-my-info button:active {
+    transform: scale(0.98);
+  }
+  .my-informations-container-mobile form .button-area-field-my-info .ch-p {
+    color: white;
+    background-color: #0a2056;
+    border-radius: 12px;
+    padding: 12px 24px;
+    cursor: pointer;
+  }
+  .my-informations-container-mobile form .button-area-field-my-info .ch-p:active {
+    transform: scale(0.98);
+  }
+  .my-informations-container-mobile form .button-area-field-my-info .ch-p:hover {
+    background-color: #285e77;
+  }
+  .my-informations-container-mobile form .button-area-field-my-info .telephone-modal-overlay {
+    position: fixed;
+    z-index: 9999999;
+    inset: 0;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: 200ms ease;
+    background-color: rgba(61, 61, 61, 0.479);
+  }
+  .my-informations-container-mobile form .button-area-field-my-info .telephone-modal-overlay .modal-content {
+    width: 100%;
+    max-width: 440px;
+    height: auto;
+    border-radius: 16px;
+    background: #ffffff;
+    padding: 20px;
+  }
+  .my-informations-container-mobile form .button-area-field-my-info .telephone-modal-overlay .modal-content .head-close {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .my-informations-container-mobile form .button-area-field-my-info .telephone-modal-overlay .modal-content .head-close .close-btn {
+    min-width: 24px;
+    width: 24px;
+    min-height: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 150ms ease;
+    border: none;
+    outline: none;
+  }
+  .my-informations-container-mobile form .button-area-field-my-info .telephone-modal-overlay .modal-content .head-close .close-btn img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: scale-down;
+       object-fit: scale-down;
+  }
+  .my-informations-container-mobile form .button-area-field-my-info .telephone-modal-overlay .modal-content .head-close .close-btn:hover {
+    transform: scale(1.02);
+  }
+  .my-informations-container-mobile form .button-area-field-my-info .telephone-modal-overlay .modal-content .head-close .close-btn:active {
+    transform: scale(0.98);
+  }
+  .my-informations-container-mobile form .button-area-field-my-info .telephone-modal-overlay .modal-content .content-modal {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .my-informations-container-mobile form .button-area-field-my-info .telephone-modal-overlay .modal-content .content-modal .title-modal {
+    max-width: 163px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .my-informations-container-mobile form .button-area-field-my-info .telephone-modal-overlay .modal-content .content-modal .title-modal h2 {
+    color: #000000;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+    line-height: 24px;
+  }
+  .my-informations-container-mobile form .button-area-field-my-info .telephone-modal-overlay .modal-content .content-modal .title-modal p {
+    line-height: 21px;
+    color: #000000;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    width: 100%;
+  }
+  .my-informations-container-mobile form .button-area-field-my-info .telephone-modal-overlay .modal-content .content-modal .form-modal-content {
+    width: 100%;
+    max-width: 384px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .my-informations-container-mobile form .button-area-field-my-info .telephone-modal-overlay .modal-content .content-modal .form-modal-content .top-inputs {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+  }
+  .my-informations-container-mobile form .button-area-field-my-info .telephone-modal-overlay .modal-content .content-modal .form-modal-content .top-inputs .nice-select {
+    border-right: none;
+    width: 100%;
+    max-width: 105px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 400;
+    height: auto;
+    background-color: #f5f5f5;
+    line-height: normal;
+    font-size: 14px;
+    transition: 200ms ease;
+    padding: 18px 18px;
+  }
+  .my-informations-container-mobile form .button-area-field-my-info .telephone-modal-overlay .modal-content .content-modal .form-modal-content .top-inputs .nice-select:focus {
+    cursor: auto;
+    border: none;
+  }
+  .my-informations-container-mobile form .button-area-field-my-info .telephone-modal-overlay .modal-content .content-modal .form-modal-content .top-inputs .nice-select::-moz-placeholder {
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .my-informations-container-mobile form .button-area-field-my-info .telephone-modal-overlay .modal-content .content-modal .form-modal-content .top-inputs .nice-select::placeholder {
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .my-informations-container-mobile form .button-area-field-my-info .telephone-modal-overlay .modal-content .content-modal .form-modal-content .top-inputs .nice-select::after {
+    content: "";
+    background-image: url("/assets/images/selectdown.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    border: none;
+    top: 58%;
+    left: 60%;
+    transform: translateY(-50%);
+  }
+  .my-informations-container-mobile form .button-area-field-my-info .telephone-modal-overlay .modal-content .content-modal .form-modal-content .top-inputs .nice-select .list {
+    width: 100%;
+    height: auto;
+  }
+  .my-informations-container-mobile form .button-area-field-my-info .telephone-modal-overlay .modal-content .content-modal .form-modal-content .top-inputs input {
+    background-color: #f5f5f5;
+    width: 100%;
+    height: 56px;
+    border-radius: 12px;
+    padding: 18px 18px;
+    cursor: pointer;
+    transition: 200ms ease;
+  }
+  .my-informations-container-mobile form .button-area-field-my-info .telephone-modal-overlay .modal-content .content-modal .form-modal-content .top-inputs input:focus {
+    cursor: auto;
+  }
+  .my-informations-container-mobile form .button-area-field-my-info .telephone-modal-overlay .modal-content .content-modal .form-modal-content .top-inputs input::-moz-placeholder {
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .my-informations-container-mobile form .button-area-field-my-info .telephone-modal-overlay .modal-content .content-modal .form-modal-content .top-inputs input::placeholder {
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .my-informations-container-mobile form .button-area-field-my-info .telephone-modal-overlay .modal-content .content-modal .form-modal-content .top-inputs input::-webkit-inner-spin-button {
+    display: none;
+  }
+  .my-informations-container-mobile form .button-area-field-my-info .telephone-modal-overlay .modal-content .content-modal .form-modal-content .submit-button {
+    width: 100%;
+    padding: 12px 0;
+    background-color: #008bd0;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  .my-informations-container-mobile form .button-area-field-my-info .telephone-modal-overlay .modal-content .content-modal .form-modal-content .submit-button p {
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 14px;
+  }
+  .my-informations-container-mobile form .button-area-field-my-info .telephone-modal-overlay .modal-content .content-modal .form-modal-content .submit-button img {
+    min-width: 20px;
+    width: 20px;
+    min-height: 20px;
+    height: 20px;
+  }
+  .my-informations-container-mobile form .button-area-field-my-info .telephone-modal-overlay .modal-content .content-modal .form-modal-content .submit-button:hover {
+    background-color: #007bff;
+  }
+  .my-informations-container-mobile form .button-area-field-my-info .telephone-modal-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+  .my-informations-container-mobile form .button-area-field-my-info .email-modal-overlay {
+    position: fixed;
+    z-index: 9999999;
+    inset: 0;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: 200ms ease;
+    background-color: rgba(61, 61, 61, 0.479);
+  }
+  .my-informations-container-mobile form .button-area-field-my-info .email-modal-overlay .modal-content {
+    width: 100%;
+    max-width: 440px;
+    height: auto;
+    border-radius: 16px;
+    background: #ffffff;
+    padding: 20px;
+  }
+  .my-informations-container-mobile form .button-area-field-my-info .email-modal-overlay .modal-content .head-close {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .my-informations-container-mobile form .button-area-field-my-info .email-modal-overlay .modal-content .head-close .close-btn {
+    min-width: 24px;
+    width: 24px;
+    min-height: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 150ms ease;
+    border: none;
+    outline: none;
+  }
+  .my-informations-container-mobile form .button-area-field-my-info .email-modal-overlay .modal-content .head-close .close-btn img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: scale-down;
+       object-fit: scale-down;
+  }
+  .my-informations-container-mobile form .button-area-field-my-info .email-modal-overlay .modal-content .head-close .close-btn:hover {
+    transform: scale(1.02);
+  }
+  .my-informations-container-mobile form .button-area-field-my-info .email-modal-overlay .modal-content .head-close .close-btn:active {
+    transform: scale(0.98);
+  }
+  .my-informations-container-mobile form .button-area-field-my-info .email-modal-overlay .modal-content .content-modal {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .my-informations-container-mobile form .button-area-field-my-info .email-modal-overlay .modal-content .content-modal .title-modal {
+    max-width: 183px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .my-informations-container-mobile form .button-area-field-my-info .email-modal-overlay .modal-content .content-modal .title-modal h2 {
+    color: #000000;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+    line-height: 24px;
+  }
+  .my-informations-container-mobile form .button-area-field-my-info .email-modal-overlay .modal-content .content-modal .title-modal p {
+    line-height: 21px;
+    color: #000000;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    width: 100%;
+  }
+  .my-informations-container-mobile form .button-area-field-my-info .email-modal-overlay .modal-content .content-modal .form-modal-content {
+    width: 100%;
+    max-width: 384px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .my-informations-container-mobile form .button-area-field-my-info .email-modal-overlay .modal-content .content-modal .form-modal-content .top-inputs {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+  }
+  .my-informations-container-mobile form .button-area-field-my-info .email-modal-overlay .modal-content .content-modal .form-modal-content .top-inputs .nice-select {
+    border-right: none;
+    width: 100%;
+    max-width: 105px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 400;
+    height: auto;
+    background-color: #f5f5f5;
+    line-height: normal;
+    font-size: 14px;
+    transition: 200ms ease;
+    padding: 18px 18px;
+  }
+  .my-informations-container-mobile form .button-area-field-my-info .email-modal-overlay .modal-content .content-modal .form-modal-content .top-inputs .nice-select:focus {
+    cursor: auto;
+    border: none;
+  }
+  .my-informations-container-mobile form .button-area-field-my-info .email-modal-overlay .modal-content .content-modal .form-modal-content .top-inputs .nice-select::-moz-placeholder {
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .my-informations-container-mobile form .button-area-field-my-info .email-modal-overlay .modal-content .content-modal .form-modal-content .top-inputs .nice-select::placeholder {
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .my-informations-container-mobile form .button-area-field-my-info .email-modal-overlay .modal-content .content-modal .form-modal-content .top-inputs .nice-select::after {
+    content: "";
+    background-image: url("/assets/images/selectdown.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    border: none;
+    top: 58%;
+    left: 60%;
+    transform: translateY(-50%);
+  }
+  .my-informations-container-mobile form .button-area-field-my-info .email-modal-overlay .modal-content .content-modal .form-modal-content .top-inputs .nice-select .list {
+    width: 100%;
+    height: auto;
+  }
+  .my-informations-container-mobile form .button-area-field-my-info .email-modal-overlay .modal-content .content-modal .form-modal-content .top-inputs input {
+    background-color: #f5f5f5;
+    width: 100%;
+    height: 56px;
+    border-radius: 12px;
+    padding: 18px 18px;
+    cursor: pointer;
+    transition: 200ms ease;
+  }
+  .my-informations-container-mobile form .button-area-field-my-info .email-modal-overlay .modal-content .content-modal .form-modal-content .top-inputs input:focus {
+    cursor: auto;
+  }
+  .my-informations-container-mobile form .button-area-field-my-info .email-modal-overlay .modal-content .content-modal .form-modal-content .top-inputs input::-moz-placeholder {
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .my-informations-container-mobile form .button-area-field-my-info .email-modal-overlay .modal-content .content-modal .form-modal-content .top-inputs input::placeholder {
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .my-informations-container-mobile form .button-area-field-my-info .email-modal-overlay .modal-content .content-modal .form-modal-content .top-inputs input::-webkit-inner-spin-button {
+    display: none;
+  }
+  .my-informations-container-mobile form .button-area-field-my-info .email-modal-overlay .modal-content .content-modal .form-modal-content .submit-button {
+    width: 100%;
+    padding: 12px 0;
+    background-color: #008bd0;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  .my-informations-container-mobile form .button-area-field-my-info .email-modal-overlay .modal-content .content-modal .form-modal-content .submit-button p {
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 14px;
+  }
+  .my-informations-container-mobile form .button-area-field-my-info .email-modal-overlay .modal-content .content-modal .form-modal-content .submit-button img {
+    min-width: 20px;
+    width: 20px;
+    min-height: 20px;
+    height: 20px;
+  }
+  .my-informations-container-mobile form .button-area-field-my-info .email-modal-overlay .modal-content .content-modal .form-modal-content .submit-button:hover {
+    background-color: #007bff;
+  }
+  .my-informations-container-mobile form .button-area-field-my-info .email-modal-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+  .my-informations-container-mobile form .file-area {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .my-informations-container-mobile form .file-area label {
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 400;
+    font-size: 12px;
+  }
+  .my-informations-container-mobile form .file-area .input-fielder {
+    width: 100%;
+    position: relative;
+    height: 56px;
+    cursor: pointer;
+    transition: 100ms ease;
+    background: #f8f8f8;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.1215686275);
+    padding: 17px 20px;
+  }
+  .my-informations-container-mobile form .file-area .input-fielder input[type=file] {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 15;
+    opacity: 0;
+  }
+  .my-informations-container-mobile form .file-area .input-fielder .titles {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+  }
+  .my-informations-container-mobile form .file-area .input-fielder .titles p {
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .my-informations-container-mobile form .file-area .input-fielder .titles img {
+    min-width: 24px;
+    width: 24px;
+    height: 24px;
+    min-height: 24px;
+  }
+  .my-informations-container-mobile form .file-area .input-fielder:hover {
+    background-color: transparent;
+  }
+  .my-informations-container-mobile form .file-area .input-fielder:active {
+    transform: scale(0.98);
+  }
+  .my-informations-container-mobile form .bottom-button {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+  .my-informations-container-mobile form .bottom-button .ch-p {
+    color: white;
+    background-color: #0a2056;
+    border-radius: 12px;
+    padding: 12px 24px;
+    cursor: pointer;
+  }
+  .my-informations-container-mobile form .bottom-button .ch-p:active {
+    transform: scale(0.98);
+  }
+  .my-informations-container-mobile form .bottom-button .ch-p:hover {
+    background-color: #285e77;
+  }
+  body .content .container-content .form-container-add-contract form .button-area {
+    margin-top: 24px;
+  }
+  body .content .container-content .company-inner-content {
+    margin-top: 24px;
+  }
+  body .content .container-content .grid-card-item-bonuses {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  body .content .container-content .my-informations-container,
+  body .content .container-content .my-informations-container-contact {
+    padding: 12px;
+    margin-top: 24px;
+  }
+  body .content .container-content .title-head-add-contract-settings .right-content {
+    gap: 12px;
+  }
+  body .content .container-content .title-head-add-contract-settings .right-content .my-informations p,
+  body .content .container-content .title-head-add-contract-settings .right-content .change-password p,
+  body .content .container-content .title-head-add-contract-settings .right-content .lang-select p,
+  body .content .container-content .title-head-add-contract-settings .right-content .contact-us p {
+    font-size: 13px;
+  }
+  body .content .container-content .title-head-add-contract-settings .right-content .my-informations img,
+  body .content .container-content .title-head-add-contract-settings .right-content .change-password img,
+  body .content .container-content .title-head-add-contract-settings .right-content .lang-select img,
+  body .content .container-content .title-head-add-contract-settings .right-content .contact-us img {
+    min-width: 18px;
+    width: 18px;
+    height: 18px;
+    min-height: 18px;
+  }
+  body .content .container-content .title-head-add-contract-settings h2 {
+    font-size: 16px;
+  }
+  body .content .container-content .title-head-add-contract-notifications .right-content .delete p,
+  body .content .container-content .title-head-add-contract-notifications .right-content .read p {
+    font-size: 12px;
+  }
+  body .content .container-content .all-notifications .head-notification {
+    height: auto !important;
+  }
+  body .content .container-content .all-notifications .head-notification h3 {
+    font-size: 13px;
+  }
+  body .content .container-content .all-notifications .grid-notifs-mobile {
+    height: auto !important;
+  }
+  body .content .container-content .all-notifications .grid-notifs-mobile .item-notif .right-area .right-delete-notification {
+    min-width: 24px !important;
+    width: 24px !important;
+    height: 24px !important;
+    min-height: 24px !important;
+  }
+  body .content .container-content .all-notifications .grid-notifs {
+    display: none !important;
+  }
+  body .content .container-content .all-notifications .head-notification {
+    height: auto;
+    padding: 12px;
+  }
+  body .content .container-content .title-head-add-contract-notifications .right-content .delete img,
+  body .content .container-content .title-head-add-contract-notifications .right-content .read img {
+    min-width: 16px;
+    width: 16px;
+    min-height: 16px;
+    height: 16px;
+  }
+  body .content .container-content .all-notifications .grid-notifs-mobile {
+    width: 100%;
+    height: 560px;
+    overflow-y: auto;
+    overflow-y: auto;
+    display: grid !important;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: flex-start;
+    align-items: flex-start;
+  }
+  body .content .container-content .all-notifications .grid-notifs-mobile .item-notif {
+    background: rgba(255, 255, 255, 0.6);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.0784313725);
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column-reverse;
+    gap: 24px;
+    padding: 12px;
+  }
+  body .content .container-content .all-notifications .grid-notifs-mobile .item-notif .left-area {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 24px;
+  }
+  body .content .container-content .all-notifications .grid-notifs-mobile .item-notif .left-area .title {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+  }
+  body .content .container-content .all-notifications .grid-notifs-mobile .item-notif .left-area .title .circle {
+    min-width: 10px;
+    width: 10px;
+    height: 10px;
+    min-height: 10px;
+    background-color: #de2e2e;
+    border-radius: 100px;
+  }
+  body .content .container-content .all-notifications .grid-notifs-mobile .item-notif .left-area .title h2 {
+    color: #000000;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    max-width: 650px;
+    width: 100%;
+    text-align: left;
+  }
+  body .content .container-content .all-notifications .grid-notifs-mobile .item-notif .right-area {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  body .content .container-content .all-notifications .grid-notifs-mobile .item-notif .right-area .time {
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 400;
+    font-size: 12px;
+  }
+  body .content .container-content .all-notifications .grid-notifs-mobile .item-notif .right-area .right-delete-notification {
+    min-width: 32px;
+    width: 32px;
+    height: 32px;
+    min-height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    border-radius: 100px;
+    cursor: pointer;
+    background-color: #fff2f2;
+    transition: 100ms ease;
+  }
+  body .content .container-content .all-notifications .grid-notifs-mobile .item-notif .right-area .right-delete-notification img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  body .content .container-content .all-notifications .grid-notifs-mobile .item-notif .right-area .right-delete-notification:active {
+    transform: scale(0.98);
+  }
+  body .content .container-content .all-notifications .grid-notifs-mobile .item-notif .right-area .right-delete-notification:hover {
+    background-color: #f8a3a3;
+  }
+  body .content .container-content .all-notifications .grid-notifs-mobile .item-notif .modal-notification {
+    position: fixed;
+    z-index: 100000000;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2392156863);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: 200ms ease;
+  }
+  body .content .container-content .all-notifications .grid-notifs-mobile .item-notif .modal-notification .modal-content {
+    width: calc(100% - 16px);
+    height: 264px;
+    overflow-y: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 12px;
+    background: #ffffff;
+    border-radius: 16px;
+    position: relative;
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.1215686275);
+  }
+  body .content .container-content .all-notifications .grid-notifs-mobile .item-notif .modal-notification .modal-content .head {
+    width: 100%;
+    position: sticky;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 18px 24px;
+  }
+  body .content .container-content .all-notifications .grid-notifs-mobile .item-notif .modal-notification .modal-content .head .close {
+    min-width: 26px;
+    width: 26px;
+    height: 26px;
+    min-height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  body .content .container-content .all-notifications .grid-notifs-mobile .item-notif .modal-notification .modal-content .head .close img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  body .content .container-content .all-notifications .grid-notifs-mobile .item-notif .modal-notification .modal-content .head .close:active {
+    transform: scale(0.98);
+  }
+  body .content .container-content .all-notifications .grid-notifs-mobile .item-notif .modal-notification .modal-content .time {
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 400;
+    font-size: 12px;
+    text-align: left;
+    padding: 0 24px;
+  }
+  body .content .container-content .all-notifications .grid-notifs-mobile .item-notif .modal-notification .modal-content h2 {
+    padding: 0 24px;
+    color: #000000;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: left;
+    line-height: 21px;
+  }
+  body .content .container-content .all-notifications .grid-notifs-mobile .item-notif .modal-notification .modal-content .desc {
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: justify;
+    padding: 0 24px;
+    padding-bottom: 24px;
+  }
+  body .content .container-content .all-notifications .grid-notifs-mobile .item-notif .modal-notification.active-modal {
+    opacity: 1;
+    pointer-events: all;
+  }
+  body .content .container-content .all-notifications .grid-notifs-mobile .item-notif.readed .left-area h2 {
+    color: rgba(0, 0, 0, 0.8);
+  }
+  body .content .container-content .all-notifications .grid-notifs-mobile .item-notif.readed .left-area .circle {
+    background-color: rgba(0, 0, 0, 0.2392156863);
+  }
+  body .content .container-content .title-head-add-contract-notifications {
+    flex-direction: column;
+    gap: 18px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 24px;
+  }
+  body .content .container-content .all-notifications .head-notification h3 {
+    font-size: 14px;
+  }
+  body .content .container-content .all-notifications .grid-notifs .item-notif .left-area .title h2 {
+    font-size: 13px;
+    line-height: 24px;
+  }
+  body .content .container-content .all-notifications .grid-notifs .item-notif .left-area .time {
+    font-size: 11px;
+  }
+  body .content .container-content .all-notifications {
+    margin-top: 24px;
+  }
+  body .content .container-content .title-head-add-contract-notifications .right-content {
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: auto;
+  }
+  body .content .container-content .grid-card-item-insurance {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 5px;
+    margin-top: 24px;
+  }
+  body .content .container-content .kasko-insurance-form {
+    margin-top: 16px;
+  }
+  body .content .container-content .kasko-insurance-form .form-content .field-content {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  body .content .container-content .kasko-insurance-form {
+    padding: 12px;
+  }
+  body .content .container-content .kasko-insurance-form .title-form h3 {
+    font-size: 15px;
+    letter-spacing: -0.3px;
+  }
+  body .content .header-wrapper .header .overlay {
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1921568627);
+    pointer-events: none;
+    transition: 1s ease;
+    width: 0;
+    display: block !important;
+    z-index: -100000;
+    visibility: hidden;
+    transform: translateX(35rem);
+  }
+  body .content .header-wrapper .header .overlay .toggle-menu {
+    position: fixed;
+    height: 100vh;
+    background: #ffffff;
+    right: 0;
+    top: 0;
+    padding: 12px;
+    display: flex !important;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    pointer-events: none;
+    transition: 600ms ease;
+    width: 0;
+    z-index: -100000;
+    visibility: hidden;
+    transform: translateX(15rem);
+  }
+  body .content .header-wrapper .header .overlay .toggle-menu .head-menu {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.0784313725);
+  }
+  body .content .header-wrapper .header .overlay .toggle-menu .head-menu .left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    max-width: 225px;
+    width: 100%;
+    gap: 12px;
+  }
+  body .content .header-wrapper .header .overlay .toggle-menu .head-menu .left .profile {
+    min-width: 48px;
+    width: 48px;
+    min-height: 48px;
+    height: 48px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #0a2056;
+    padding: 12px;
+  }
+  body .content .header-wrapper .header .overlay .toggle-menu .head-menu .left .profile img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  body .content .header-wrapper .header .overlay .toggle-menu .head-menu .left .text {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4px;
+  }
+  body .content .header-wrapper .header .overlay .toggle-menu .head-menu .left .text h2 {
+    color: #000000;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: -0.2px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    max-width: 160px;
+    width: 100%;
+  }
+  body .content .header-wrapper .header .overlay .toggle-menu .head-menu .left .text p {
+    text-wrap: nowrap;
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: -0.3px;
+    text-align: left;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    max-width: 160px;
+    width: 100%;
+  }
+  body .content .header-wrapper .header .overlay .toggle-menu .head-menu .toggle-button {
+    min-width: 36px;
+    width: 36px;
+    height: 36px;
+    min-height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  body .content .header-wrapper .header .overlay .toggle-menu .head-menu .toggle-button img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  body .content .header-wrapper .header .overlay .toggle-menu .menu {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+  body .content .header-wrapper .header .overlay .toggle-menu .menu .mini-title {
+    color: rgba(0, 0, 0, 0.5019607843);
+    font-weight: 400;
+    font-size: 12px;
+    text-align: left;
+    letter-spacing: -0.2px;
+  }
+  body .content .header-wrapper .header .overlay .toggle-menu .menu .navbar {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 2px;
+  }
+  body .content .header-wrapper .header .overlay .toggle-menu .menu .navbar a {
+    width: 100%;
+    background-color: #fbfbfb;
+    padding: 16px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+  }
+  body .content .header-wrapper .header .overlay .toggle-menu .menu .navbar a img {
+    width: 24px;
+    height: 24px;
+    min-height: 24px;
+    min-width: 24px;
+  }
+  body .content .header-wrapper .header .overlay .toggle-menu .menu .navbar a p {
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: -0.3px;
+    text-align: left;
+    text-wrap: nowrap;
+  }
+  body .content .header-wrapper .header .overlay .toggle-menu .menu .navbar a.active-link {
+    border-left: 4px solid #0a2056;
+    background: #f4f7ff;
+    -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);
+  }
+  body .content .header-wrapper .header .overlay .toggle-menu.active {
+    visibility: visible;
+    transform: translateX(0);
+    width: calc(100% - 46px);
+    pointer-events: all;
+    z-index: 90000;
+  }
+  body .content .header-wrapper .header .overlay.active {
+    visibility: visible;
+    transform: translateX(0);
+    width: 100%;
+    pointer-events: all;
+    z-index: 80000;
+  }
+  body .content .container-content .grid-card-item {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  body .sidebar {
+    display: none;
+  }
+  body .content .header-wrapper .header .sidebar-mobile {
+    display: block !important;
+  }
+  body .content .header-wrapper .header .sidebar-mobile .toggle-button {
+    min-width: 48px;
+    width: 48px;
+    height: 48px;
+    min-height: 48px;
+    border-radius: 100px;
+    background-color: #0a2056;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 10px;
+  }
+  body .content .header-wrapper .header .sidebar-mobile .toggle-button img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  body .content .header-wrapper .header .sidebar-mobile .toggle-button:active {
+    transform: scale(0.92);
+  }
+  body .content .header-wrapper .header .left-section,
+  body .content .header-wrapper .header .right-section {
+    display: none;
+  }
+  body .content {
+    width: 100%;
+  }
+  body .content .header-wrapper .header {
+    flex-direction: row-reverse;
+  }
+  body .content .header-wrapper .header .mobile-logo {
+    display: flex !important;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  body .content .header-wrapper .header .mobile-logo img {
+    width: auto;
+    height: auto;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .toggle-button {
+    min-width: 48px;
+    width: 48px;
+    height: 48px;
+    min-height: 48px;
+    border-radius: 100px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 5px;
+    cursor: pointer;
+  }
+  .toggle-button img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .toggle-button:active {
+    transform: scale(0.92);
+  }
+}
+@media only screen and (max-width: 568px) {
+  body .content .container-content .company-inner-content {
+    margin-top: 24px;
+    flex-direction: column;
+    gap: 18px;
+  }
+  body .content .container-content .title-head-add-contract h1 {
+    font-size: 18px;
+  }
+  body .content .container-content .company-inner-content .left {
+    height: 250px;
+  }
+  body .content .container-content .grid-card-item-bonuses .card-item-bonus .top-content-image {
+    height: 250px;
+  }
+  body .content .container-content .grid-card-item-bonuses {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  body .content .container-content .title-head-add-contract-settings {
+    flex-direction: column;
+    gap: 24px;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  body .content .container-content .my-informations-container form .input-area,
+  body .content .container-content .my-informations-container-contact form .input-area {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  body .content .container-content .my-informations-container form .button-area-field .left-pass-checker .checkers,
+  body .content .container-content .my-informations-container-contact form .button-area-field .left-pass-checker .checkers {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  body .content .container-content .my-informations-container form .button-area-field,
+  body .content .container-content .my-informations-container-contact form .button-area-field {
+    flex-direction: column-reverse;
+    gap: 28px;
+  }
+  body .content .container-content .my-informations-container form .button-area-field .ch-p,
+  body .content .container-content .my-informations-container-contact form .button-area-field .ch-p {
+    width: 100%;
+  }
+  body .content .container-content .my-informations-container form .input-field-contact .nice-select::after,
+  body .content .container-content .my-informations-container-contact form .input-field-contact .nice-select::after {
+    left: 85%;
+  }
+  body .content .container-content .bonus_products_title {
+    font-size: 18px;
+  }
+  body .content .container-content .my-informations-container .top-title-contact-us h2,
+  body .content .container-content .my-informations-container-contact .top-title-contact-us h2 {
+    font-size: 14px;
+  }
+  body .content .container-content .my-informations-container .top-title-contact-us .right-navigators .element-nav,
+  body .content .container-content .my-informations-container-contact .top-title-contact-us .right-navigators .element-nav {
+    font-size: 13px;
+    padding: 12px 18px;
+  }
+  body .content .container-content .my-informations-container form .bottom-button .ch-p,
+  body .content .container-content .my-informations-container-contact form .bottom-button .ch-p {
+    width: 100%;
+  }
+  body .content .container-content .title-head-add-contract-settings .right-content {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+  body .content .container-content .title-head-add-contract-settings .right-content .my-informations,
+  body .content .container-content .title-head-add-contract-settings .right-content .change-password,
+  body .content .container-content .title-head-add-contract-settings .right-content .lang-select,
+  body .content .container-content .title-head-add-contract-settings .right-content .contact-us {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 12px;
+  }
+  body .content .container-content .title-head {
+    flex-direction: column;
+    gap: 24px;
+  }
+  body .content .container-content .search-container {
+    flex-direction: column;
+    gap: 16px;
+    height: auto;
+  }
+  body .content .container-content .search-container .left-search {
+    max-width: 100%;
+  }
+  body .content .container-content .search-container .right-filter {
+    width: 100%;
+    justify-content: center;
+  }
+  body .content .container-content .search-container .right-filter .element-filter {
+    width: 100%;
+  }
+  body .content .container-content .grid-card-item {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  body .content .container-content .search-container .right-filter .element-filter .head-filter-select {
+    width: 100% !important;
+    text-wrap: nowrap;
+  }
+  body .content .container-content .table-container-my-contracts table tbody tr td {
+    padding: 16px 12px;
+  }
+  body .content .container-content .table-container-my-contracts table thead tr th {
+    padding: 16px 12px;
+  }
+  body .content .container-content .table-container-my-contracts table tbody tr td {
+    font-size: 13px;
+  }
+  body .content .container-content .form-container-add-contract {
+    margin-top: 18px;
+    padding: 12px;
+    gap: 16px;
+  }
+  body .content .container-content .form-container-add-contract form .input-field-area {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  body .content .container-content .extract-contract-container {
+    padding: 12px;
+  }
+  body .content .container-content .extract-contract-container .contract-information .data .data-list .name,
+  body .content .container-content .extract-contract-container .automobile-information .data .data-list .name,
+  body .content .container-content .extract-contract-container .personal-information .data .data-list .name {
+    font-size: 13px;
+    letter-spacing: -0.5px;
+  }
+  body .content .container-content .extract-contract-container .contract-information .data .data-list .value,
+  body .content .container-content .extract-contract-container .automobile-information .data .data-list .value,
+  body .content .container-content .extract-contract-container .personal-information .data .data-list .value {
+    font-size: 12px;
+    letter-spacing: -0.5px;
+  }
+  body .content .container-content .extract-contract-container .extract-contract {
+    flex-direction: column;
+    gap: 24px;
+    padding: 12px;
+  }
+  body .content .container-content .extract-contract-container .extract-contract .left-view {
+    height: auto;
+  }
+}/*# sourceMappingURL=responsive.css.map */

@@ -19,11 +19,11 @@ class LinkController extends Controller
     function generateUniqueSlug($title)
     {
         $slug = Str::slug($title);
-        $count = Link::whereTranslation('title', $title)->count();
-
-        if ($count > 0) {
-            $slug .= '-' . $count;
-        }
+//        $count = Link::whereTranslation('title', $title)->count();
+//
+//        if ($count > 0) {
+//            $slug .= '-' . $count;
+//        }
 
         return $slug;
     }
@@ -131,18 +131,21 @@ class LinkController extends Controller
                 'meta_title'=>$request->az_meta_title,
                 'meta_description'=>$request->az_meta_description,
                 'meta_keywords'=>$request->az_meta_keywords,
+                'slug'=>$this->generateUniqueSlug($request->az_title),
             ],
             'en'=>[
                 'title'=>$request->en_title,
                 'meta_title'=>$request->en_meta_title,
                 'meta_description'=>$request->en_meta_description,
                 'meta_keywords'=>$request->en_meta_keywords,
+                'slug'=>$this->generateUniqueSlug($request->en_title),
             ],
             'ru'=>[
                 'title'=>$request->ru_title,
                 'meta_title'=>$request->ru_meta_title,
                 'meta_description'=>$request->ru_meta_description,
                 'meta_keywords'=>$request->ru_meta_keywords,
+                'slug'=>$this->generateUniqueSlug($request->ru_title),
             ]
 
         ]);

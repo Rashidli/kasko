@@ -1,9 +1,9 @@
 @extends('front.layouts.master')
 
-@section('title', 'İnzibati xətalar məcəlləsi')
-@section('description', 'İnzibati xətalar məcəlləsi')
-@section('keywords', 'İnzibati xətalar məcəlləsi')
-
+@section('title', $inzibati_xetalar_mecellesi->seo_title)
+@section('description', $inzibati_xetalar_mecellesi->seo_description)
+@section('keywords', $inzibati_xetalar_mecellesi->seo_keywords)
+@section('image', 'https://kasko.az/storage/869aeca8-d5c6-42ff-b754-5987d24d8e28.webp')
 @section('content')
 
 <div class="sigortaQanun-container p-lr">
@@ -272,6 +272,8 @@
                 Respublikasının Maliyyə Nazirliyi baxır.
             </p>
         </div>
+        <button class="scrollButton"><i class="bi bi-chevron-up"></i></button>
+
 </div>
 
 @endsection

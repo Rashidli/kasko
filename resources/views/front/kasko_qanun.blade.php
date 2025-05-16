@@ -1,9 +1,9 @@
 @extends('front.layouts.master')
 
-@section('title', 'Kasko qanun')
-@section('description', 'Kasko qanun')
-@section('keywords', 'Kasko qanun')
-
+@section('title', $kasko_sigorta_qaydalar->seo_title)
+@section('description', $kasko_sigorta_qaydalar->seo_description)
+@section('keywords', $kasko_sigorta_qaydalar->seo_keywords)
+@section('image', 'https://kasko.az/storage/869aeca8-d5c6-42ff-b754-5987d24d8e28.webp')
 @section('content')
 
 <div class="kaskoQanun-container p-lr">
@@ -1002,6 +1002,8 @@
 
 
         </div>
+        <button class="scrollButton"><i class="bi bi-chevron-up"></i></button>
+
     </div>
 
 @endsection

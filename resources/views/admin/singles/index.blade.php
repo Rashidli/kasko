@@ -26,28 +26,11 @@
                                         </thead>
 
                                         <tbody>
-                                        @foreach($singles as $single)
-
-                                            <tr>
-                                                <th scope="row">{{$single->id}}</th>
-                                                <th scope="row">{{$single->title}}</th>
-{{--                                                <td><img src="{{asset('storage/'.$single->image)}}" style="width: 100px; height: 50px" alt=""></td>--}}
-                                                <td>
-                                                    <a href="{{route('singles.edit',$single->id)}}" class="btn btn-primary" style="margin-right: 15px" >Edit</a>
-{{--                                                    <form action="{{route('singles.destroy', $single->id)}}" method="post" style="display: inline-block">--}}
-{{--                                                        {{ method_field('DELETE') }}--}}
-{{--                                                        @csrf--}}
-{{--                                                        <button onclick="return confirm('Məlumatın silinməyin təsdiqləyin')" type="submit" class="btn btn-danger">Delete</button>--}}
-{{--                                                    </form>--}}
-                                                </td>
-                                            </tr>
-
-                                        @endforeach
+                                        <livewire:single-sort-table />
 
                                         </tbody>
                                     </table>
                                     <br>
-                                    {{ $singles->links('admin.vendor.pagination.bootstrap-5') }}
                                 </div>
                             </div>
                         </div>

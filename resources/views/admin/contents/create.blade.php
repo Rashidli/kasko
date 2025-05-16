@@ -34,6 +34,14 @@
                                                 @endif
                                             </div>
 
+{{--                                            <div class="mb-3">--}}
+{{--                                                <label class="col-form-label">Slug* {{ strtoupper($lang) }}</label>--}}
+{{--                                                <input class="form-control" type="text" name="{{ $lang }}_slug" value="{{ old("{$lang}_slug") }}">--}}
+{{--                                                @if($errors->first("{$lang}_slug"))--}}
+{{--                                                    <small class="form-text text-danger">{{ $errors->first("{$lang}_slug") }}</small>--}}
+{{--                                                @endif--}}
+{{--                                            </div>--}}
+
                                             <div class="mb-3">
                                                 <label class="col-form-label">Text* {{ strtoupper($lang) }}</label>
                                                 <textarea id="editor_{{ $lang }}" class="form-control" name="{{ $lang }}_description">{{ old("{$lang}_description") }}</textarea>
@@ -102,6 +110,15 @@
                                     </div>
                                 </div>
                             @endforeach
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label class="col-form-label">Button link</label>
+                                        <input class="form-control" type="text" name="link">
+                                        @if($errors->first('link'))
+                                            <small class="form-text text-danger">{{ $errors->first('link') }}</small>
+                                        @endif
+                                    </div>
+                                </div>
                                 <div class="col-md-6">
                                     <div class="mb-3">
                                         <label class="col-form-label">Şəkil*(820-400)</label>

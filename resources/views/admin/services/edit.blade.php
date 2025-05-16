@@ -134,6 +134,42 @@
                                                 </div>
                                             </div>
                                         </div>
+
+                                        <div class="col-md-6">
+                                            <div class="card mb-3">
+                                                <div class="card-header">Succes mesajları</div>
+                                                <div class="card-body">
+                                                    <div class="mb-3">
+                                                        <label class="col-form-label">Başlıq {{ strtoupper($lang) }} iş saatları</label>
+                                                        <input class="form-control" type="text" name="{{ $lang }}_work_message" value="{{ $service->translate($lang)->work_message }}">
+                                                        @if($errors->first($lang.'_work_message'))
+                                                            <small class="form-text text-danger">{{ $errors->first($lang.'_work_message') }}</small>
+                                                        @endif
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label class="col-form-label">Text {{ strtoupper($lang) }} iş saatları</label>
+                                                        <textarea class="form-control" name="{{ $lang }}_work_text">{{ $service->translate($lang)->work_text }}</textarea>
+                                                        @if($errors->first($lang.'_work_text'))
+                                                            <small class="form-text text-danger">{{ $errors->first($lang.'_work_text') }}</small>
+                                                        @endif
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label class="col-form-label">Başlıq {{ strtoupper($lang) }} qeyri-iş saatları</label>
+                                                        <input class="form-control" type="text" name="{{ $lang }}_off_message" value="{{ $service->translate($lang)->off_message }}">
+                                                        @if($errors->first($lang.'_off_message'))
+                                                            <small class="form-text text-danger">{{ $errors->first($lang.'_off_message') }}</small>
+                                                        @endif
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label class="col-form-label">Text {{ strtoupper($lang) }} qeyri-iş saatları</label>
+                                                        <textarea class="form-control" name="{{ $lang }}_off_text">{{ $service->translate($lang)->off_text }}</textarea>
+                                                        @if($errors->first($lang.'_off_text'))
+                                                            <small class="form-text text-danger">{{ $errors->first($lang.'_off_text') }}</small>
+                                                        @endif
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             @endforeach
@@ -181,6 +217,24 @@
                                             <input type="file" name="image" class="form-control">
                                             @if($errors->first('image'))
                                                 <small class="form-text text-danger">{{ $errors->first('image') }}</small>
+                                            @endif
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="card mb-3">
+                                    <div class="card-header">Icon</div>
+                                    <div class="card-body">
+                                        <div class="mb-3 text-center">
+                                            <img style="width: 100px; height: 100px;background-color: black" src="{{ asset('storage/' . $service->icon) }}" class="uploaded_image" alt="{{ $service->icon }}">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Icon*(20-20)</label>
+                                            <input type="file" name="icon" class="form-control">
+                                            @if($errors->first('icon'))
+                                                <small class="form-text text-danger">{{ $errors->first('icon') }}</small>
                                             @endif
                                         </div>
                                     </div>

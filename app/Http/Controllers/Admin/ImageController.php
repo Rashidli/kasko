@@ -87,7 +87,20 @@ class ImageController extends Controller
             $image->image = $filename;
 
         }
-
+        $image->update([
+            'az'=>[
+                'img_alt'=>$request->az_img_alt,
+                'img_title'=>$request->az_img_title,
+            ],
+            'en'=>[
+                'img_alt'=>$request->en_img_alt,
+                'img_title'=>$request->en_img_title,
+            ],
+            'ru'=>[
+                'img_alt'=>$request->ru_img_alt,
+                'img_title'=>$request->ru_img_title,
+            ]
+        ]);
         $image->save();
 
         return redirect()->back()->with('message','Image updated successfully');

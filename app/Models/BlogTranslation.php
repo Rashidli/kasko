@@ -21,7 +21,9 @@ class BlogTranslation extends Model
         'slug',
         'meta_title',
         'meta_keywords',
-        'meta_description'
+        'meta_description',
+        'short_text',
+        'short_description',
     ];
 
 }

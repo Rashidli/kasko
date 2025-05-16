@@ -18,7 +18,7 @@ class FormController extends Controller
     public function index()
     {
 
-        $forms = Form::paginate(10);
+        $forms = Form::query()->paginate(20);
         return view('admin.forms.index', compact('forms'));
 
     }

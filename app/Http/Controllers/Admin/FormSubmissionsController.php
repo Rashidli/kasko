@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Enums\StatusEnum;
+use App\Exports\SubmissionsExport;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\FormSubmission;
-use App\Models\Service;
+use App\Models\OrderStatus;
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
 
 class FormSubmissionsController extends Controller
 {
@@ -27,9 +28,11 @@ class FormSubmissionsController extends Controller
     {
         $category = Category::with('services')->findOrFail($request->category_id);
 
-        $query = FormSubmission::whereHas('form.service.category', function ($query) use ($request) {
+        $query = FormSubmission::query()->whereHas('form.service.category', function ($query) use ($request) {
             $query->where('id', $request->category_id);
-        });
+        }) ->with(['order_logs' => function ($q) {
+            $q->latest()->limit(1);
+        }]);
 
         if ($request->filled('service_id')) {
             $query->whereHas('form.service', function ($query) use ($request) {
@@ -46,19 +49,23 @@ class FormSubmissionsController extends Controller
             $query->where('status', $request->status);
         }
 
-        if ($request->filled('date')) {
-            $query->whereDate('created_at', $request->date);
+        if ($request->filled('start_date') && $request->filled('end_date')) {
+            $query->whereBetween('created_at', [$request->start_date, $request->end_date]);
         }
 
         $limit = $request->filled('limit') ? $request->limit : 10;
 
-        $formSubmissions = $query->orderBy('created_at','desc')->paginate($limit);
-
-        return view('admin.form_submissions.index', compact('formSubmissions', 'category'));
+        $formSubmissions = $query->orderByDesc('created_at')->paginate($limit)->withQueryString();
+        $order_statuses = OrderStatus::all();
+        return view('admin.form_submissions.index', compact(
+            'formSubmissions',
+            'category','order_statuses'
+        ));
     }
 
     public function update(Request $request, $id)
     {
+
         $formSubmission = FormSubmission::findOrFail($id);
 
         $request->validate([
@@ -70,8 +77,9 @@ class FormSubmissionsController extends Controller
         $formSubmission->note = $request->note;
         $formSubmission->save();
 
-        return redirect()->route('form_submissions.show', $formSubmission->id)
+        return redirect()->route('form_submissions.show', ['form_submission' => $formSubmission->id] + request()->query())
             ->with('message', 'Mesaj updated successfully.');
+
     }
 
     /**
@@ -79,12 +87,55 @@ class FormSubmissionsController extends Controller
      */
     public function show(FormSubmission $formSubmission)
     {
-        return view('admin.form_submissions.show', compact('formSubmission'));
+//        $formSubmission = FormSubmission::with(['order_logs' => function ($q) {
+//            $q->latest()->limit(1);
+//        }])->findOrFail($formSubmission->id);
+        $order_statuses = OrderStatus::all();
+        return view('admin.form_submissions.show', compact('formSubmission','order_statuses'));
     }
 
     public function destroy(FormSubmission $formSubmission)
     {
         $formSubmission->delete();
-        return redirect()->back();
+        return redirect()->route('form_submissions.index',['category_id' => $formSubmission->form?->service?->category] + request()->query())
+            ->with('message', 'Silindi');
     }
+
+    public function exportSubmissionsToExcel(Request $request)
+    {
+        $query = FormSubmission::query();
+
+        if ($request->filled('category_id')) {
+            $query->whereHas('form.service.category', function ($query) use ($request) {
+                $query->where('id', $request->category_id);
+            });
+        }
+
+        if ($request->filled('service_id')) {
+            $query->whereHas('form.service', function ($query) use ($request) {
+                $query->where('id', $request->service_id);
+            });
+        }
+
+        if ($request->filled('status')) {
+            $query->where('status', $request->status);
+        }
+
+        if ($request->filled('name')) {
+            $query->where('name', 'like', '%' . $request->name . '%');
+        }
+
+        if ($request->filled('start_date')) {
+            $query->whereDate('created_at', '>=', $request->start_date);
+        }
+
+        if ($request->filled('end_date')) {
+            $query->whereDate('created_at', '<=', $request->end_date);
+        }
+
+        $formSubmissions = $query->orderBy('created_at', 'desc')->get();
+
+        return Excel::download(new SubmissionsExport($formSubmissions), 'submissions.xlsx');
+    }
+
 }

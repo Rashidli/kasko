@@ -1,8 +1,8 @@
 @extends('front.layouts.master')
 
-@section('title', 'Tibbi siğorta haqqında qanun')
-@section('description', 'Tibbi siğorta haqqında qanun')
-@section('keywords', 'Tibbi siğorta haqqında qanun')
+@section('title', $tibbi_sigorta_haqqinda_qanun->seo_title)
+@section('description', $tibbi_sigorta_haqqinda_qanun->seo_description)
+@section('keywords', $tibbi_sigorta_haqqinda_qanun->seo_keywords)
 
 @section('content')
 
@@ -365,6 +365,8 @@ qanunvericiliyinə uyğun olaraq məsuliyyət daşıyırlar.
                 <br><strong>3.</strong> 2 oktyabr 2008-ci il tarixli 699-IIIQD nömrəli Azərbaycan Respublikasının Qanunu (<strong>“Azərbaycan” qəzeti, 16 noyabr 2008-ci il, № 257</strong>)
             </p>
         </div>
+        <button class="scrollButton"><i class="bi bi-chevron-up"></i></button>
+
     </div>
 
 @endsection

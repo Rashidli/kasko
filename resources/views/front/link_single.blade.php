@@ -1,11 +1,12 @@
 @extends('front.layouts.master')
 
-@section('title', $link->seo_title)
-@section('description', $link->seo_description)
-@section('keywords', $link->seo_keywords)
+@section('title', $link->meta_title)
+@section('description', $link->meta_description)
+@section('keywords', $link->meta_keywords)
+@section('image', 'https://kasko.az/storage/869aeca8-d5c6-42ff-b754-5987d24d8e28.webp')
 
 @section('content')
-    <div class="page-direction p-lr">
+    <!-- <div class="page-direction p-lr">
         <a href="{{route('welcome')}}" class="prev-page">
            {{$home_page->title}}
         </a>
@@ -24,7 +25,7 @@
         <a href="javascript: void(0)" class="current-page">
             {{$link->title}}
         </a>
-    </div>
+    </div> -->
     <div class="useful_link_head p-lr">
         <h1 class="title">{{$link->title}}</h1>
     </div>

@@ -10,6 +10,7 @@ enum StatusEnum: int
     case IMTINA_EDILDI = 4;
     case ƏLAQƏ_ALINMADI = 5;
     case TEKLIF_VERILDI = 6;
+    case QERAR_VERECEK = 7;
 
     public function label(): string
     {
@@ -20,6 +21,7 @@ enum StatusEnum: int
             self::IMTINA_EDILDI => 'İmtina edildi',
             self::ƏLAQƏ_ALINMADI => 'Əlaqə alınmadı',
             self::TEKLIF_VERILDI => 'Təklif verildi',
+            SELF::QERAR_VERECEK => 'Qərar verəcək'
         };
     }
     public function cssClass(): string
@@ -31,6 +33,7 @@ enum StatusEnum: int
             self::IMTINA_EDILDI => 'btn-danger',
             self::ƏLAQƏ_ALINMADI => 'btn-secondary',
             self::TEKLIF_VERILDI => 'btn-info',
+            self::QERAR_VERECEK => 'btn-info'
         };
     }
 }

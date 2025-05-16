@@ -30,17 +30,29 @@ class AuthController extends Controller
 
     public function login_submit(LoginRequest $request)
     {
+        // Verify reCAPTCHA response
+//        $recaptchaResponse = $request->input('g-recaptcha-response');
+//        $secretKey = '6LdhrpYqAAAAAJErJ2nqHBMfSzRUNntCTMWkcc3_';
+//
+//        $recaptchaVerifyUrl = 'https://www.google.com/recaptcha/api/siteverify';
+//        $response = file_get_contents($recaptchaVerifyUrl . '?secret=' . $secretKey . '&response=' . $recaptchaResponse);
+//        $responseKeys = json_decode($response, true);
+//
+//        if (!$responseKeys['success']) {
+//            return redirect()->back()->withErrors(['captcha' => 'Please complete the reCAPTCHA.']);
+//        }
 
-        if(Auth::attempt(['email' => $request->email, 'password' => $request->password])){
+        // Attempt login
+        if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
             return redirect()->route('home');
-        }else{
+        } else {
             $error = \Illuminate\Validation\ValidationException::withMessages([
                 'password' => ['Şifrə yanlışdır'],
             ]);
             throw $error;
         }
-
     }
+
 
     public function logout()
     {

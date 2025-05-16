@@ -44,29 +44,38 @@ class UserController extends Controller
 
     public function store(RegisterRequest $request)
     {
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'surname' => 'nullable|string|max:255',
+            'father_name' => 'nullable|string|max:255',
+            'indentity' => 'nullable|string|max:255',
+            'birthday' => 'nullable|date',
+            'position' => 'nullable|string|max:255',
+            'phone' => 'nullable|string|max:20',
+            'email' => 'required|email|unique:users,email',
+            'password' => 'required|string',
+        ]);
 
         $user = new User([
             'name' => $request->input('name'),
+            'surname' => $request->input('surname'),
+            'father_name' => $request->input('father_name'),
+            'indentity' => $request->input('indentity'),
+            'birthday' => $request->input('birthday'),
+            'position' => $request->input('position'),
+            'phone' => $request->input('phone'),
             'email' => $request->input('email'),
             'password' => Hash::make($request->input('password')),
         ]);
 
-        $user->assignRole($request->role);
-
-//        if($request->role){
-//            foreach ($request->role as $r){
-//                $user->assignRole($r);
-//            }
-//        }
-
-
         $user->save();
 
-//        Auth::login($user);
+        // Rol təyin edirik
+        $user->assignRole($request->role);
 
         return redirect()->route('users.index')->with('message', 'İstifadəçi əlavə edildi');
-
     }
+
 
     /**
      * Display the specified resource.
@@ -95,36 +104,39 @@ class UserController extends Controller
 
     public function update(Request $request, User $user)
     {
-
         $request->validate([
             'name' => 'required|string|max:255',
+            'surname' => 'nullable|string|max:255',
+            'father_name' => 'nullable|string|max:255',
+            'indentity' => 'nullable|string|max:255',
+            'birthday' => 'nullable|date',
+            'position' => 'nullable|string|max:255',
+            'phone' => 'nullable|string|max:20',
             'email' => 'required|email|unique:users,email,' . $user->id,
             'password' => 'nullable|string|min:8',
         ]);
 
         $user->name = $request->input('name');
+        $user->surname = $request->input('surname');
+        $user->father_name = $request->input('father_name');
+        $user->indentity = $request->input('indentity');
+        $user->birthday = $request->input('birthday');
+        $user->position = $request->input('position');
+        $user->phone = $request->input('phone');
         $user->email = $request->input('email');
 
-        if ($request->password) {
-            $user->password = Hash::make($request->password);
+        if ($request->filled('password')) {
+            $user->password = Hash::make($request->input('password'));
         }
 
         $user->syncRoles();
         $user->assignRole($request->role);
 
-//        if($request->role){
-//            $user->syncRoles();
-//
-//            foreach ($request->role as $p){
-//                $user->assignRole($p);
-//            }
-//        }
-
         $user->save();
 
-        return redirect()->back()->with('message','İstifadəçi update edildi');
-
+        return redirect()->back()->with('message', 'İstifadəçi yeniləndi');
     }
+
 
     /**
      * Remove the specified resource from storage.

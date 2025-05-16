@@ -1,0 +1,103 @@
+/* Cədvəlin əsas stil qaydaları */
+.news-detail-texts table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+}
+
+/* Cədvəlin hüceyrələrinə sərhəd əlavə etmək */
+.news-detail-texts table, th, td {
+    border: 1px solid #ddd;
+}
+
+/* Cədvəl hüceyrələrinin daxili boşluğu */
+.news-detail-texts th, td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+/* Cədvəl başlığına xüsusi stil əlavə etmək */
+.news-detail-texts th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+/* Hər ikinci sıra üçün rəngləmə */
+.news-detail-texts table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Hover zamanı sıranın fon rəngi */
+.news-detail-texts table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Cədvəlin əsas stil qaydaları */
+.custom_table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+}
+
+/* Cədvəlin hüceyrələrinə sərhəd əlavə etmək */
+.custom_table table, th, td {
+    border: 1px solid #ddd;
+}
+
+/* Cədvəl hüceyrələrinin daxili boşluğu */
+.custom_table th, td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+/* Cədvəl başlığına xüsusi stil əlavə etmək */
+.custom_table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+/* Hər ikinci sıra üçün rəngləmə */
+.custom_table table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Hover zamanı sıranın fon rəngi */
+.custom_table table tr:hover {
+    background-color: #f1f1f1;
+}
+/* Cədvəlin əsas stil qaydaları */
+.content-texts table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+}
+
+/* Cədvəlin hüceyrələrinə sərhəd əlavə etmək */
+.content-texts table, th, td {
+    border: 1px solid #ddd;
+}
+
+/* Cədvəl hüceyrələrinin daxili boşluğu */
+.content-texts th, td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+/* Cədvəl başlığına xüsusi stil əlavə etmək */
+.content-texts th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+/* Hər ikinci sıra üçün rəngləmə */
+.content-texts table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Hover zamanı sıranın fon rəngi */
+.content-texts table tr:hover {
+    background-color: #f1f1f1;
+}

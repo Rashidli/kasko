@@ -12,10 +12,7 @@ class AdvantageController extends Controller
 {
     public function __construct(protected ImageUploadService $imageUploadService)
     {
-        $this->middleware('permission:list-advantages|create-advantages|edit-advantages|delete-advantages', ['only' => ['index','show']]);
-        $this->middleware('permission:create-advantages', ['only' => ['create','store']]);
-        $this->middleware('permission:edit-advantages', ['only' => ['edit']]);
-        $this->middleware('permission:delete-advantages', ['only' => ['destroy']]);
+
     }
 
     public function index()

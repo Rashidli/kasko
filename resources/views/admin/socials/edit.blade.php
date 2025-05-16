@@ -11,6 +11,13 @@
                 <div class="card">
                     <div class="card-body">
                         <h4 class="card-title">{{$social->title}}</h4>
+                        <nav aria-label="breadcrumb" style="margin-bottom: 20px;">
+                            <ol class="breadcrumb bg-light p-3 rounded">
+                                <li class="breadcrumb-item"><a href="{{ route('home') }}">Dashboard</a></li>
+                                <li class="breadcrumb-item"><a href="{{ route('socials.index') }}">Siyahı</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">{{ $social->title }}</li>
+                            </ol>
+                        </nav>
                         <div class="row">
                             <div class="col-6">
 
@@ -38,8 +45,8 @@
                                 <div class="mb-3">
                                     <label class="col-form-label">Active</label>
                                     <select name="is_active" id="" class="form-control">
-                                        <option value="1" {{$social->is_active == true ? 'selected' : ''}}>Active</option>
-                                        <option value="0" {{$social->is_active == false ? 'selected' : ''}}>Deactive</option>
+                                        <option value="1" {{$social->is_active  ? 'selected' : ''}}>Active</option>
+                                        <option value="0" {{!$social->is_active  ? 'selected' : ''}}>Deactive</option>
                                     </select>
                                 </div>
 
