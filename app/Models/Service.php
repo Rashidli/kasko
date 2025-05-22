@@ -24,6 +24,7 @@ class Service extends Model
         'off_message',
         'work_text',
         'off_text',
+        'apply_text',
     ];
     protected $fillable = ['image','is_active','category_id','form_id','icon'];
 

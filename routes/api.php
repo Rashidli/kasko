@@ -14,5 +14,3 @@ Route::post('/send-contract-property', [DaisController::class, 'contractProperty
 Route::post('/status-change-property', [DaisController::class, 'statusChangeProperty']);
 Route::post('/terminate-property', [DaisController::class, 'terminateProperty']);
 Route::post('/payment-property', [DaisController::class, 'paymentProperty']);
-Route::post('/successcallback-property', [DaisController::class, 'successCallbackProperty']);
-Route::post('/failurecallback-property', [DaisController::class, 'failureCallbackProperty']);

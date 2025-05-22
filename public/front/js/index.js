@@ -316,7 +316,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-
     const tablesNews = document.querySelectorAll('.news-detail-texts table');
 
     // Her bir table elementini dolaş
@@ -501,6 +500,21 @@ function closeFooterLink(footerLinks) {
     })
 }
 
+const mobile_submenu_title = document.querySelectorAll('.mobile_submenu_title')
+mobile_submenu_title.forEach(item => {
+    item?.addEventListener('click', function () {
+        let mobile_submenu = item.parentElement;
+        closeMobileSubMenu(mobile_submenu);
+        if (mobile_submenu.classList.contains("active")) mobile_submenu.classList.remove('active');
+        else mobile_submenu.classList.add("active");
+    })
+})
+function closeMobileSubMenu(subMenu) {
+    mobile_submenu_title.forEach(item => {
+        let mobile_submenu = item.parentElement;
+        if (subMenu != mobile_submenu) mobile_submenu.classList.remove("active");
+    })
+}
 
 
 const copiedBtn = document.querySelector('.simply_link');
@@ -560,9 +574,7 @@ useful_info_btn?.addEventListener("click", () => {
     useful_info_btn.parentElement.classList.toggle("active_info_box")
 })
 
-document.querySelector('.mobile_submenu')?.addEventListener('click', function () {
-    this.classList.toggle('active');
-});
+
 
 // Takvimi oluşturduğunuz yerde veya hemen öncesinde:
 const minYear = 1960;
@@ -582,8 +594,9 @@ fixed_message?.addEventListener("click", () => {
     fixed_message.classList.toggle("active_fixed_message")
     fixedLinks.classList.toggle("showedFixedLinks")
 })
-window.addEventListener("load", function () {
-    setTimeout(function () {
-        document.querySelector(".fixed_text").style.opacity = "1";
-    }, 1800);
-});
+
+// window.addEventListener("load", function () {
+//     setTimeout(function () {
+//         document.querySelector(".fixed_text").style.opacity = "1";
+//     }, 1800);
+// });

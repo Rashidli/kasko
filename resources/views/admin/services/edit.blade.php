@@ -49,6 +49,21 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <!-- Form Title Section -->
+                                        <div class="col-md-6">
+                                            <div class="card mb-3">
+                                                <div class="card-header">Form başlıq</div>
+                                                <div class="card-body">
+                                                    <div class="mb-3">
+                                                        <label class="col-form-label">Form başlıq* {{ strtoupper($lang) }}</label>
+                                                        <input class="form-control" type="text" name="{{ $lang }}_apply_text" value="{{ $service->translate($lang)->apply_text }}">
+                                                        @if($errors->first($lang.'_apply_text'))
+                                                            <small class="form-text text-danger">{{ $errors->first($lang.'_apply_text') }}</small>
+                                                        @endif
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
 
                                         <!-- Description Section -->
                                         <div class="col-md-6">
@@ -212,6 +227,11 @@
                                         <div class="mb-3 text-center">
                                             <img style="width: 100px; height: 100px;" src="{{ asset('storage/' . $service->image) }}" class="uploaded_image" alt="{{ $service->image }}">
                                         </div>
+                                        @if($service->image)
+                                            <button type="button" class="btn btn-danger btn-sm mt-2" onclick="deleteImage({{ $service->id }})">
+                                                Şəkli Sil
+                                            </button>
+                                        @endif
                                         <div class="form-group">
                                             <label>Şəkil*(1240-500)</label>
                                             <input type="file" name="image" class="form-control">
@@ -248,8 +268,8 @@
                                         <div class="mb-3">
                                             <label class="col-form-label">Aktiv?</label>
                                             <select name="is_active" class="form-control">
-                                                <option value="1" {{ $service->is_active == true ? 'selected' : '' }}>Aktiv</option>
-                                                <option value="0" {{ $service->is_active == false ? 'selected' : '' }}>Deaktiv</option>
+                                                <option value="1" {{ $service->is_active  ? 'selected' : '' }}>Aktiv</option>
+                                                <option value="0" {{ !$service->is_active  ? 'selected' : '' }}>Deaktiv</option>
                                             </select>
                                         </div>
                                     </div>
@@ -272,3 +292,29 @@
     </div>
 </div>
 @include('admin.includes.footer')
+<script>
+    function deleteImage(id) {
+        console.log(id);
+        if (confirm('Şəkli silmək istədiyinizə əminsiniz?')) {
+            fetch(`/admin/services/${id}/delete-image`, {
+                method: 'GET',
+                headers: {
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}',
+                    'Content-Type': 'application/json'
+                }
+            })
+                .then(response => {
+                    if (response.ok) {
+                        window.location.reload();
+                    } else {
+                        alert('Xəta baş verdi');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Xəta baş verdi');
+                });
+        }
+    }
+</script>
+

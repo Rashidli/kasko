@@ -408,11 +408,21 @@
 
             // Datepicker ayarları
             $('.datepicker').datetimepicker({
-                format: 'd.m.Y',
-                minDate: '+1',
                 timepicker: false,
+                format: 'd.m.Y',
                 lang: selectedLang
             });
+            $('.datepicker2').datetimepicker({
+                format: 'd.m.Y',
+                timepicker: false,
+                lang: selectedLang,
+                minDate: new Date(new Date().setDate(new Date().getDate() + 1)),
+                value: new Date(new Date().setDate(new Date().getDate() + 1)),
+                maxDate: new Date(new Date().setDate(new Date().getDate() + 30)),
+            });
+
+
+
 
             // Takvim ikonuna veya input alanına tıklandığında datepicker'ı aç
             $('.calendar-icon, .datepicker').on('click', function () {
@@ -421,7 +431,7 @@
         });
     });
 
-    document.getElementById('loginForm').addEventListener('submit', function(event) {
+    document.getElementById('loginForm')?.addEventListener('submit', function(event) {
         if (!grecaptcha.getResponse()) {
             event.preventDefault();
             document.getElementById('errorMessage').style.display = 'block';

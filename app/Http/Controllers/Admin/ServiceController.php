@@ -8,6 +8,7 @@ use App\Models\Form;
 use App\Models\Service;
 use App\Services\ImageUploadService;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
 class ServiceController extends Controller
@@ -99,6 +100,7 @@ class ServiceController extends Controller
                 'off_message' => $request->az_off_message,
                 'work_text' => $request->az_work_text,
                 'off_text' => $request->az_off_text,
+                'apply_text' => $request->az_apply_text,
             ],
             'en'=>[
                 'title'=>$request->en_title,
@@ -114,6 +116,7 @@ class ServiceController extends Controller
                 'off_message' => $request->en_off_message,
                 'work_text' => $request->en_work_text,
                 'off_text' => $request->en_off_text,
+                'apply_text' => $request->en_apply_text,
             ],
             'ru'=>[
                 'title'=>$request->ru_title,
@@ -129,6 +132,7 @@ class ServiceController extends Controller
                 'off_message' => $request->ru_off_message,
                 'work_text' => $request->ru_work_text,
                 'off_text' => $request->ru_off_text,
+                'apply_text' => $request->ru_apply_text,
             ]
         ]);
 
@@ -200,6 +204,7 @@ class ServiceController extends Controller
                 'off_message' => $request->az_off_message,
                 'work_text' => $request->az_work_text,
                 'off_text' => $request->az_off_text,
+                'apply_text' => $request->az_apply_text,
                 'slug'=>$this->generateUniqueSlug($request->az_title),
             ],
             'en'=>[
@@ -215,6 +220,7 @@ class ServiceController extends Controller
                 'off_message' => $request->en_off_message,
                 'work_text' => $request->en_work_text,
                 'off_text' => $request->en_off_text,
+                'apply_text' => $request->en_apply_text,
                 'slug'=>$this->generateUniqueSlug($request->en_title),
             ],
             'ru'=>[
@@ -230,6 +236,7 @@ class ServiceController extends Controller
                 'off_message' => $request->ru_off_message,
                 'work_text' => $request->ru_work_text,
                 'off_text' => $request->ru_off_text,
+                'apply_text' => $request->ru_apply_text,
                 'slug'=>$this->generateUniqueSlug($request->ru_title),
             ]
 
@@ -248,6 +255,22 @@ class ServiceController extends Controller
         $service->delete();
         return redirect()->route('services.index')->with('message', 'Service deleted successfully');
 
+    }
+
+    public function deleteImage($id)
+    {
+        $service = Service::findOrFail($id);
+
+        // Şəkli storage-dan sil
+        if (Storage::exists($service->image)) {
+            Storage::delete($service->image);
+        }
+
+        // Verilənlər bazasından şəkil yolunu sil
+        $service->image = null;
+        $service->save();
+
+        return back()->with('message', 'Şəkil uğurla silindi');
     }
 
 }

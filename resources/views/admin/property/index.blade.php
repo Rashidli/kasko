@@ -40,7 +40,11 @@
                                             <td>{{ $insurance->customer->name ?? '-' }}</td>
                                             <td>{{ $insurance->insuredPerson->fullName ?? '-' }}</td>
                                             <td>{{ $insurance->property->registryNumber ?? '-' }}</td>
-                                            <td>{{ optional(json_decode($insurance->property->propertyAddress))->address ?? '-' }}</td>
+                                            <td>
+                                                @if($insurance->property?->propertyAddress)
+                                                    {{ optional(json_decode($insurance->property->propertyAddress))->address ?? '-' }}
+                                                @endif
+                                            </td>
                                             <td>{{ $insurance->sumInsured }} ₼</td>
                                             <td>{{ \Carbon\Carbon::parse($insurance->creationDate)->format('d.m.Y') }}</td>
                                             <td><a href="{{ route('property.insurances.show', $insurance->id) }}" class="btn btn-primary btn-sm">Bax</a></td>

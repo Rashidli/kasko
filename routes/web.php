@@ -232,6 +232,7 @@ Route::group(['prefix' => 'admin'], function (): void {
         Route::resource('contacts', ContactController::class);
         Route::get('/delete-slider-image/{id}', [BlogController::class, 'deleteImage'])
             ->name('delete-slider-image');
+        Route::get('/services/{id}/delete-image', [ServiceController::class, 'deleteImage'])->name('services.delete-image');
     });
 });
 

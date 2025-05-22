@@ -15,6 +15,7 @@ use App\Models\Content;
 use App\Models\Faq;
 use App\Models\FormField;
 use App\Models\FormSubmission;
+use App\Models\Insurance;
 use App\Models\Link;
 use App\Models\Main;
 use App\Models\Map;
@@ -396,9 +397,11 @@ class HomeController extends Controller
         return view('front.email_template');
     }
 
-    public function successDeis()
+    public function successDeis(Request $request)
     {
-        return view('front.success_deis');
+        $insurance = Insurance::query()->where('contractNumber',$request->policyNumber)->first();
+        $payment_code = $insurance->paymentCode;
+        return view('front.success_deis', compact('payment_code'));
     }
     public function failDeis()
     {

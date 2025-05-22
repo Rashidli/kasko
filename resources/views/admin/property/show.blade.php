@@ -20,11 +20,13 @@
             <div class="card mb-4">
                 <div class="card-header">Əmlak Məlumatları</div>
                 <div class="card-body">
-                    <p><strong>Registry №:</strong> {{ $insurance->property->registryNumber }}</p>
-                    <p><strong>Registration №:</strong> {{ $insurance->property->registrationNumber }}</p>
-                    <p><strong>Area:</strong> {{ $insurance->property->propertyArea }} m²</p>
+                    <p><strong>Registry №:</strong> {{ $insurance->property?->registryNumber ?? '-' }}</p>
+                    <p><strong>Registration №:</strong> {{ $insurance->property?->registrationNumber ?? '-' }}</p>
+                    <p><strong>Area:</strong> {{ $insurance->property?->propertyArea ?? '-'}} m²</p>
                     <p>
-                        <strong>Address:</strong> {{ optional(json_decode($insurance->property->propertyAddress))->address }}
+                        @if($insurance->property?->propertyAddress)
+                            <strong>Address:</strong> {{ optional(json_decode($insurance->property->propertyAddress ?? '-'))->address ?? '-'}}
+                        @endif
                     </p>
                 </div>
             </div>
@@ -32,11 +34,11 @@
             <div class="card mb-4">
                 <div class="card-header">Sığortalı Şəxs</div>
                 <div class="card-body">
-                    <p><strong>Ad Soyad:</strong> {{ $insurance->insuredPerson->fullName }}</p>
-                    <p><strong>Doğum Tarixi:</strong> {{ $insurance->insuredPerson->birthDate }}</p>
-                    <p><strong>Pin:</strong> {{ $insurance->insuredPerson->pin }}</p>
-                    <p><strong>Vəsiqə:</strong> {{ $insurance->insuredPerson->idDocument }}</p>
-                    <p><strong>Telefon:</strong> {{ $insurance->insuredPerson->phone }}</p>
+                    <p><strong>Ad Soyad:</strong> {{ $insurance->insuredPerson->fullName ?? '-' }}</p>
+                    <p><strong>Doğum Tarixi:</strong> {{ $insurance->insuredPerson->birthDate ?? '-'}}</p>
+                    <p><strong>Pin:</strong> {{ $insurance->insuredPerson->pin ?? '-'}}</p>
+                    <p><strong>Vəsiqə:</strong> {{ $insurance->insuredPerson->idDocument ?? '-'}}</p>
+                    <p><strong>Telefon:</strong> {{ $insurance->insuredPerson->phone ?? '-'}}</p>
                 </div>
             </div>
 
@@ -44,8 +46,8 @@
                 <div class="card mb-4">
                     <div class="card-header">Operator</div>
                     <div class="card-body">
-                        <p><strong>Ad:</strong> {{ $insurance->operator->firstName }}</p>
-                        <p><strong>Pin Code:</strong> {{ $insurance->operator->pinCode }}</p>
+                        <p><strong>Ad:</strong> {{ $insurance->operator->firstName ?? '-'}}</p>
+                        <p><strong>Pin Code:</strong> {{ $insurance->operator->pinCode ?? '-'}}</p>
                     </div>
                 </div>
             @endif

@@ -41,6 +41,15 @@
                                                 @endif
                                             </div>
                                             <div class="mb-3">
+                                                <label class="col-form-label">Form başlıq* {{ $lang }}</label>
+                                                <input class="form-control" type="text"
+                                                       value="{{old($lang . '_apply_text')}}" name="{{ $lang }}_apply_text">
+                                                @if($errors->first("{$lang}_apply_text"))
+                                                    <small
+                                                        class="form-text text-danger">{{ $errors->first("{$lang}_apply_text") }}</small>
+                                                @endif
+                                            </div>
+                                            <div class="mb-3">
                                                 <label class="col-form-label">Text* {{ $lang }}</label>
                                                 <textarea id="editor_{{ $lang }}" class="form-control"
                                                           name="{{ $lang }}_description">{{old($lang . '_description')}}</textarea>

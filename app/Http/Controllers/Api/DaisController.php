@@ -70,7 +70,7 @@ class DaisController extends Controller
 
             session(['payment' => $insurance->paymentCode]);
 
-            return response()->json(['message' => 'Data saved successfully'], 201);
+            return response()->json(['message' => 'Data saved successfully'], 200);
         } catch (Exception $e) {
             Log::error('contractProperty error: ' . $e->getMessage());
 

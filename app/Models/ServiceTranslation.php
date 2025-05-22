@@ -26,5 +26,6 @@ class ServiceTranslation extends Model
         'off_message',
         'work_text',
         'off_text',
+        'apply_text',
     ];
 }
